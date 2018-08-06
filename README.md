@@ -61,12 +61,3 @@ This is the second of my Data Analysis Projects. Here I used the [Ecommerce Purc
 - Card Numbers, expiration dates
 
 This was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
-
-## Recommendation systems.
-
-### Collaborative filtering
-
-[Github](https://github.com/Erlemar/Erlemar.github.io/blob/master/Notebooks/Collaborative_filtering.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/Erlemar/Erlemar.github.io/blob/master/Notebooks/Collaborative_filtering.ipynb)
-
-Recommenders are systems, which predict ratings of users for items. There are several approaches to build such systems and one of them is Collaborative Filtering. 
-This notebook shows sevуral examples of collaborative filtering algorithms.
