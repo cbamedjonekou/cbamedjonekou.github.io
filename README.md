@@ -30,7 +30,7 @@ This portfolio is a compilation of notebooks which covers my efforts in learning
 
 This is a simple example of feedforward neural network with regularization. It is based on Andrew Ng's lectures on Coursera. I used data from Kaggle's challenge "Ghouls, Goblins, and Ghosts... Boo!", it is available [here](https://www.kaggle.com/c/ghouls-goblins-and-ghosts-boo).
 
-## Data exploration and analysis
+## Data Exploration, Visualization, and Analysis
 
 ### SF Salaries Data
 
