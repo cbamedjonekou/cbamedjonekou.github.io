@@ -1,6 +1,8 @@
-# ML-AI-HKG_Portfolio
+# Portfolio (Machine Learning/Artificial Intelligence/Hacking Principles):
 
 This portfolio is a compilation of notebooks which covers my efforts in learning Data Analysis, Machine Learning, Artificial Intelligence, and Hacking Techniques. There are separate categories for separate projects.
+
+# Machine Learning/Artificial Intelligence:
 
 ## Stand-alone projects.
 
