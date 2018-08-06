@@ -38,8 +38,13 @@ This is my First Data Analysis Project. Here I used the [SF Salaries Dataset](ht
 
 - Average Base Pay
 - Largest Overtime Pay
-- Whose the Highest Paid Person
-- 
+- Who the Highest and Lowest Paid Person is...
+- Unique Job Titles
+- What the Most Common Jobs are
+- The amount of Job Titles represented by only one person
+- The amount of high position persons 
+
+This was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
 ## Recommendation systems.
 
