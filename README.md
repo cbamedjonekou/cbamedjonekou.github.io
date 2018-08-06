@@ -46,6 +46,23 @@ This is my First Data Analysis Project. Here I used the [SF Salaries Dataset](ht
 
 This was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
+### Ecommerce Purchases Data
+
+[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb)
+
+This is the second of my Data Analysis Projects. Here I used the [Ecommerce Purchases Dataset](https://raw.githubusercontent.com/deaththeberry/ML-AI-HKG_Portfolio/master/Notebooks/Ecommerce%20Purchases) to explore the following:
+
+- Average Purchase Price
+- The Highest and Lowest Purchase Price
+- Language of Choice
+- Job Titles
+- Purchase Times (AM or PM)
+- Emails associated w/ Credit Card Numbers, and Email Providers
+- Card Numbers, expiration dates
+- 
+
+This was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
+
 ## Recommendation systems.
 
 ### Collaborative filtering
