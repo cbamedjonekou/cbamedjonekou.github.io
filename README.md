@@ -59,7 +59,6 @@ This is the second of my Data Analysis Projects. Here I used the [Ecommerce Purc
 - Purchase Times (AM or PM)
 - Emails associated w/ Credit Card Numbers, and Email Providers
 - Card Numbers, expiration dates
-- 
 
 This was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
