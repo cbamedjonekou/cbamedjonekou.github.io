@@ -8,8 +8,6 @@ This portfolio is a compilation of notebooks which covers my efforts in learning
 
 ## Kaggle DataSets/Competitions.
 
-### Avito demand prediction
-
 ## Kaggle kernels.
 
 ## Classification problems.
