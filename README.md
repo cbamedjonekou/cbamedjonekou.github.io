@@ -86,3 +86,15 @@ This is the second of my Data Analysis Projects. Here I used the [Ecommerce Purc
 - Card Numbers, expiration dates
 
 This was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
+
+### NumPy Review
+
+[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb)
+
+This is a review from when I was learning to implement numpy methods. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
+
+### MatPlotLib Review
+
+[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb)
+
+This is a review from when I was learning to implement matplotlib methods. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
