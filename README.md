@@ -89,12 +89,12 @@ This was based on Pierian Data's Data Science and Machine Learning Bootcamp lect
 
 ### NumPy Review
 
-[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb)
+[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Numpy%20Exercise%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Numpy%20Exercise%20.ipynb)
 
 This is a review from when I was learning to implement numpy methods. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
 ### MatPlotLib Review
 
-[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb)
+[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Numpy%20Exercise%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Numpy%20Exercise%20.ipynb)
 
 This is a review from when I was learning to implement matplotlib methods. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
