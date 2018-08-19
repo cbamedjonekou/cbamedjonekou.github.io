@@ -98,3 +98,10 @@ This is a review from when I was learning to implement numpy methods. Again, thi
 [Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Matplotlib%20Exercises%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Matplotlib%20Exercises%20.ipynb)
 
 This is a review from when I was learning to implement matplotlib methods. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
+
+### Seaborn Review
+
+[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Matplotlib%20Exercises%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Matplotlib%20Exercises%20.ipynb)
+
+This is a review from when I was learning to implement seaborn methods. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
+
