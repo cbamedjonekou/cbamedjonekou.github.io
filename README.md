@@ -111,5 +111,5 @@ This is a review from when I was learning to implement seaborn methods. Again, t
 
 [Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Pandas%20Data%20Visualization%20Exercise%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Pandas%20Data%20Visualization%20Exercise%20.ipynb)
 
-This is a review from when I was learning to implement seaborn methods. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
+This is a review from when I was learning to implement Pandas built-in data visualization methods. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
