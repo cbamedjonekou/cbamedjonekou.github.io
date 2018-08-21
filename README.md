@@ -57,7 +57,7 @@ This is a simple example of feedforward neural network with regularization. It i
 
 ### SF Salaries Data
 
-[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/SF%20Salaries%20Exercise.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/SF%20Salaries%20Exercise.ipynb)
+[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/SF%20Salaries%20Exercise.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/SF%20Salaries%20Exercise.ipynb?flush_cache=true)
 
 This is my First Data Analysis Project. Here I used the [SF Salaries Dataset](https://www.kaggle.com/kaggle/sf-salaries/home) to explore the following:
 
@@ -73,7 +73,7 @@ This was based on Pierian Data's Data Science and Machine Learning Bootcamp lect
 
 ### Ecommerce Purchases Data
 
-[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb)
+[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb?flush_cache=true)
 
 This is the second of my Data Analysis Projects. Here I used the [Ecommerce Purchases Dataset](https://raw.githubusercontent.com/deaththeberry/ML-AI-HKG_Portfolio/master/Notebooks/Ecommerce%20Purchases) to explore the following:
 
@@ -91,25 +91,25 @@ This was based on Pierian Data's Data Science and Machine Learning Bootcamp lect
 
 #### NumPy Review
 
-[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Numpy%20Exercise%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Numpy%20Exercise%20.ipynb)
+[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Numpy%20Exercise%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Numpy%20Exercise%20.ipynb?flush_cache=true)
 
 This is a review from when I was learning to implement numpy methods. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
 #### MatPlotLib Review
 
-[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Matplotlib%20Exercises%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Matplotlib%20Exercises%20.ipynb)
+[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Matplotlib%20Exercises%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Matplotlib%20Exercises%20.ipynb?flush_cache=true)
 
 This is a review from when I was learning to implement matplotlib methods. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
 #### Seaborn Review
 
-[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Seaborn%20Exercises%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Seaborn%20Exercises%20.ipynb)
+[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Seaborn%20Exercises%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Seaborn%20Exercises%20.ipynb?flush_cache=true)
 
 This is a review from when I was learning to implement seaborn methods. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
 #### Pandas Data Visualization Review
 
-[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Pandas%20Data%20Visualization%20Exercise%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Pandas%20Data%20Visualization%20Exercise%20.ipynb)
+[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Pandas%20Data%20Visualization%20Exercise%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Pandas%20Data%20Visualization%20Exercise%20.ipynb?flush_cache=true)
 
 This is a review from when I was learning to implement Pandas built-in data visualization methods. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
