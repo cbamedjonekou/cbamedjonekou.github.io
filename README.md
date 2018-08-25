@@ -4,13 +4,13 @@ This portfolio is a compilation of notebooks which covers my efforts in learning
 
 # Machine Learning/Artificial Intelligence:
 
-## Stand-alone projects.
+## Stand-alone projects:
 
-## Kaggle DataSets/Competitions.
+## Kaggle DataSets/Competitions:
 
-## Kaggle kernels.
+## Kaggle kernels:
 
-## Classification problems.
+## Classification problems:
 
 ### Titanic: Machine Learning from Disaster
 
@@ -59,7 +59,7 @@ This is a simple example of feedforward neural network with regularization. It i
 
 [Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/SF%20Salaries%20Exercise.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/SF%20Salaries%20Exercise.ipynb?flush_cache=true)
 
-This is my First Data Analysis Project. Here I used the [SF Salaries Dataset](https://www.kaggle.com/kaggle/sf-salaries/home) to explore the following:
+This is my First Project. Here I used the [SF Salaries Dataset](https://www.kaggle.com/kaggle/sf-salaries/home) to explore the following:
 
 - Average Base Pay
 - Largest Overtime Pay
@@ -75,7 +75,7 @@ This was based on Pierian Data's Data Science and Machine Learning Bootcamp lect
 
 [Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb?flush_cache=true)
 
-This is the second of my Data Analysis Projects. Here I used the [Ecommerce Purchases Dataset](https://raw.githubusercontent.com/deaththeberry/ML-AI-HKG_Portfolio/master/Notebooks/Ecommerce%20Purchases) to explore the following:
+This is my Second Project. Here I used the [Ecommerce Purchases Dataset](https://raw.githubusercontent.com/deaththeberry/ML-AI-HKG_Portfolio/master/Notebooks/Ecommerce%20Purchases) to explore the following:
 
 - Average Purchase Price
 - The Highest and Lowest Purchase Price
@@ -86,6 +86,39 @@ This is the second of my Data Analysis Projects. Here I used the [Ecommerce Purc
 - Card Numbers, expiration dates
 
 This was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
+
+### Finance Data
+
+[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Finance%20Project%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Finance%20Project%20.ipynb?flush_cache=true)
+
+This is my Third Project. Here I used the [Pandas Datareader](https://github.com/pydata/pandas-datareader) to read stock information directly from the internet and explore the following:
+
+- Average Base Pay
+- Largest Overtime Pay
+- Who the Highest and Lowest Paid Person is...
+- Unique Job Titles
+- What the Most Common Jobs are
+- The amount of Job Titles represented by only one person
+- The amount of high position persons 
+
+This was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
+
+### 911 Calls Data
+
+[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/911%20Calls%20Data%20Capstone%20Project%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/911%20Calls%20Data%20Capstone%20Project%20.ipynb?flush_cache=true)
+
+This is my Fourth Project. Here I used the [Emergency - 911 Calls](https://www.kaggle.com/mchirico/montcoalert) to explore the following:
+
+- Average Base Pay
+- Largest Overtime Pay
+- Who the Highest and Lowest Paid Person is...
+- Unique Job Titles
+- What the Most Common Jobs are
+- The amount of Job Titles represented by only one person
+- The amount of high position persons 
+
+This was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
+
 
 ### Problem Sets
 
