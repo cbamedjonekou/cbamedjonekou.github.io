@@ -117,4 +117,4 @@ This is a review from when I was learning to implement Pandas built-in data visu
 
 [Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Choropleth%20Maps%20Exercise%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Choropleth%20Maps%20Exercise%20.ipynb?flush_cache=true)
 
-This is a review from when I was learning to implement Pandas built-in data visualization methods. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
+This is a review from when I was learning to create Cloropleth Maps w/ Plotly. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
