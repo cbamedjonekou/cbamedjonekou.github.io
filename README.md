@@ -4,8 +4,6 @@ This portfolio is a compilation of notebooks which covers my efforts in learning
 
 # Machine Learning/Artificial Intelligence:
 
-[Github](https://github.com/deaththeberry/Learning-Python-Practice/blob/master/P_sets_and_Toy_Programs/P_Sets_Jupyter_Notebooks/CodeFightsTPs/Toy%20Programs%20June%209th%202018.ipynb)
-
 ## Stand-alone projects:
 
 ## Kaggle DataSets/Competitions:
