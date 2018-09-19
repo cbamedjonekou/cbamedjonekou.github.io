@@ -1,6 +1,6 @@
 # Deaththeberry's Portfolio:
 
-This portfolio is a compilation of notebooks which covers my efforts in learning Data Analysis, Machine Learning, Artificial Intelligence, and Hacking Proof of Concepts, and Pertinent School Projects. There are separate categories for separate projects.
+This portfolio is a compilation of notebooks which covers my efforts in learning Data Analysis, Machine Learning, Artificial Intelligence, and Hacking Proof of Concepts, relevant School Projects, and relevant stand-alone projects. There are separate categories for separate projects.
 
 # Machine Learning/Artificial Intelligence/Proof of Concepts/Analysis:
 
