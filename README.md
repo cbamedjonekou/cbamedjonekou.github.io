@@ -6,7 +6,7 @@ This portfolio is a compilation of notebooks which covers my efforts in learning
 
 ## Stand-alone projects:
 
-### EET_TCET_kit: Electronics/Telecommunications Toolkit:
+### EETCET_modkit: Electronics/Telecommunications Toolkit Module:
 
 [Github]()
 
