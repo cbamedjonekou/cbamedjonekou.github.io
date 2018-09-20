@@ -10,7 +10,7 @@ This portfolio is a compilation of notebooks which covers my efforts in learning
 
 [Github]()
 
-During the Fall 2018 semester, I took three interrelated courses dealing w/ Telecommunications, Digital Electronics, and Communication Electronics. When writing notes for the courses [click here](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/tree/master/Labs), I found myself having to do tedious calculations. Especially since I was typing my notes I decided that I should create a module that allowed me to access the functions without having to copy them from notebook to notebook. This module is a result of that problem.
+(**Work in Prograss**) During the Fall 2018 semester, I took three interrelated courses dealing w/ Telecommunications, Digital Electronics, and Communication Electronics. When writing notes for the courses [click here](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/tree/master/Labs), I found myself having to do tedious calculations. Especially since I was typing my notes I decided that I should create a module that allowed me to access the functions without having to copy them from notebook to notebook. This module is a result of that problem.
 
 ## Kaggle DataSets/Competitions:
 
