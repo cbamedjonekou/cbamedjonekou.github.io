@@ -61,9 +61,9 @@ The data provided consists of raw reviews and class (1 or 2), so the main part i
 
 ## Data Exploration, Visualization, and Analysis:
 
-(**Ongoing**)### SF Salaries Data:
+### SF Salaries Data:
 
-[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/SF%20Salaries%20Exercise.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/SF%20Salaries%20Exercise.ipynb?flush_cache=true)
+(**Ongoing**)[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/SF%20Salaries%20Exercise.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/SF%20Salaries%20Exercise.ipynb?flush_cache=true)
 
 This is my First Project. Here I used the [SF Salaries Dataset](https://www.kaggle.com/kaggle/sf-salaries/home) to explore the following:
 
@@ -77,9 +77,9 @@ This is my First Project. Here I used the [SF Salaries Dataset](https://www.kagg
 
 This was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
-(**Ongoing**)### Ecommerce Purchases Data:
+### Ecommerce Purchases Data:
 
-[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb?flush_cache=true)
+(**Ongoing**)[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb?flush_cache=true)
 
 This is my Second Project. Here I used the [Ecommerce Purchases Dataset](https://raw.githubusercontent.com/deaththeberry/ML-AI-HKG_Portfolio/master/Notebooks/Ecommerce%20Purchases) to explore the following:
 
