@@ -65,7 +65,7 @@ The data provided consists of raw reviews and class (1 or 2), so the main part i
 
 (**Ongoing**)[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Finance%20Project%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Finance%20Project%20.ipynb?flush_cache=true)
 
-This is my Third Project. Here I used the [Pandas Datareader](https://github.com/pydata/pandas-datareader) to read stock information directly from the internet and explore the following:
+This is my First Project. Here I used the [Pandas Datareader](https://github.com/pydata/pandas-datareader) to read stock information directly from the internet and explore the following:
 
 - Average Base Pay
 - Largest Overtime Pay
@@ -81,7 +81,7 @@ This was based on Pierian Data's Data Science and Machine Learning Bootcamp lect
 
 (**Ongoing**)[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/911%20Calls%20Data%20Capstone%20Project%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/911%20Calls%20Data%20Capstone%20Project%20.ipynb?flush_cache=true)
 
-This is my Fourth Project. Here I used the [Emergency - 911 Calls](https://www.kaggle.com/mchirico/montcoalert) to explore the following:
+This is my Second Project. Here I used the [Emergency - 911 Calls](https://www.kaggle.com/mchirico/montcoalert) to explore the following:
 
 - Average Base Pay
 - Largest Overtime Pay
@@ -112,7 +112,7 @@ This is a review from when I was learning to implement numpy methods. Again, thi
 
 [Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/SF%20Salaries%20Exercise.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/SF%20Salaries%20Exercise.ipynb?flush_cache=true)
 
-This is my First Project. Here I used the [SF Salaries Dataset](https://www.kaggle.com/kaggle/sf-salaries/home) to explore the following:
+This is my First Mini Project. Here I used the [SF Salaries Dataset](https://www.kaggle.com/kaggle/sf-salaries/home) to explore the following:
 
 - Average Base Pay
 - Largest Overtime Pay
@@ -128,7 +128,7 @@ This was based on Pierian Data's Data Science and Machine Learning Bootcamp lect
 
 [Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb?flush_cache=true)
 
-This is my Second Project. Here I used the [Ecommerce Purchases Dataset](https://raw.githubusercontent.com/deaththeberry/ML-AI-HKG_Portfolio/master/Notebooks/Ecommerce%20Purchases) to explore the following:
+This is my Second Mini Project. Here I used the [Ecommerce Purchases Dataset](https://raw.githubusercontent.com/deaththeberry/ML-AI-HKG_Portfolio/master/Notebooks/Ecommerce%20Purchases) to explore the following:
 
 - Average Purchase Price
 - The Highest and Lowest Purchase Price
