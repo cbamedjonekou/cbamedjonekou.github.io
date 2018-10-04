@@ -61,38 +61,6 @@ The data provided consists of raw reviews and class (1 or 2), so the main part i
 
 ## Data Exploration, Visualization, and Analysis:
 
-### SF Salaries Data:
-
-(**Ongoing**)[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/SF%20Salaries%20Exercise.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/SF%20Salaries%20Exercise.ipynb?flush_cache=true)
-
-This is my First Project. Here I used the [SF Salaries Dataset](https://www.kaggle.com/kaggle/sf-salaries/home) to explore the following:
-
-- Average Base Pay
-- Largest Overtime Pay
-- Who the Highest and Lowest Paid Person is...
-- Unique Job Titles
-- What the Most Common Jobs are
-- The amount of Job Titles represented by only one person
-- The amount of high position persons 
-
-This was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
-
-### Ecommerce Purchases Data:
-
-(**Ongoing**)[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb?flush_cache=true)
-
-This is my Second Project. Here I used the [Ecommerce Purchases Dataset](https://raw.githubusercontent.com/deaththeberry/ML-AI-HKG_Portfolio/master/Notebooks/Ecommerce%20Purchases) to explore the following:
-
-- Average Purchase Price
-- The Highest and Lowest Purchase Price
-- Language of Choice
-- Job Titles
-- Purchase Times (AM or PM)
-- Emails associated w/ Credit Card Numbers, and Email Providers
-- Card Numbers, expiration dates
-
-This was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
-
 ### Finance Data:
 
 (**Ongoing**)[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Finance%20Project%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Finance%20Project%20.ipynb?flush_cache=true)
@@ -140,6 +108,39 @@ This section contains labs and notes, created during the Fall Semester of 2018, 
 
 This is a review from when I was learning to implement numpy methods. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
+#### SF Salaries Data:
+
+[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/SF%20Salaries%20Exercise.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/SF%20Salaries%20Exercise.ipynb?flush_cache=true)
+
+This is my First Project. Here I used the [SF Salaries Dataset](https://www.kaggle.com/kaggle/sf-salaries/home) to explore the following:
+
+- Average Base Pay
+- Largest Overtime Pay
+- Who the Highest and Lowest Paid Person is...
+- Unique Job Titles
+- What the Most Common Jobs are
+- The amount of Job Titles represented by only one person
+- The amount of high position persons 
+
+This was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
+
+#### Ecommerce Purchases Data:
+
+[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb?flush_cache=true)
+
+This is my Second Project. Here I used the [Ecommerce Purchases Dataset](https://raw.githubusercontent.com/deaththeberry/ML-AI-HKG_Portfolio/master/Notebooks/Ecommerce%20Purchases) to explore the following:
+
+- Average Purchase Price
+- The Highest and Lowest Purchase Price
+- Language of Choice
+- Job Titles
+- Purchase Times (AM or PM)
+- Emails associated w/ Credit Card Numbers, and Email Providers
+- Card Numbers, expiration dates
+
+This was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
+
+
 #### MatPlotLib Review:
 
 [Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Matplotlib%20Exercises%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Matplotlib%20Exercises%20.ipynb?flush_cache=true)
@@ -163,4 +164,3 @@ This is a review from when I was learning to implement Pandas built-in data visu
 [Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Choropleth%20Maps%20Exercise%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Choropleth%20Maps%20Exercise%20.ipynb?flush_cache=true)
 
 This is a review from when I was learning to create Cloropleth Maps w/ Plotly. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
-
