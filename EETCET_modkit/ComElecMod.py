@@ -172,3 +172,17 @@ def outputSNR(noiseFactor, inputSNR):
     # Returns the ratio form of the output ratio (not in decibels)
     return snR/noiseRatio
 
+
+def sideFrequencyAmp(mod_index, e_C):
+    """This function calculates side frequency amplitude. Takes in two argument. Returns the result."""
+    return (mod_index*e_C)/2
+
+
+def totalPowerTransmitted(P_C, mod_Index):
+    """This function calculates side frequency amplitude. Takes in two argument. Returns the result."""
+    return P_C*(1 + (m.pow(mod_Index,2)/2))
+
+
+def totalCurrentTransmitted(I_C, mod_Index):
+    """This function calculates side frequency amplitude. Takes in two argument. Returns the result."""
+    return I_C*m.sqrt(1 + (m.pow(mod_Index,2)/2))
