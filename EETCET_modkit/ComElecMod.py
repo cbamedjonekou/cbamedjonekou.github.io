@@ -118,12 +118,6 @@ def peak_to_PeakPeak(v_peak):
     return v_peak * 2
 
 
-def signalNoiseRatio(signal_voltage, noise_voltage):
-    """Calculates the signal noise ratio. Takes in two parameters: signal_power,
-    and noise_power"""
-    return 20*m.log(signal_voltage/noise_voltage, 10)
-
-
 def snr_Decibels(signalVoltage= 1, noiseVoltage= 1, signalPower= 0, noisePower= 0, sn_Ratio= 0, snp_Ratio= 0):
     """This function calculates the signal noise ratio in decibels. It takes in a total of 6 possible arguments.
     They are: signalVoltage= 1, noiseVoltage=1 , signalPower= 0, noisePower= 0, sn_Ratio= 0, snp_Ratio= 0.
@@ -154,8 +148,7 @@ def snr(signalPower= 1, noisePower= 1, signalVoltage= 0, noiseVoltage=0):
     are by default 'switched off'. If any of these arguments are assigned a value, then they become
     'switched on' and access the segment of code associated with their activation."""
     if signalVoltage != 0 or noiseVoltage != 0:
-        snr_Bels = snr_Decibels(signalVoltage, noiseVoltage)
-        return m.pow(10, snr_Bels/10)
+        return signalVoltage/noiseVoltage
     else:
         return signalPower/noisePower
 
