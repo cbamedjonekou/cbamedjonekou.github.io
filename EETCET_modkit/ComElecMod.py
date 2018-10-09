@@ -179,3 +179,27 @@ def totalPowerTransmitted(P_C, mod_Index):
 def totalCurrentTransmitted(I_C, mod_Index):
     """This function calculates side frequency amplitude. Takes in two argument. Returns the result."""
     return I_C*m.sqrt(1 + (m.pow(mod_Index,2)/2))
+
+
+def instanteousOutputFreq(carrierFreq, deviationConst, modInput):
+    """This function calculates the instantaneous output frequency.
+    Takes in three arguments. Returns the solution."""
+    return carrierFreq + (deviationConst * modInput)
+
+
+def powerDB(besselEntry, v2= 0, v1=0):
+    """Calculates the power values of the FM Spectrum Analyzer in Decibels. Takes in 3 arguments.
+    Two of the three arguments are initialized to zero. If they are assigned a value the loop activates.
+    Otherwise, the function just uses the one non default argument to perform the calculations."""
+    if v2 != 0 and v1 != 0:
+        besselEntry = v2/v1
+        return 20 * m.log(besselEntry, 10)
+    else:
+        return 20 * m.log(besselEntry, 10)
+
+
+def carsonsRuleApprox(delta_max, infoFreq_max):
+    """This function is an approximation called Carson's Rule and is used to approximates the
+    bandwidth and includes 98% of the total power. It's often used to predict the bandwidth
+    necessary for an FM signal. Takes in two arguments and returns the result."""
+    return 2*(delta_max + infoFreq_max)

@@ -179,3 +179,9 @@ def reactanceCapacitor(frequency, Capacitance):
         return m.inf
     else:
         return 1/(2*m.pi*frequency*Capacitance)
+
+
+def deviationRatio(f_Dev_Max, f_I_Max):
+    """Calculates the deviation ratio. Takes two arguments.
+    Returns the result."""
+    return f_Dev_Max/f_I_Max
