@@ -203,3 +203,8 @@ def carsonsRuleApprox(delta_max, infoFreq_max):
     bandwidth and includes 98% of the total power. It's often used to predict the bandwidth
     necessary for an FM signal. Takes in two arguments and returns the result."""
     return 2*(delta_max + infoFreq_max)
+
+
+def fm_mod_index(delta, mod_sig):
+    """Calculates the FM modulation index. Takes in two arguments, returns the result."""
+    return delta/mod_sig
