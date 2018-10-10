@@ -208,3 +208,9 @@ def carsonsRuleApprox(delta_max, infoFreq_max):
 def fm_mod_index(delta, mod_sig):
     """Calculates the FM modulation index. Takes in two arguments, returns the result."""
     return delta/mod_sig
+
+
+def deviationRatio(f_Dev_Max, f_I_Max):
+    """Calculates the deviation ratio. Takes two arguments.
+    Returns the result."""
+    return f_Dev_Max/f_I_Max
