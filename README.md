@@ -79,19 +79,11 @@ This was based on Pierian Data's Data Science and Machine Learning Bootcamp lect
 
 ### 911 Calls Data:
 
-(**Ongoing**)[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/911%20Calls%20Data%20Capstone%20Project%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/911%20Calls%20Data%20Capstone%20Project%20.ipynb?flush_cache=true)
+[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/911%20Calls%20Data%20Capstone%20Project%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/911%20Calls%20Data%20Capstone%20Project%20.ipynb?flush_cache=true)
 
 This is my Second Project. Here I used the [Emergency - 911 Calls](https://www.kaggle.com/mchirico/montcoalert) to explore the following:
 
-- Average Base Pay
-- Largest Overtime Pay
-- Who the Highest and Lowest Paid Person is...
-- Unique Job Titles
-- What the Most Common Jobs are
-- The amount of Job Titles represented by only one person
-- The amount of high position persons 
-
-This was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
+In this particular **"project"**, again, I focused on using/gaining some familiarity working with dataset and using the following modules: **Pandas, Seaborn, NumPy, Matplotlib**. I feel as though I've become more comfortable using these module at the completion of this project, especially with the use of the documentation, stackoverflow, general google searches, etc. Any new updates to this project will feature a summary along with the date in which the update was completed. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
 ### Labs:
 
