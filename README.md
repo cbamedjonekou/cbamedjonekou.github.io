@@ -122,7 +122,7 @@ This is my First Mini Project. Here I used the [SF Salaries Dataset](https://www
 - The amount of Job Titles represented by only one person
 - The amount of high position persons 
 
-This was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
+The **SF Salaries Data Set** appears to be a popular Data Set on [Kaggle](https://www.kaggle.com/kaggle/sf-salaries/home) and something I plan to revisit in the future, maybe as a kernel. However, in this particular **"mini project"** I focused on using/gaining some familiarity with the **Pandas** module. I feel as though I've become comfortable w/ the module via the completion of this project, especially with the use of the documentation, stackoverflow, general google searches, etc. Any new updates to this project will feature a summary along with the date in which the update was completed. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
 #### Ecommerce Purchases Data:
 
@@ -138,8 +138,7 @@ This is my Second Mini Project. Here I used the [Ecommerce Purchases Dataset](ht
 - Emails associated w/ Credit Card Numbers, and Email Providers
 - Card Numbers, expiration dates
 
-This was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
-
+In this particular **"mini project"**, again, I focused on using/gaining some familiarity with the **Pandas** module. I feel as though I've become comfortable w/ the module via the completion of this project, especially with the use of the documentation, stackoverflow, general google searches, etc. Any new updates to this project will feature a summary along with the date in which the update was completed. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
 #### MatPlotLib Review:
 
