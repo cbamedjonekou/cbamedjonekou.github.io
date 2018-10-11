@@ -67,14 +67,6 @@ The data provided consists of raw reviews and class (1 or 2), so the main part i
 
 This is my First Project. Here I used the [Pandas Datareader](https://github.com/pydata/pandas-datareader) to read stock information directly from the internet and explore the following:
 
-- Average Base Pay
-- Largest Overtime Pay
-- Who the Highest and Lowest Paid Person is...
-- Unique Job Titles
-- What the Most Common Jobs are
-- The amount of Job Titles represented by only one person
-- The amount of high position persons 
-
 This was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
 ### 911 Calls Data:
