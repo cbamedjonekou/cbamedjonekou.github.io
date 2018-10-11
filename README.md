@@ -83,6 +83,9 @@ This was based on Pierian Data's Data Science and Machine Learning Bootcamp lect
 
 This is my Second Project. Here I used the [Emergency - 911 Calls](https://www.kaggle.com/mchirico/montcoalert) to explore the following:
 
+*  loading the Dataset, and finding out the raw information about the dataset such as number of columns, rows, and how large the dataset is in general
+* 
+
 In this particular **"project"**, again, I focused on using/gaining some familiarity working with dataset and using the following modules: **Pandas, Seaborn, NumPy, Matplotlib**. I feel as though I've become more comfortable using these module at the completion of this project, especially with the use of the documentation, stackoverflow, general google searches, etc. Any new updates to this project will feature a summary along with the date in which the update was completed. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
 ### Labs:
