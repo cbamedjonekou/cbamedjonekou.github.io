@@ -20,7 +20,7 @@
 % if using A4 paper. (This probably isn't strictly necessary.)
 % If using another size paper, use default 1cm margins.
 \ifthenelse{\lengthtest { \paperwidth = 11in}}
-    { \geometry{top=.25in,left=.25in,right=.25in,bottom=.25in} }
+    { \geometry{top=.2in,left=.2in,right=.2in,bottom=.2in} }
     {\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
         {\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
         {\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
@@ -216,6 +216,18 @@ $$X_C = \frac{R_{src}}{Q}$$
 $$C = \frac{1}{2\pi f X_C}$$  
 $$BW = \frac{f}{Q}$$  
 $$R_R = \frac{L}{CR} = R(Q^2 +1) = \text{ resonant equivalent resistance}$$  
+
+\subsection{Pi-Pad Formulas (Low Pass)}
+
+$$BW = \frac{f}{Q}$$  
+$$R_V = \frac{R_H}{Q^2 + 1}$$
+$$X_L = QR_{L}; \text{ use this formula for } X_{L_1} \text{ and } X_{L_2}$$  
+$$L = \frac{X_L}{2\pi f}; \text{ use this formula for } L_1 \text{ and } L_2$$ 
+$$X_{C_1} = \frac{R_{src}}{Q}$$  
+$$X_{C_2} = \frac{R_{L}}{Q}$$  
+$$C = \frac{1}{2\pi f X_{C}}; \text{ use this formula for } C_1 \text{ and } C_2$$  
+$$Q = \sqrt{\frac{R_{src}}{R_L} - 1}; R_{src} = R_V$$  
+$$\text{Add } L_1 + L_2 \text{ to get total inductance.}$$ 
 
 \section{Resonance}
 Etc.
