@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  25 OCT 2018 18:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  25 OCT 2018 18:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -491,30 +491,22 @@ Overfull \hbox (5.37242pt too wide) detected at line 207
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 No file "Communications Electronics Latex Cheat Sheet".bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 332.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 351.
 [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 332.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 351.
  (./Communications Electronics Latex Cheat Sheet.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 332.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 332.
-
-
-Package rerunfilecheck Warning: File `"Communications Electronics Latex Cheat S
-heet".out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `"Communications Electronics Latex C
-heat Sheet".out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  848EBD90D6C9C44A338672061C8721CE;2621.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 332.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 351.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 351.
+Package rerunfilecheck Info: File `"Communications Electronics Latex Cheat Shee
+t".out' has not changed.
+(rerunfilecheck)             Checksum: D13FBCAF9AEFEF1B0D5E4DAE2638CED7;2774.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 351.
  ) 
 Here is how much of TeX's memory you used:
- 6904 strings out of 492995
- 100006 string characters out of 6132704
- 219434 words of memory out of 5000000
- 10322 multiletter control sequences out of 15000+600000
+ 6949 strings out of 492995
+ 100565 string characters out of 6132704
+ 230538 words of memory out of 5000000
+ 10364 multiletter control sequences out of 15000+600000
  12434 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,7n,28p,336b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -534,10 +526,10 @@ e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/
 2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/20
 17/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 Output written on "Communications Electronics Latex Cheat Sheet.pdf" (2 pages, 
-181577 bytes).
+185153 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 254 PDF objects out of 1000 (max. 8388607)
+ 232 compressed objects within 3 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 329 words of extra memory for PDF output out of 10000 (max. 10000000)
 

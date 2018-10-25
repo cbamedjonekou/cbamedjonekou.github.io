@@ -320,8 +320,27 @@ $$a_0 = \frac{1}{2 \pi}\int\limits_{-\pi}^{\pi} f(x) dx$$
 $$a_n = \frac{1}{ \pi}\int\limits_{-\pi}^{\pi} \cos(nx) dx$$  
 $$b_n = \frac{1}{ \pi}\int\limits_{-\pi}^{\pi} \sin(nx) dx$$
 
+\subsection{A0}
 
+$$a_0 = \frac{1}{2 \pi}\int\limits_{-\pi}^{\pi} f(x) dx$$
+$$= \frac{1}{2 \pi}\int\limits_{-\pi}^{0} 0 dx + \frac{1}{2 \pi}\int\limits_{0}^{\pi} 0 dx$$
+$$= 0 + \frac{1}{2 \pi} = \frac{1}{2}$$
 
+\subsection{An}
+
+$$\text{For } n \geq 1$$
+$$a_n = \frac{1}{ \pi}\int\limits_{-\pi}^{\pi} \cos(nx) dx$$
+$$= \frac{1}{\pi}\int\limits_{-\pi}^{0} 0 dx + \frac{1}{\pi}\int\limits_{0}^{\pi} \cos(nx) dx$$
+$$= 0 + \frac{1}{\pi}\frac{\sin(nx)}{n}\int\limits_{0}^{\pi} = \frac{1}{n\pi}(\sin(n\pi)-\sin(0)) = 
+0$$
+
+\subsection{Bn}
+
+$$\text{For } n \geq 1$$
+$$b_n = \frac{1}{ \pi}\int\limits_{-\pi}^{\pi} \sin(nx) dx$$
+$$= \frac{1}{\pi}\int\limits_{-\pi}^{0} 0 dx + \frac{1}{\pi}\int\limits_{0}^{\pi} \sin(nx) dx$$
+$$= -\frac{1}{\pi}\frac{\cos(nx)}{n}\int\limits_{0}^{\pi} = -\frac{1}{n\pi}(\cos(n\pi)-\cos(0)) =$$ 
+$$0 \text{ if } n \text{ is even}; \frac{2}{n\pi} \text{ if } n \text{ is odd}$$
 
 % You can even have references
 \rule{0.3\linewidth}{0.25pt}
