@@ -20,7 +20,7 @@
 % if using A4 paper. (This probably isn't strictly necessary.)
 % If using another size paper, use default 1cm margins.
 \ifthenelse{\lengthtest { \paperwidth = 11in}}
-    { \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
+    { \geometry{top=.25in,left=.25in,right=.25in,bottom=.25in} }
     {\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
         {\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
         {\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
@@ -123,10 +123,18 @@ $$\text{SNR } = 20 \log_{10} \big(\frac{V_S}{V_N}\big)\text{dB}$$
 $$ dB_S = 20 \log_{10} \big(\frac{P}{0.0002 \space \bar{\mu}}\big) \text{, where P is sound pressure in } \bar{\mu}$$
 $$ \bar{\mu} = 1 \space \frac{\text{dyne}}{\text{cm}^2} = 10^{-6} \text{ of atmospheric pressure at sea level}$$
 
+\section{Convert Parallel to Series Resonant Circuits} 
+$$R_s = \frac{R_p * X_p^2}{R_p^2 + X_p^2} = \frac{R_p}{Q^2 + 1}$$  
+$$X_s = \frac{R_p^2 * X_p}{R_p^2 + X_p^2} = \frac{X_p * Q^2}{Q^2 + 1}$$
+
+\section{Convert Series to Parallel Resonant Circuits} 
+$$R_p = \frac{R_s^2 + X_s^2}{R_s}$$  
+$$X_p = \frac{R_s^2 + X_s^2}{X_s}$$  
+
 \section{Impedance Matching}
 
-$$R_S = R_L, \text{ for DC sources.}$$
-$$Z_S = Z_L, \text{ for AC sources.}$$
+$$R_{src} = R_L, \text{ for DC sources.}$$
+$$Z_{src} = Z_L, \text{ for AC sources.}$$
 $$\text{Source Resistance = Load Resistance}$$
 $$P_I = P_O$$  
 
@@ -148,21 +156,18 @@ $\textbf{7. There are limits to the range of impedances}$
 $\textbf{that it can match.**}$
 
 \subsection{Key Points Pi-Pad Networks}  
-$\text{1. The primary applications of L-networks involve impedance}$
-$\text{matching in RF circuits, transmitters, and receivers.}$  
-$\text{2. L-networks are useful in matching one amplifier}$
-$\text{output to the input of a following stage.}$  
-$\text{3. Any RF circuit application covering a narrow frequency}$  
-$\text{range is a candidate for an L-network.}$  
-$\text{4. There are four basic versions of the L-network,}$
-$\text{with two low-pass versions and two high-pass versions.}$
-$\text{5. Most widely used since they attenuate harmonics,}$
-$\text{noise, and other undesired signals.}$
-$\textbf{6. The impedances that are being matched}$
-$\textbf{determine the Q (quality factor) of the circuit,}$
-$\textbf{which cannot be specified or controlled.**}$
-$\textbf{7. There are limits to the range of impedances}$
-$\textbf{that it can match.**}$
+$\text{1. The }\pi\text{-network’s primary application is to match}$
+$\text{a high impedance source to lower value load impedance}$  
+$\text{2. It can also be used in reverse to match a low impedance}$
+$\text{to a higher impedance.}$  
+$\text{3. The }\pi\text{-network also can be considered two back-}$  
+$\text{to-back L-networks with a virtual impedance between them.}$  
+$\text{4. To use the L-network procedures, you need to assume an}$
+$\text{intermediate virtual load/source resistance } R_V = \frac{R_H}{Q^2 + 1}$
+$\text{5. $R_H$ is the higher of the two design impedances } R_{src} \text{ and } R_L$
+$\textbf{6. The resulting } R_V \textbf{ will be lower than either } R_{src}$
+$\textbf{or } R_L \textbf{ depending on the desired } Q.$
+$\textbf{7. Typical }Q \textbf{ values are usually in the 5 to 20 range.}$
 
 \subsection{Key Points T-Pad Networks}  
 $\text{1. The primary applications of L-networks involve impedance}$
@@ -184,21 +189,33 @@ $\textbf{that it can match.**}$
 
 \subsection{L-Pad Formulas (Low Pass 1)}
 
-$$Q = \sqrt{\frac{R_L}{R_S} - 1}$$  
-$$X_L = QR_S$$  
+$$Q = \sqrt{\frac{R_L}{R_{src}} - 1}$$  
+$$X_L = QR_{src}$$  
 $$L = \frac{X_L}{2\pi f}$$  
 $$X_C = \frac{R_L}{Q}$$  
 $$C = \frac{1}{2\pi f X_C}$$  
-$$BW = \frac{f}{Q}$$  
+$$BW = \frac{f}{Q}$$
+
+\subsection{L-Pad Formulas (Conversion Series-Parallel)}
+
+$$R_s = \text{ series resistance} = \frac{R_p}{Q^2 + 1}$$  
+$$R_p = \text{ parallel resistance} = R_s(Q^2 + 1)$$  
+$$X_s = \text{ series reactance} = \frac{X_pQ^2}{Q^2 + 1}$$  
+$$X_p = \text{ parallel reactance} = \frac{X_s(Q^2 +1)}{Q^2}$$  
+$$Q = \sqrt{\frac{R_p}{R_s – 1}} = \frac{X_L}{R_s} = \frac{R_p}{X_C}$$
+$$\text{If } Q > 5, y\text{ you can use the simplified approximations:}$$  
+$$R_p = Q^2R_s$$  
+$$X_p = X_s$$ 
 
 \subsection{L-Pad Formulas (Low Pass 2)}
 
-$$Q = \sqrt{\frac{R_L}{R_S} - 1}$$  
-$$X_L = QR_S$$  
+$$Q = \sqrt{\frac{R_{src}}{R_L} - 1}$$  
+$$X_L = QR_{L}$$  
 $$L = \frac{X_L}{2\pi f}$$  
-$$X_C = \frac{R_L}{Q}$$  
+$$X_C = \frac{R_{src}}{Q}$$  
 $$C = \frac{1}{2\pi f X_C}$$  
 $$BW = \frac{f}{Q}$$  
+$$R_R = \frac{L}{CR} = R(Q^2 +1) = \text{ resonant equivalent resistance}$$  
 
 \section{Resonance}
 Etc.
