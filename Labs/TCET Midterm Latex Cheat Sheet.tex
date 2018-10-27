@@ -170,21 +170,13 @@ $\textbf{or } R_L \textbf{ depending on the desired } Q.$
 $\textbf{7. Typical }Q \textbf{ values are usually in the 5 to 20 range.}$
 
 \subsection{Key Points T-Pad Networks}  
-$\text{1. The primary applications of L-networks involve impedance}$
-$\text{matching in RF circuits, transmitters, and receivers.}$  
-$\text{2. L-networks are useful in matching one amplifier}$
-$\text{output to the input of a following stage.}$  
-$\text{3. Any RF circuit application covering a narrow frequency}$  
-$\text{range is a candidate for an L-network.}$  
-$\text{4. There are four basic versions of the L-network,}$
-$\text{with two low-pass versions and two high-pass versions.}$
-$\text{5. Most widely used since they attenuate harmonics,}$
-$\text{noise, and other undesired signals.}$
-$\textbf{6. The impedances that are being matched}$
-$\textbf{determine the Q (quality factor) of the circuit,}$
-$\textbf{which cannot be specified or controlled.**}$
-$\textbf{7. There are limits to the range of impedances}$
-$\textbf{that it can match.**}$
+$\text{1. The main reason to employ a T-network}$
+$\text{like the }\pi \text{-network, is to get control of the circuit Q.}$  
+$\text{2. Like the }\pi \text{-network, it's used when you need to limit}$
+$\text{the bandwidth to reduce harmonics or help filter out}$
+$\text{adjacent signals without the use of additional filters.}$   
+$\text{3. The T-network also can be considered two cascaded}$  
+$\text{L-networks. }\textbf{This is equivalent to the }\pi\textbf{-network above.}$  
 
 
 \subsection{L-Pad Formulas (Low Pass 1)}
@@ -227,7 +219,16 @@ $$X_{C_1} = \frac{R_{src}}{Q}$$
 $$X_{C_2} = \frac{R_{L}}{Q}$$  
 $$C = \frac{1}{2\pi f X_{C}}; \text{ use this formula for } C_1 \text{ and } C_2$$  
 $$Q = \sqrt{\frac{R_{src}}{R_L} - 1}; R_{src} = R_V$$  
-$$\text{Add } L_1 + L_2 \text{ to get total inductance.}$$ 
+$$\text{Add } L_1 + L_2 \text{ to get total inductance.}$$  
+
+\subsection{T-Pad Formulas (LCC Method)}
+
+$\text{1. Select the desired bandwidth and calculate Q.}$ 
+$\text{2. Calculate: } X_L = QR_{src}$
+$\text{3. Calculate } X_{C_2} = R_L\sqrt{R_{src}\frac{Q^2 + 1}{R_L} – 1}$
+$\text{4. Calculate } X_{C_1} = R_{src}\frac{Q^2 + 1}{Q}\frac{QR_L}{QR_L – X_{C_2}}$
+$\text{5. Calculate the inductance } L = \frac{X_L}{2 \pi f}$
+$\text{6. Calculate the capacitances } C = \frac{1}{2 \pi f X_C}$
 
 \section{Resonance}
 Etc.
