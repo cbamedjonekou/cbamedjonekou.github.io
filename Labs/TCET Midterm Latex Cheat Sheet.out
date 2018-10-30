@@ -13,10 +13,22 @@
 \BOOKMARK [2][-]{section*.13}{Key Points L-Pad Networks}{section*.12}% 13
 \BOOKMARK [2][-]{section*.14}{Key Points Pi-Pad Networks}{section*.12}% 14
 \BOOKMARK [2][-]{section*.15}{Key Points T-Pad Networks}{section*.12}% 15
-\BOOKMARK [2][-]{section*.16}{L-Pad Formulas \(Low Pass 1\)}{section*.12}% 16
-\BOOKMARK [2][-]{section*.17}{L-Pad Formulas \(Conversion Series-Parallel\)}{section*.12}% 17
-\BOOKMARK [2][-]{section*.18}{L-Pad Formulas \(Low Pass 2\)}{section*.12}% 18
-\BOOKMARK [2][-]{section*.19}{Pi-Pad Formulas \(Low Pass\)}{section*.12}% 19
-\BOOKMARK [2][-]{section*.20}{T-Pad Formulas \(LCC Method\)}{section*.12}% 20
-\BOOKMARK [1][-]{section*.21}{Resonance}{}% 21
-\BOOKMARK [1][-]{section*.22}{Telecommunications \(Chapter 11\)}{}% 22
+\BOOKMARK [2][-]{section*.16}{Note**}{section*.12}% 16
+\BOOKMARK [2][-]{section*.17}{L-Pad Formulas \(Low Pass 1\)**}{section*.12}% 17
+\BOOKMARK [2][-]{section*.18}{L-Pad Formulas \(Conversion Series-Parallel\)}{section*.12}% 18
+\BOOKMARK [2][-]{section*.19}{L-Pad Formulas \(Low Pass 2\)**}{section*.12}% 19
+\BOOKMARK [2][-]{section*.20}{Pi-Pad Formulas \(Low Pass\)**}{section*.12}% 20
+\BOOKMARK [2][-]{section*.21}{T-Pad Formulas \(LCC Method\)}{section*.12}% 21
+\BOOKMARK [1][-]{section*.22}{Telephone Set and Loop Subscriber Interface}{}% 22
+\BOOKMARK [2][-]{section*.23}{Telephone Circuit}{section*.22}% 23
+\BOOKMARK [2][-]{section*.24}{Telephone Ringer}{section*.22}% 24
+\BOOKMARK [2][-]{section*.25}{Telephone Hybrid}{section*.22}% 25
+\BOOKMARK [2][-]{section*.26}{Dual Tone Multifrequency}{section*.22}% 26
+\BOOKMARK [2][-]{section*.27}{Centralized Switching}{section*.22}% 27
+\BOOKMARK [2][-]{section*.28}{Local Loop}{section*.22}% 28
+\BOOKMARK [2][-]{section*.29}{Telephone Cable Color Codes}{section*.22}% 29
+\BOOKMARK [1][-]{section*.30}{Resonance}{}% 30
+\BOOKMARK [2][-]{section*.31}{PB Filter Series}{section*.30}% 31
+\BOOKMARK [2][-]{section*.32}{PB Filter Parallel}{section*.30}% 32
+\BOOKMARK [2][-]{section*.33}{SB Filter Series}{section*.30}% 33
+\BOOKMARK [2][-]{section*.34}{SB Filter Parallel}{section*.30}% 34

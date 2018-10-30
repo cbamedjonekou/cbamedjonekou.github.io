@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  25 OCT 2018 18:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  25 OCT 2018 18:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -490,28 +490,40 @@ Overfull \hbox (5.37242pt too wide) detected at line 207
 [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-No file "Communications Electronics Latex Cheat Sheet".bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 351.
-[2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 351.
- (./Communications Electronics Latex Cheat Sheet.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 351.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 351.
-Package rerunfilecheck Info: File `"Communications Electronics Latex Cheat Shee
-t".out' has not changed.
-(rerunfilecheck)             Checksum: D13FBCAF9AEFEF1B0D5E4DAE2638CED7;2774.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 351.
- ) 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.335 \[
+        
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.335 \[
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+ 
 Here is how much of TeX's memory you used:
- 6949 strings out of 492995
- 100565 string characters out of 6132704
- 230538 words of memory out of 5000000
- 10364 multiletter control sequences out of 15000+600000
+ 6886 strings out of 492995
+ 99877 string characters out of 6132704
+ 219434 words of memory out of 5000000
+ 10321 multiletter control sequences out of 15000+600000
  12434 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,7n,28p,336b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+!  ==> Fatal error occurred, no output PDF file produced!
+2434 words of font info for 48 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 28i,7n,28p,336b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
+2.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
 usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></us
 r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><
