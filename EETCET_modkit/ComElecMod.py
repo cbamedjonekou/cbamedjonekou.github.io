@@ -214,3 +214,38 @@ def deviationRatio(f_Dev_Max, f_I_Max):
     """Calculates the deviation ratio. Takes two arguments.
     Returns the result."""
     return f_Dev_Max/f_I_Max
+
+
+def lowpassfilter_voltagegain(f_c, f, phase_degree= True):
+    """Calculates the voltage gain given the frequency and cuttoff frequency
+    of the low pass filter. Returns a list featuring the magnitude and phase angle.
+    The preset variable "phase_degree" is set to true to give an answer in degrees
+    for the phase angle."""
+    magnitude = 1/m.sqrt(m.pow(f/f_c, 2) + 1)
+    phase_angle = 0 - m.atan(f/f_c)
+    if phase_degree == False:
+        return [magnitude, phase_angle]
+    else:
+        return [magnitude, m.degrees(phase_angle)]
+
+
+def highpassfilter_voltagegain(f_c, f, phase_degree= True):
+    """Calculates the voltage gain given the frequency and cuttoff frequency
+    of the high pass filter. Returns a list featuring the magnitude and phase angle.
+    The preset variable "phase_degree" is set to true to give an answer in degrees
+    for the phase angle."""
+    magnitude = 1/m.sqrt(m.pow(f_c/f, 2) + 1)
+    phase_angle = 0 - m.atan(f_c/f)
+    if phase_degree == False:
+        return [magnitude, phase_angle]
+    else:
+        return [magnitude, m.degrees(phase_angle)]
+
+def frequency_blocked(gain, gain_c):
+    """Determines whether input frequencies are blocked. This is based on the gains
+    related to an arbitrary frequency (gain), and the cuffoff frequency (gain_c).
+    Returns an "allowed to pass" or "is blocked" message based on the type of filter."""
+    if gain > gain_c:
+        return 'Frequency is allowed to Pass'
+    else:
+        return 'Frequency is Blocked'
