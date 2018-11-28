@@ -81,13 +81,6 @@ This is my Second Project. Here I used the [Emergency - 911 Calls](https://www.k
 
 In this particular **"project"**, again, I focused on using/gaining some familiarity working with dataset and using the following modules: **Pandas, Seaborn, NumPy, Matplotlib**. I feel as though I've become more comfortable using these module at the completion of this project, especially with the use of the documentation, stackoverflow, general google searches, etc. Any new updates to this project will feature a summary along with the date in which the update was completed. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
-### Labs:
-
-[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/tree/master/Labs)
-
-This section contains labs and notes, created during the Fall Semester of 2018, that I believe showcases either python syntax skills or the use of python data analysis libraries such as seaborn, matplotlib, pandas, and numpy. If projects are deserve their own section, they'll be shown seperately. 
-
-
 ### Problem Sets:
 
 #### NumPy Review:
