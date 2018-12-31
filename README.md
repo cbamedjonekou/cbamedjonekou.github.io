@@ -71,7 +71,8 @@ This was based on Pierian Data's Data Science and Machine Learning Bootcamp lect
 
 ### 911 Calls Data:
 
-[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/911%20Calls%20Data%20Capstone%20Project%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/911%20Calls%20Data%20Capstone%20Project%20.ipynb?flush_cache=true)
+[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/911%20Calls%20Data%20Project%20.ipynb) [nbviewer](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/911%20Calls%20Data%20Project%20.ipynb)
+
 
 This is my Second Project. Here I used the [Emergency - 911 Calls](https://www.kaggle.com/mchirico/montcoalert) to explore the following:
 
