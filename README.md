@@ -1,16 +1,17 @@
 # CBA's Portfolio:
 
-This portfolio is a compilation of notebooks which covers my efforts in learning Data Analysis, Machine Learning, Artificial Intelligence, and Hacking Proof of Concepts, relevant School Projects, and relevant stand-alone projects. There are separate categories for separate projects.
+The following portfolio contains work related to Data Analysis, Machine Learning, Artificial Intellingence, Malware Analysis (as it relates Machine Learning), and Mathematical Modeling. The format used for these notebooks is of the extension .ipynb (Jupyter Notebooks) and all code segments contained in these notebooks are written in Python. This portfolio can be viewed as my journey learning about the previously mentioned topics. It represents my continuing interests as well. Each section below represents a topic or an algorithm I've picked up during my journey. Additionally, as the journey never ends, the same applies my continuing curiosity. 
 
-# Machine Learning/Artificial Intelligence/Proof of Concepts/Analysis:
 
-## Stand-alone projects:
+# Stand-alone projects:
 
 ### EETCET_modkit: Electronics/Telecommunications Toolkit Module:
 
 [Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/tree/master/EETCET_modkit)
 
 (**Ongoing**) During the Fall 2018 semester, I took three interrelated courses dealing w/ Telecommunications, Digital Electronics, and Communication Electronics. When writing notes for the courses [click here](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/tree/master/Labs), I found myself having to do tedious calculations. Especially since I was typing my notes I decided that I should create a module that allowed me to access the functions without having to copy them from notebook to notebook. This module is a result of that problem.
+
+# Machine Learning()/Artificial Intelligence:
 
 ## Kaggle DataSets/Competitions:
 
