@@ -3,7 +3,7 @@
 The following portfolio contains work related to Data Analysis, Machine Learning, Artificial Intellingence, Malware Analysis (as it relates Machine Learning), and Mathematical Modeling. The format used for these notebooks is of the extension .ipynb (Jupyter Notebooks) and all code segments contained in these notebooks are written in Python. This portfolio can be viewed as my journey learning about the previously mentioned topics. It represents my continuing interests as well. Each section below represents a topic or an algorithm I've picked up during my journey. Additionally, as the journey never ends, the same applies my continuing curiosity. 
 
 
-# Stand-alone projects:
+# Python Modules:
 
 ### EETCET_modkit: Electronics/Telecommunications Toolkit Module:
 
@@ -60,15 +60,7 @@ The data provided consists of raw reviews and class (1 or 2), so the main part i
 
 (**TO Come**) This is a simple example of feedforward neural network with regularization. It is based on Andrew Ng's lectures on Coursera. I used data from Kaggle's challenge "Ghouls, Goblins, and Ghosts... Boo!", it is available [here](https://www.kaggle.com/c/ghouls-goblins-and-ghosts-boo).
 
-## Data Exploration, Visualization, and Analysis:
-
-### Finance Data:
-
-(**Ongoing**)[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Finance%20Project%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Finance%20Project%20.ipynb?flush_cache=true)
-
-This is my First Project. Here I used the [Pandas Datareader](https://github.com/pydata/pandas-datareader) to read stock information directly from the internet and explore the following:
-
-This was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
+## Data Exploration, Visualization, and Analysis Problem Sets:
 
 ### 911 Calls Data:
 
@@ -83,15 +75,13 @@ This is my Second Project. Here I used the [Emergency - 911 Calls](https://www.k
 
 In this particular **"project"**, again, I focused on using/gaining some familiarity working with dataset and using the following modules: **Pandas, Seaborn, NumPy, Matplotlib**. I feel as though I've become more comfortable using these module at the completion of this project, especially with the use of the documentation, stackoverflow, general google searches, etc. Any new updates to this project will feature a summary along with the date in which the update was completed. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
-### Problem Sets:
-
-#### NumPy Review:
+### NumPy Review:
 
 [Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Numpy%20Exercise%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Numpy%20Exercise%20.ipynb?flush_cache=true)
 
 This is a review from when I was learning to implement numpy methods. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
-#### SF Salaries Data:
+### SF Salaries Data:
 
 [Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/SF%20Salaries%20Exercise.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/SF%20Salaries%20Exercise.ipynb?flush_cache=true)
 
@@ -107,7 +97,7 @@ This is my First Mini Project. Here I used the [SF Salaries Dataset](https://www
 
 The **SF Salaries Data Set** appears to be a popular Data Set on [Kaggle](https://www.kaggle.com/kaggle/sf-salaries/home) and something I plan to revisit in the future, maybe as a kernel. However, in this particular **"mini project"** I focused on using/gaining some familiarity with the **Pandas** module. I feel as though I've become comfortable w/ the module via the completion of this project, especially with the use of the documentation, stackoverflow, general google searches, etc. Any new updates to this project will feature a summary along with the date in which the update was completed. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
-#### Ecommerce Purchases Data:
+### Ecommerce Purchases Data:
 
 [Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Ecommerce%20Purchases.ipynb?flush_cache=true)
 
@@ -123,25 +113,25 @@ This is my Second Mini Project. Here I used the [Ecommerce Purchases Dataset](ht
 
 In this particular **"mini project"**, again, I focused on using/gaining some familiarity with the **Pandas** module. I feel as though I've become comfortable w/ the module via the completion of this project, especially with the use of the documentation, stackoverflow, general google searches, etc. Any new updates to this project will feature a summary along with the date in which the update was completed. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
-#### MatPlotLib Review:
+### MatPlotLib Review:
 
 [Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Matplotlib%20Exercises%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Matplotlib%20Exercises%20.ipynb?flush_cache=true)
 
 This is a review from when I was learning to implement matplotlib methods. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
-#### Seaborn Review:
+### Seaborn Review:
 
 [Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Seaborn%20Exercises%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Seaborn%20Exercises%20.ipynb?flush_cache=true)
 
 This is a review from when I was learning to implement seaborn methods. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
-#### Pandas Data Visualization Review:
+### Pandas Data Visualization Review:
 
 [Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Pandas%20Data%20Visualization%20Exercise%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Pandas%20Data%20Visualization%20Exercise%20.ipynb?flush_cache=true)
 
 This is a review from when I was learning to implement Pandas built-in data visualization methods. Again, this was based on Pierian Data's Data Science and Machine Learning Bootcamp lectures on Udemy.
 
-#### Cloropleth Maps w/ Plotly Review:
+### Cloropleth Maps w/ Plotly Review:
 
 [Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Choropleth%20Maps%20Exercise%20.ipynb) [nbviewer](http://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Notebooks/Choropleth%20Maps%20Exercise%20.ipynb?flush_cache=true)
 
