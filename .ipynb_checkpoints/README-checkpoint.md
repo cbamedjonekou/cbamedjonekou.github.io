@@ -28,7 +28,7 @@ During the Fall 2018 semester, I took three interrelated courses dealing w/ Tele
 
 ## Data Exploration, Visualization, and Analysis:
 
-###     Problem Sets:
+### Problem Sets:
 
 [Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/tree/master/Projects/Python%20Packages%20Practice) 
 
