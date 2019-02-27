@@ -141,7 +141,7 @@
     \def\gt{>}
     \def\lt{<}
     % Document parameters
-    \title{TCET 3102-E316 (Analog and Digital Communications) HW 3}
+    \title{TCET 3102-E316 (Analog and Digital Communications) Lab 1}
     
     
     
@@ -281,155 +281,451 @@
 
     
     \textbf{Name: Christ-Brian Amedjonekou}\\
-\textbf{Date: 2/24/2019}\\
-\textbf{TCET 3102-E316 (Analog and Digital Communications) HW 3}\\
+\textbf{Date: 2/04/2019}\\
+\textbf{TCET 3102-E316 (Analog and Digital Communications) Lab 1}\\
 \textbf{Spring 2019, Section: E316, Code: 37251}\\
 \textbf{Instructor: Song Tang}
 
-    \hypertarget{solve-the-for-the-fourier-series-of-the-following-function-using-the-generalized-fourier-series-equations.}{%
-\subsubsection{Solve the for the Fourier Series of the following
-function, using the generalized Fourier Series
-Equations.}\label{solve-the-for-the-fourier-series-of-the-following-function-using-the-generalized-fourier-series-equations.}}
+    \hypertarget{references}{%
+\paragraph{References:}\label{references}}
+
+\begin{itemize}
+\tightlist
+\item
+  http://www.thefouriertransform.com/series/coefficients.php
+\item
+  https://flothesof.github.io/Fourier-series-rectangle.html
+\item
+  https://docs.scipy.org/doc/scipy/reference/tutorial/fftpack.html
+\end{itemize}
+
+    \hypertarget{modules-packages}{%
+\subsubsection{Modules (Packages)}\label{modules-packages}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{c+c1}{\PYZsh{} These are the packages I\PYZsq{}ll need to solve this problem}
+        \PY{k+kn}{import} \PY{n+nn}{math} \PY{k}{as} \PY{n+nn}{m}
+        \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+        \PY{k+kn}{from} \PY{n+nn}{matplotlib} \PY{k}{import} \PY{n}{pyplot} \PY{k}{as} \PY{n}{plt}
+        \PY{k+kn}{from} \PY{n+nn}{scipy}\PY{n+nn}{.}\PY{n+nn}{fftpack} \PY{k}{import} \PY{n}{fft}\PY{p}{,} \PY{n}{fftfreq}
+\end{Verbatim}
+
+
+    \hypertarget{variables-for-time-domain-plot}{%
+\subsubsection{Variables for time domain
+plot}\label{variables-for-time-domain-plot}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{c+c1}{\PYZsh{} These variables are used to create the fourier series}
+        \PY{c+c1}{\PYZsh{} Start and Stop indicates my domain for my sampling frequency [samplingfreq; (F\PYZus{}S)], 100 points.}
+        \PY{c+c1}{\PYZsh{} n1, n2 are the amount of harmonics I want.}
+        \PY{n}{start}\PY{p}{,} \PY{n}{stop}\PY{p}{,} \PY{n}{n1}\PY{p}{,} \PY{n}{n2}\PY{p}{,} \PY{n}{samplingfreq} \PY{o}{=} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{,} \PY{l+m+mi}{9}\PY{p}{,} \PY{l+m+mi}{29}\PY{p}{,} \PY{l+m+mi}{100} 
+        
+        \PY{c+c1}{\PYZsh{} \PYZsq{}t\PYZsq{} is for time, and is used to create my 100 Hz time vector}
+        \PY{n}{t} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{n}{start}\PY{p}{,} \PY{n}{stop}\PY{p}{,} \PY{o}{.}\PY{l+m+mi}{001}\PY{p}{)} \PY{o}{/} \PY{n}{samplingfreq}
+        
+        \PY{c+c1}{\PYZsh{} \PYZsq{}A\PYZsq{} represents the amplitude 2 volts}
+        \PY{n}{A} \PY{o}{=} \PY{l+m+mi}{2}
+        
+        \PY{c+c1}{\PYZsh{} \PYZsq{}fundamental\PYZsq{} is the DC component of the Fourier Series }
+        \PY{n}{fundamental} \PY{o}{=} \PY{n}{A}\PY{o}{/}\PY{l+m+mi}{2}
+        
+        \PY{c+c1}{\PYZsh{} \PYZsq{}signalfreq\PYZsq{} is the Signal Frequency (f\PYZus{}0)}
+        \PY{n}{signalfreq} \PY{o}{=} \PY{l+m+mi}{1} 
+        
+        \PY{c+c1}{\PYZsh{} \PYZsq{}omega\PYZsq{} is the Angular Velocity (w\PYZus{}0)}
+        \PY{n}{omega} \PY{o}{=} \PY{l+m+mi}{2} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{pi} \PY{o}{*} \PY{n}{signalfreq}
+        
+        \PY{c+c1}{\PYZsh{} harmonics1, harmonics2 are AC component of the Fourier series}
+        \PY{n}{harmonics1} \PY{o}{=} \PY{n+nb}{sum}\PY{p}{(}\PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{p}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)} \PY{o}{*} \PY{n}{omega} \PY{o}{*} \PY{n}{t}\PY{p}{)} \PY{k}{for} \PY{n}{p} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n}{n1}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+        \PY{n}{harmonics2} \PY{o}{=} \PY{n+nb}{sum}\PY{p}{(}\PY{p}{[}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{A}\PY{p}{)}\PY{o}{/}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{o}{*}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{p}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}\PY{p}{)} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{p}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)} \PY{o}{*} \PY{n}{omega} \PY{o}{*} \PY{n}{t}\PY{p}{)} \PY{k}{for} \PY{n}{p} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n}{n2}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} ffs1, ffs2 are the fourier series}
+        \PY{n}{ffs1}\PY{p}{,} \PY{n}{ffs2} \PY{o}{=} \PY{k}{lambda} \PY{n}{n}\PY{p}{:} \PY{p}{(}\PY{n}{fundamental} \PY{o}{+} \PY{n}{harmonics1}\PY{p}{)}\PY{p}{,} \PY{k}{lambda} \PY{n}{w}\PY{p}{:} \PY{p}{(}\PY{n}{fundamental} \PY{o}{+} \PY{n}{harmonics2}\PY{p}{)}
+\end{Verbatim}
+
+
+    \hypertarget{run-1-plot-of-the-fourier-series-in-the-time-domain}{%
+\subsubsection{RUN 1: Plot of the fourier series in the time
+domain}\label{run-1-plot-of-the-fourier-series-in-the-time-domain}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Step 1: Plot Fourier Series w/ 9 members (waves)}
+\end{itemize}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{c+c1}{\PYZsh{} Creates figure 1 and its subplot }
+        \PY{n}{fig1}\PY{p}{,} \PY{n}{ax1} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=} \PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{p}{)}
+        \PY{n}{ax1}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,} \PY{n}{ffs1}\PY{p}{(}\PY{n}{n1}\PY{p}{)}\PY{p}{)}
+        \PY{n}{ax1}\PY{o}{.}\PY{n}{set}\PY{p}{(}\PY{n}{xlabel}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Frequency (Hertz)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ylabel}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Amplitude}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Squave Wave Synthesis}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{;}
+        \PY{n}{ax1}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_7_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \hypertarget{run-2-plot-of-the-fourier-series-in-the-frequency-domain-fast-fourier-transform-fft}{%
+\subsubsection{RUN 2: Plot of the fourier series in the frequency domain
+{[}Fast Fourier Transform
+(FFT){]}}\label{run-2-plot-of-the-fourier-series-in-the-frequency-domain-fast-fourier-transform-fft}}
 
     \begin{itemize}
 \tightlist
 \item
-  Function
+  \textbf{Step 1: Plot Fourier Series w/ 20 additional members (waves)}
 \end{itemize}
 
-\[
- f(x) =
-  \begin{cases}
-    -1 & \quad - \frac{1}{2} T < x < 0 \\
-    1 & \quad  0 < x < \frac{1}{2} T 
-  \end{cases}
-\]
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{c+c1}{\PYZsh{} Creates figure 2 and its subplot }
+        \PY{n}{fig2}\PY{p}{,} \PY{n}{ax2} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=} \PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{p}{)}\PY{p}{;}
+        \PY{n}{ax2}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,} \PY{n}{ffs2}\PY{p}{(}\PY{n}{n2}\PY{p}{)}\PY{p}{,} \PY{n}{color}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tab:red}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{ax2}\PY{o}{.}\PY{n}{set}\PY{p}{(}\PY{n}{xlabel}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Frequency (Hertz)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ylabel}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Amplitude}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Squave Wave Synthesis}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{;}
+        \PY{n}{ax2}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+\end{Verbatim}
 
-\begin{itemize}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_10_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{itemize}
 \tightlist
 \item
-  Generalized Fourier Series Equations
+  \textbf{Step 2: Change the numbers \(F_S\) and \(f_0\) and observe
+  their influence.}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    This is a scaling problem. By changing \(f_0\), you must change
+    \(F_S\) by the same scaling.
+  \item
+    \(f_0\) was assigned to be scaled by 100. \(f_0 = 100 \textit{ Hz}\)
+  \item
+    Therefore, \(F_S\) must also be scaled by 100.
+    \(F_S = 10000 \textit{ Hz}\)
+  \item
+    Shown below:
+  \end{itemize}
 \end{itemize}
 
-\[a_0 = \frac{1}{2L} \int\limits_{-L}^{L} f(x) dx\]
+    \hypertarget{code}{%
+\paragraph{Code}\label{code}}
 
-\[a_n = \frac{1}{L} \int\limits_{-L}^{L} f(x) \cos(\frac{n \pi x}{L})dx\]
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{c+c1}{\PYZsh{} These variables are used to create the fourier series}
+        \PY{c+c1}{\PYZsh{} Start and Stop indicates my domain for my sampling frequency [samplingfreq; (F\PYZus{}S)], 100 points.}
+        \PY{c+c1}{\PYZsh{} n1, n2 are the amount of harmonics I want.}
+        \PY{n}{start}\PY{p}{,} \PY{n}{stop}\PY{p}{,} \PY{n}{n1}\PY{p}{,} \PY{n}{n2}\PY{p}{,} \PY{n}{samplingfreq} \PY{o}{=} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{,} \PY{l+m+mi}{9}\PY{p}{,} \PY{l+m+mi}{29}\PY{p}{,} \PY{l+m+mi}{10000} 
+        
+        \PY{c+c1}{\PYZsh{} \PYZsq{}t\PYZsq{} is for time, and is used to create my 100 Hz time vector}
+        \PY{n}{t} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{n}{start}\PY{p}{,} \PY{n}{stop}\PY{p}{,} \PY{o}{.}\PY{l+m+mi}{001}\PY{p}{)} \PY{o}{/} \PY{n}{samplingfreq}
+        
+        \PY{c+c1}{\PYZsh{} \PYZsq{}A\PYZsq{} represents the amplitude 2 volts}
+        \PY{n}{A} \PY{o}{=} \PY{l+m+mi}{2}
+        
+        \PY{c+c1}{\PYZsh{} \PYZsq{}fundamental\PYZsq{} is the DC component of the Fourier Series }
+        \PY{n}{fundamental} \PY{o}{=} \PY{n}{A}\PY{o}{/}\PY{l+m+mi}{2}
+        
+        \PY{c+c1}{\PYZsh{} \PYZsq{}signalfreq\PYZsq{} is the Signal Frequency (f\PYZus{}0)}
+        \PY{n}{signalfreq} \PY{o}{=} \PY{l+m+mi}{100} 
+        
+        \PY{c+c1}{\PYZsh{} \PYZsq{}omega\PYZsq{} is the Angular Velocity (w\PYZus{}0)}
+        \PY{n}{omega} \PY{o}{=} \PY{l+m+mi}{2} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{pi} \PY{o}{*} \PY{n}{signalfreq}
+        
+        \PY{c+c1}{\PYZsh{} harmonics1, harmonics2 are AC component of the Fourier series}
+        \PY{n}{harmonics1} \PY{o}{=} \PY{n+nb}{sum}\PY{p}{(}\PY{p}{[}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{A}\PY{p}{)}\PY{o}{/}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{o}{*}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{p}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}\PY{p}{)} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{p}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)} \PY{o}{*} \PY{n}{omega} \PY{o}{*} \PY{n}{t}\PY{p}{)} \PY{k}{for} \PY{n}{p} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n}{n1}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+        \PY{n}{harmonics2} \PY{o}{=} \PY{n+nb}{sum}\PY{p}{(}\PY{p}{[}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{A}\PY{p}{)}\PY{o}{/}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{o}{*}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{p}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}\PY{p}{)} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{p}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)} \PY{o}{*} \PY{n}{omega} \PY{o}{*} \PY{n}{t}\PY{p}{)} \PY{k}{for} \PY{n}{p} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n}{n2}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} ffs1, ffs2 are the fourier series}
+        \PY{n}{ffs1}\PY{p}{,} \PY{n}{ffs2} \PY{o}{=} \PY{k}{lambda} \PY{n}{n}\PY{p}{:} \PY{p}{(}\PY{n}{fundamental} \PY{o}{+} \PY{n}{harmonics1}\PY{p}{)}\PY{p}{,} \PY{k}{lambda} \PY{n}{w}\PY{p}{:} \PY{p}{(}\PY{n}{fundamental} \PY{o}{+} \PY{n}{harmonics2}\PY{p}{)}
+\end{Verbatim}
 
-\[b_n = \frac{1}{L} \int\limits_{-L}^{L} f(x) \sin(\frac{n \pi x}{L})dx\]
 
-    \hypertarget{solution-for-the-fundamental-a_0}{%
-\subsubsection{\texorpdfstring{Solution for the Fundamental;
-\(a_0\)}{Solution for the Fundamental; a\_0}}\label{solution-for-the-fundamental-a_0}}
+    \hypertarget{plots}{%
+\paragraph{Plots}\label{plots}}
 
-\[a_0 = \frac{1}{2L} \int\limits_{-L}^{L} f(x) dx\]
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}6}]:} \PY{c+c1}{\PYZsh{} Creates figure and its subplots }
+        \PY{c+c1}{\PYZsh{} Subplot 1}
+        \PY{n}{fig4}\PY{p}{,} \PY{n}{ax4} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=} \PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{p}{)}
+        \PY{n}{ax4}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,} \PY{n}{ffs1}\PY{p}{(}\PY{n}{n1}\PY{p}{)}\PY{p}{)}
+        \PY{n}{ax4}\PY{o}{.}\PY{n}{set}\PY{p}{(}\PY{n}{xlabel}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Frequency (Hertz)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ylabel}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Amplitude}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Squave Wave Synthesis}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{ax4}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} Subplot 2}
+        \PY{n}{fig5}\PY{p}{,} \PY{n}{ax5} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=} \PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{p}{)}
+        \PY{n}{ax5}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,} \PY{n}{ffs2}\PY{p}{(}\PY{n}{n2}\PY{p}{)}\PY{p}{,} \PY{n}{color}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tab:red}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{ax5}\PY{o}{.}\PY{n}{set}\PY{p}{(}\PY{n}{xlabel}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Frequency (Hertz)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ylabel}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Amplitude}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Squave Wave Synthesis}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{;}
+        \PY{n}{ax5}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+\end{Verbatim}
 
-\begin{itemize}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_15_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_15_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{itemize}
 \tightlist
 \item
-  Work
+  \textbf{Step 3: Using the original signal from RUN 1, observer the
+  frequency spectrum of the signal as follows:}
 \end{itemize}
 
-\[a_0 = \frac{1}{T} \int\limits_{-\frac{1}{2}T}^{\frac{1}{2}T} f(x) dx\]
+\hypertarget{code}{%
+\paragraph{Code}\label{code}}
 
-\[ = \frac{1}{T} \int\limits_{-\frac{1}{2}T}^{0} -1 dx + \frac{1}{T} \int\limits_{0}^{\frac{1}{2}T} 1 dx\]
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}33}]:} \PY{n}{fft1} \PY{o}{=} \PY{n}{fft}\PY{p}{(}\PY{n}{ffs2}\PY{p}{(}\PY{n}{n2}\PY{p}{)}\PY{p}{,} \PY{l+m+mi}{512}\PY{p}{)}
+         \PY{n}{f} \PY{o}{=} \PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{255}\PY{p}{,}\PY{l+m+mi}{512}\PY{p}{)}\PY{o}{/}\PY{l+m+mi}{256}\PY{p}{)}\PY{o}{*}\PY{p}{(}\PY{n}{samplingFreq}\PY{o}{/}\PY{l+m+mi}{2}\PY{p}{)}
+\end{Verbatim}
 
-\[ = -\frac{1}{T} x \space \bigg|_{-\frac{1}{2}T}^{0} + \frac{1}{T} x \space \bigg|_{0}^{\frac{1}{2}T}\]
 
-\[ = -\frac{1}{T} \Big( 0 + \frac{1}{2}T \Big) + \frac{1}{T} \Big( \frac{1}{2}T - 0 \Big) \space\]
+    \hypertarget{plot}{%
+\paragraph{Plot}\label{plot}}
 
-\[ = -\frac{1}{2} + \frac{1}{2} = 0\]
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}34}]:} \PY{n}{fig3}\PY{p}{,} \PY{n}{ax3} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=} \PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{p}{)}
+         \PY{n}{ax3}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{f}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{abs}\PY{p}{(}\PY{n}{fft1}\PY{p}{)}\PY{p}{)}
+         \PY{n}{ax3}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+\end{Verbatim}
 
-\begin{itemize}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_19_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \hypertarget{lab-questionsrequirements}{%
+\subsubsection{Lab
+Questions/Requirements}\label{lab-questionsrequirements}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  \textbf{Answer: \(a_0 = 0\)}
-\end{itemize}
+  \textbf{Depict signals \(2 \sin(628 \text{t})\) and
+  \(2 \cos(628 \text{t})\) both in the time domain and the frequency
+  domain. In the frequency domain, show both axes with angular velocity
+  \((\omega)\) and frequency \(\big(f\big)\)}
+\end{enumerate}
 
-    \hypertarget{solution-for-the-harmonic-a_n}{%
-\subsubsection{\texorpdfstring{Solution for the Harmonic;
-\(a_n\)}{Solution for the Harmonic; a\_n}}\label{solution-for-the-harmonic-a_n}}
+    \hypertarget{code}{%
+\paragraph{CODE}\label{code}}
 
-\[a_n = \frac{1}{L} \int\limits_{-L}^{L} f(x) \cos(\frac{n \pi x}{L})dx\]
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}19}]:} \PY{c+c1}{\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{} Creates an array with values for the functions 2sin(628t) and 2cos(628t)}
+         \PY{n}{start}\PY{p}{,} \PY{n}{stop}\PY{p}{,} \PY{n}{n1}\PY{p}{,} \PY{n}{n2}\PY{p}{,} \PY{n}{samplingfreq} \PY{o}{=} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{,} \PY{l+m+mi}{9}\PY{p}{,} \PY{l+m+mi}{29}\PY{p}{,} \PY{l+m+mi}{10000} 
+         
+         \PY{c+c1}{\PYZsh{} \PYZsq{}t\PYZsq{} is for time, and is used to create my 100 Hz time vector}
+         \PY{n}{t} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{n}{start}\PY{p}{,} \PY{n}{stop}\PY{p}{,} \PY{o}{.}\PY{l+m+mi}{001}\PY{p}{)} \PY{o}{/} \PY{n}{samplingfreq}
+         \PY{n}{sine} \PY{o}{=} \PY{l+m+mi}{2} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{l+m+mi}{628} \PY{o}{*} \PY{n}{t}\PY{p}{)}
+         \PY{n}{cosine} \PY{o}{=} \PY{l+m+mi}{2} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{cos}\PY{p}{(}\PY{l+m+mi}{628} \PY{o}{*} \PY{n}{t}\PY{p}{)}
+\end{Verbatim}
 
-\begin{itemize}
-\tightlist
+
+    \hypertarget{plot-for-2sin628t}{%
+\paragraph{\texorpdfstring{Plot for
+\(2\sin(628*t)\)}{Plot for 2\textbackslash{}sin(628*t)}}\label{plot-for-2sin628t}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}20}]:} \PY{c+c1}{\PYZsh{} Subplot 1}
+         
+         \PY{n}{fig8}\PY{p}{,} \PY{n}{ax8} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=} \PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{ax8}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,} \PY{n}{sine}\PY{p}{)}
+         \PY{n}{ax8}\PY{o}{.}\PY{n}{set}\PY{p}{(}\PY{n}{xlabel} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Time}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ylabel}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{f(t)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{f(t) = 2sin(628t)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax8}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} Subplot 2}
+         
+         \PY{n}{bx8} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+         \PY{n}{bx8}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{100}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{]}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{color}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{b}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw}\PY{o}{=} \PY{l+m+mi}{3}\PY{p}{)}
+         \PY{n}{bx8}\PY{o}{.}\PY{n}{set}\PY{p}{(}\PY{n}{xlabel} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Frequency}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ylabel}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Voltage}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{f(t) = 2sin(628t)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+                 \PY{n}{ylim} \PY{o}{=} \PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{)}\PY{p}{)}
+         \PY{n}{bx8}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} Subplot 3}
+         
+         \PY{n}{cx8} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{)}
+         \PY{n}{cx8}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{color}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{c}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw}\PY{o}{=} \PY{l+m+mi}{9}\PY{p}{)}
+         \PY{n}{cx8}\PY{o}{.}\PY{n}{set}\PY{p}{(}\PY{n}{xlabel} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Angular Velocity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ylabel}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Voltage}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{f(t) = 2sin(628t)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+                 \PY{n}{xlim}\PY{o}{=} \PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{)}\PY{p}{,} \PY{n}{ylim} \PY{o}{=} \PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{)}\PY{p}{)}
+         \PY{n}{cx8}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{subplots\PYZus{}adjust}\PY{p}{(}\PY{n}{hspace}\PY{o}{=}\PY{l+m+mf}{0.5}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_24_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \hypertarget{plot-for-2cos628t}{%
+\paragraph{\texorpdfstring{Plot for
+\(2\cos(628*t)\)}{Plot for 2\textbackslash{}cos(628*t)}}\label{plot-for-2cos628t}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}21}]:} \PY{c+c1}{\PYZsh{} Subplot 1}
+         
+         \PY{n}{fig9}\PY{p}{,} \PY{n}{ax9} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=} \PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{ax9}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,} \PY{n}{cosine}\PY{p}{)}
+         \PY{n}{ax9}\PY{o}{.}\PY{n}{set}\PY{p}{(}\PY{n}{xlabel} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Time}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ylabel}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Voltage}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{f(t) = 2cos(628t)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax9}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} Subplot 2}
+         
+         \PY{n}{bx9} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+         \PY{n}{bx9}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{100}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{]}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{color}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{b}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw}\PY{o}{=} \PY{l+m+mi}{3}\PY{p}{)}
+         \PY{n}{bx9}\PY{o}{.}\PY{n}{set}\PY{p}{(}\PY{n}{xlabel} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Frequency}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ylabel}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Voltage}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{f(t) = 2sin(628t)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+                 \PY{n}{ylim}\PY{o}{=} \PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{)}\PY{p}{)}
+         \PY{n}{bx9}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} Subplot 3}
+         
+         \PY{n}{cx9} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{)}
+         \PY{n}{cx9}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{o}{/}\PY{l+m+mi}{2}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{o}{/}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{color}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{c}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw}\PY{o}{=} \PY{l+m+mi}{3}\PY{p}{)}
+         \PY{n}{cx9}\PY{o}{.}\PY{n}{set}\PY{p}{(}\PY{n}{xlabel} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Angular Velocity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ylabel}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Voltage}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{f(t) = 2sin(628t)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+                 \PY{n}{xlim}\PY{o}{=} \PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{)}\PY{p}{,} \PY{n}{ylim} \PY{o}{=} \PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{)}\PY{p}{)}
+         \PY{n}{cx9}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{subplots\PYZus{}adjust}\PY{p}{(}\PY{n}{hspace}\PY{o}{=}\PY{l+m+mf}{0.5}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_26_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
 \item
-  Work
-\end{itemize}
+  \textbf{Square Wave Analysis: using \emph{Python} generate a square
+  wave with \emph{A = 2 Volts} and \emph{T = 1 ms}.}
 
-\[a_n = \frac{2}{T} \int\limits_{-\frac{1}{2}T}^{\frac{1}{2}T} f(x) \cos(\frac{2n \pi x}{T})dx\]
+  \begin{itemize}
+  \tightlist
+  \item
+    Check RUN 1, step 1 and associated code for the results
+  \end{itemize}
+\end{enumerate}
 
-\[ = \frac{2}{T} \int\limits_{-\frac{1}{2}T}^{0} -1 \cos(\frac{2n \pi x}{T})dx + \frac{2}{T} \int\limits_{0}^{\frac{1}{2}T} \cos(\frac{2n \pi x}{T})dx\]
-
-\[ = -\frac{2}{T} \int\limits_{-\frac{1}{2}T}^{0} 1 \cos(\frac{2n \pi x}{T})dx + \frac{2}{T} \int\limits_{0}^{\frac{1}{2}T} \cos(\frac{2n \pi x}{T})dx\]
-
-\begin{itemize}
-\tightlist
+    \begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
 \item
-  \textbf{``U'' substitution:} Let
-  \(1 = \cfrac{\frac{2n \pi}{T}}{\frac{2n \pi}{T}}\),
-  \(u = \frac{2n \pi x}{T}\), \(du = \frac{2n \pi}{T}\)
-\end{itemize}
+  \textbf{Based on the experimental results, how do the number of
+  harmonic terms included in the square wave synthesis influence the
+  waveform? Show waveform w/ different number of series terms to explain
+  your answer.}
 
-\[ = -\frac{1}{n \pi} \int\limits_{-\frac{1}{2}T}^{0} \cos(u)du + \frac{1}{n \pi} \int\limits_{0}^{\frac{1}{2}T} \cos(u)du\]
+  \begin{itemize}
+  \tightlist
+  \item
+    Basically, the more harmonics you have the more square your wave
+    looks.
+  \item
+    Check RUN 2 step 1 for the plot demonstrating this phenomenon.
+  \end{itemize}
+\end{enumerate}
 
-\[ = -\frac{1}{n \pi} \sin(\frac{2n \pi x}{T}) \space \bigg|_{-\frac{1}{2}T}^{0} + \frac{1}{n \pi} \sin(\frac{2n \pi x}{T}) \space \bigg|_{0}^{\frac{1}{2}T}\]
-
-\[ = -\frac{1}{n \pi} \Big( \sin(0) - \sin(- n \pi) \Big) + \frac{1}{n \pi} \Big( \sin(n \pi) - \sin(0) \Big) \space\]
-
-\[ = -\frac{1}{n \pi} \Big( \sin(0) + \sin( n \pi) \Big) + \frac{1}{n \pi} \Big( \sin(n \pi) - \sin(0) \Big) \space\]
-
-\[ = -\frac{\sin( n \pi)}{n \pi} + \frac{\sin( n \pi)}{n \pi} = 0\]
-
-\begin{itemize}
-\tightlist
+    \begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
 \item
-  \textbf{Answer: \(a_n = 0\)}
-\end{itemize}
+  \textbf{Vary \(F_S\) and \(f_0\) and observe their influence on the
+  waveform. Show figure and explain.}
 
-    \hypertarget{solution-for-the-harmonic-b_n}{%
-\subsubsection{\texorpdfstring{Solution for the Harmonic;
-\(b_n\)}{Solution for the Harmonic; b\_n}}\label{solution-for-the-harmonic-b_n}}
+  \begin{itemize}
+  \tightlist
+  \item
+    Check figure in RUN 2, Step 2 to observe the influence of varying
+    \(F_S\) and \(f_0\) on the waveform
+  \item
+    As aforementioned, by changing the signal frequency (\(f_0\)) you
+    must also change the sampling frequency (\(F_S\)) by the equivalent
+    scale in order to obtain a similar waveform shape as the previous
+    unscaled waveform. Anything else produces a quirky wavefore or more
+    as shown below:
+  \end{itemize}
+\end{enumerate}
 
-\[b_n = \frac{1}{L} \int\limits_{-L}^{L} f(x) \sin(\frac{n \pi x}{L})dx\]
+\hypertarget{code}{%
+\paragraph{Code}\label{code}}
 
-\begin{itemize}
-\tightlist
-\item
-  Work
-\end{itemize}
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}12}]:} \PY{c+c1}{\PYZsh{} These variables are used to create the fourier series}
+         \PY{c+c1}{\PYZsh{} Start and Stop indicates my domain for my sampling frequency [samplingfreq; (F\PYZus{}S)], 100 points.}
+         \PY{c+c1}{\PYZsh{} n1, n2 are the amount of harmonics I want.}
+         \PY{n}{start}\PY{p}{,} \PY{n}{stop}\PY{p}{,} \PY{n}{n1}\PY{p}{,} \PY{n}{n2}\PY{p}{,} \PY{n}{samplingfreq1}\PY{p}{,} \PY{n}{samplingfreq2} \PY{o}{=} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{,} \PY{l+m+mi}{29}\PY{p}{,} \PY{l+m+mi}{29}\PY{p}{,} \PY{l+m+mi}{10000}\PY{p}{,} \PY{l+m+mi}{1000} 
+         
+         \PY{c+c1}{\PYZsh{} \PYZsq{}t\PYZsq{} is for time, and is used to create my 100 Hz time vector}
+         \PY{n}{t1} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{n}{start}\PY{p}{,} \PY{n}{stop}\PY{p}{,} \PY{o}{.}\PY{l+m+mi}{001}\PY{p}{)} \PY{o}{/} \PY{n}{samplingfreq1}
+         \PY{n}{t2} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{n}{start}\PY{p}{,} \PY{n}{stop}\PY{p}{,} \PY{o}{.}\PY{l+m+mi}{001}\PY{p}{)} \PY{o}{/} \PY{n}{samplingfreq2}
+         
+         \PY{c+c1}{\PYZsh{} \PYZsq{}A\PYZsq{} represents the amplitude 2 volts}
+         \PY{n}{A} \PY{o}{=} \PY{l+m+mi}{2}
+         
+         \PY{c+c1}{\PYZsh{} \PYZsq{}fundamental\PYZsq{} is the DC component of the Fourier Series }
+         \PY{n}{fundamental} \PY{o}{=} \PY{n}{A}\PY{o}{/}\PY{l+m+mi}{2}
+         
+         \PY{c+c1}{\PYZsh{} \PYZsq{}signalfreq\PYZsq{} is the Signal Frequency (f\PYZus{}0)}
+         \PY{n}{signalfreq1}\PY{p}{,} \PY{n}{signalfreq2} \PY{o}{=} \PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{100} 
+         
+         \PY{c+c1}{\PYZsh{} \PYZsq{}omega\PYZsq{} is the Angular Velocity (w\PYZus{}0)}
+         \PY{n}{omega1} \PY{o}{=} \PY{l+m+mi}{2} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{pi} \PY{o}{*} \PY{n}{signalfreq1}
+         \PY{n}{omega2} \PY{o}{=} \PY{l+m+mi}{2} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{pi} \PY{o}{*} \PY{n}{signalfreq2}
+         
+         \PY{c+c1}{\PYZsh{} harmonics1, harmonics2 are AC component of the Fourier series}
+         \PY{n}{harmonics1} \PY{o}{=} \PY{n+nb}{sum}\PY{p}{(}\PY{p}{[}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{A}\PY{p}{)}\PY{o}{/}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{o}{*}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{p}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}\PY{p}{)} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{p}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)} \PY{o}{*} \PY{n}{omega1} \PY{o}{*} \PY{n}{t1}\PY{p}{)} \PY{k}{for} \PY{n}{p} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n}{n1}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+         \PY{n}{harmonics2} \PY{o}{=} \PY{n+nb}{sum}\PY{p}{(}\PY{p}{[}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{A}\PY{p}{)}\PY{o}{/}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{o}{*}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{p}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}\PY{p}{)} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{p}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)} \PY{o}{*} \PY{n}{omega2} \PY{o}{*} \PY{n}{t2}\PY{p}{)} \PY{k}{for} \PY{n}{p} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n}{n2}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} ffs1, ffs2 are the fourier series}
+         \PY{n}{ffs1}\PY{p}{,} \PY{n}{ffs2} \PY{o}{=} \PY{k}{lambda} \PY{n}{n}\PY{p}{:} \PY{p}{(}\PY{n}{fundamental} \PY{o}{+} \PY{n}{harmonics1}\PY{p}{)}\PY{p}{,} \PY{k}{lambda} \PY{n}{w}\PY{p}{:} \PY{p}{(}\PY{n}{fundamental} \PY{o}{+} \PY{n}{harmonics2}\PY{p}{)}
+\end{Verbatim}
 
-\[a_n = \frac{2}{T} \int\limits_{-\frac{1}{2}T}^{\frac{1}{2}T} f(x) \sin(\frac{2n \pi x}{T})dx\]
 
-\[ = \frac{2}{T} \int\limits_{-\frac{1}{2}T}^{0} -1 \sin(\frac{2n \pi x}{T})dx + \frac{2}{T} \int\limits_{0}^{\frac{1}{2}T} \sin(\frac{2n \pi x}{T})dx\]
+    \hypertarget{plot}{%
+\paragraph{Plot}\label{plot}}
 
-\[ = -\frac{2}{T} \int\limits_{-\frac{1}{2}T}^{0} 1 \sin(\frac{2n \pi x}{T})dx + \frac{2}{T} \int\limits_{0}^{\frac{1}{2}T} \sin(\frac{2n \pi x}{T})dx\]
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{c+c1}{\PYZsh{} Creates figure and its subplots }
+         \PY{c+c1}{\PYZsh{} Subplot 1}
+         \PY{n}{fig6}\PY{p}{,} \PY{n}{ax6} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=} \PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{p}{)}
+         \PY{n}{ax6}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{t1}\PY{p}{,} \PY{n}{ffs1}\PY{p}{(}\PY{n}{n1}\PY{p}{)}\PY{p}{)}
+         \PY{n}{ax6}\PY{o}{.}\PY{n}{set}\PY{p}{(}\PY{n}{xlabel}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Frequency (Hertz)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ylabel}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Amplitude}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Squave Wave Synthesis}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax6}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} Subplot 2}
+         \PY{n}{fig7}\PY{p}{,} \PY{n}{ax7} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=} \PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{p}{)}
+         \PY{n}{ax7}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{t2}\PY{p}{,} \PY{n}{ffs2}\PY{p}{(}\PY{n}{n2}\PY{p}{)}\PY{p}{,} \PY{n}{color}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tab:red}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax7}\PY{o}{.}\PY{n}{set}\PY{p}{(}\PY{n}{xlabel}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Frequency (Hertz)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ylabel}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Amplitude}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title}\PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Squave Wave Synthesis}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{;}
+         \PY{n}{ax7}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+\end{Verbatim}
 
-\begin{itemize}
-\tightlist
-\item
-  \textbf{``U'' substitution:} Let
-  \(1 = \cfrac{\frac{2n \pi}{T}}{\frac{2n \pi}{T}}\),
-  \(u = \frac{2n \pi x}{T}\), \(du = \frac{2n \pi}{T}\)
-\end{itemize}
 
-\[ = -\frac{1}{n \pi} \int\limits_{-\frac{1}{2}T}^{0} \sin(u)du + \frac{1}{n \pi} \int\limits_{0}^{\frac{1}{2}T} \sin(u)du\]
-
-\[ = \frac{1}{n \pi} \cos(\frac{2n \pi x}{T}) \space \bigg|_{-\frac{1}{2}T}^{0} - \frac{1}{n \pi} \cos(\frac{2n \pi x}{T}) \space \bigg|_{0}^{\frac{1}{2}T}\]
-
-    \[ = \frac{1}{n \pi} \Big( \cos(0) - \cos(- n \pi) \Big) - \frac{1}{n \pi} \Big( \cos(n \pi) - \cos(0) \Big) \space\]
-
-\[ = \frac{1}{n \pi} \Big( \cos(0) + \cos( n \pi) \Big) - \frac{1}{n \pi} \Big( \cos(n \pi) - \cos(0) \Big) \space\]
-
-\[ = \frac{\Big( 1 + \cos( n \pi) \Big)}{n \pi}  - \frac{\Big( \cos(n \pi) - 1 \Big)}{n \pi}\]
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Answer:
-  \(b_n = \begin{cases}  0 & \quad \text{when } n \text{ is even} \\  \cfrac{4}{n \pi} & \quad \text{when } n \text{ is odd} \end{cases}\)}
-\end{itemize}
-
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_32_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_32_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
 
     % Add a bibliography block to the postdoc
     
