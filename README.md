@@ -51,7 +51,7 @@ This section contains all the example problem sets I worked on while learning th
 
 **Part 2**
 
-* A variant of the previous Whale Problem which introduces the Dynamical System, a system of 'n' growth functions (here $n = 2$). We examine the Blue Whale in competition with the Fin Whale. As a result, we are introduced to the competition term. As with the previous whale problem, we evaluate the model using the Five-Step Method to produce a qualitive answer to our model. The links below show us this in detail. 
+* A variant of the previous Whale Problem which introduces the Dynamical System, a system of 'n' growth functions (here n = 2). We examine the Blue Whale in competition with the Fin Whale. As a result, we are introduced to the competition term. We also conduct sensitivity analysis of the 'alpha' term. As with the previous whale problem, we evaluate the model using the Five-Step Method to produce a qualitive answer to our model. The links below show us this in detail. 
 
 	* [Github.com/Whale-Problem-2](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20(Math%20Modeling%20II)/MAT%204880-D692%20(Math%20Modeling%20II)%20Whale%20Problem%202.ipynb) 
 	* [nbviewer.jupyter.org/Whale-Problem-2](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/MAT%204880-D692%20%28Math%20Modeling%20II%29%20Whale%20Problem%202.ipynb)
@@ -63,7 +63,7 @@ This section contains all the example problem sets I worked on while learning th
 
 **Part 3**
 
-* A variant of the previous Whale Problem which introduces the Dynamical System, a system of 'n' growth functions (here $n = 2$). We examine the Blue Whale in competition with the Fin Whale. As a result, we are introduced to the competition term. As with the previous whale problem, we evaluate the model using the Five-Step Method to produce a qualitive answer to our model. The links below show us this in detail. 
+* A variant of the previous Whale Problem which introduces the Dynamical System, a system of 'n' growth functions (here n = 2). On top of examining the Blue Whale in competition with the Fin Whale, we also consider a situation where there is harvesting. As a result, we are introduce another term. As with the previous whale problem, we evaluate the model using the Five-Step Method to produce a qualitive answer to our model. The links below show us this in detail. 
 
 	* [Github.com/Whale-Problem-2](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20(Math%20Modeling%20II)/MAT%204880-D692%20(Math%20Modeling%20II)%20Whale%20Problem%203.ipynb) 
 	* [nbviewer.jupyter.org/Whale-Problem-2](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/MAT%204880-D692%20%28Math%20Modeling%20II%29%20Whale%20Problem%203.ipynb)
