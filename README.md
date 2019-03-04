@@ -53,21 +53,25 @@ This section contains all the example problem sets I worked on while learning th
 
 * A variant of the previous Whale Problem which introduces the Dynamical System, a system of 'n' growth functions (here $n = 2$). We examine the Blue Whale in competition with the Fin Whale. As a result, we are introduced to the competition term. As with the previous whale problem, we evaluate the model using the Five-Step Method to produce a qualitive answer to our model. The links below show us this in detail. 
 
-	* [Github.com/Whale-Problem-2]() 
-	* [nbviewer.jupyter.org/Whale-Problem-2]()
+	* [Github.com/Whale-Problem-2](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20(Math%20Modeling%20II)/MAT%204880-D692%20(Math%20Modeling%20II)%20Whale%20Problem%202.ipynb) 
+	* [nbviewer.jupyter.org/Whale-Problem-2](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/MAT%204880-D692%20%28Math%20Modeling%20II%29%20Whale%20Problem%202.ipynb)
 
 * We also do this with the Blue Whale in Competition with Krill. This is shown below, as well.
 
-	* [Github.com/Krill-Whale-Problem]() 
-	* [nbviewer.jupyter.org/Krill-Whale-Problem]()
+	* [Github.com/Krill-Whale-Problem](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20(Math%20Modeling%20II)/MAT%204880-D692%20(Math%20Modeling%20II)%20Krill%2C%20Whale%2C%20SIR%20Problem%20HW%202.ipynb) 
+	* [nbviewer.jupyter.org/Krill-Whale-Problem](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/MAT%204880-D692%20%28Math%20Modeling%20II%29%20Krill%2C%20Whale%2C%20SIR%20Problem%20HW%202.ipynb)
 
 **Part 3**
 
 * A variant of the previous Whale Problem which introduces the Dynamical System, a system of 'n' growth functions (here $n = 2$). We examine the Blue Whale in competition with the Fin Whale. As a result, we are introduced to the competition term. As with the previous whale problem, we evaluate the model using the Five-Step Method to produce a qualitive answer to our model. The links below show us this in detail. 
 
-	* [Github.com/Whale-Problem-2]() 
-	* [nbviewer.jupyter.org/Whale-Problem-2]()
+	* [Github.com/Whale-Problem-2](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20(Math%20Modeling%20II)/MAT%204880-D692%20(Math%20Modeling%20II)%20Whale%20Problem%203.ipynb) 
+	* [nbviewer.jupyter.org/Whale-Problem-2](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/MAT%204880-D692%20%28Math%20Modeling%20II%29%20Whale%20Problem%203.ipynb)
 
+### The Astronaut Problem
+
+	* [Github.com/Astronaut-Problem](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20(Math%20Modeling%20II)/MAT%204880-D692%20(Math%20Modeling%20II)%20Astronaut%20Problem.ipynb) 
+	* [nbviewer.jupyter.org/Astronaut-Problem](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/MAT%204880-D692%20%28Math%20Modeling%20II%29%20Astronaut%20Problem.ipynb)
 
 ## Mathematical Modeling of Continuous and Discrete Dynamical Systems
 
