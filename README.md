@@ -38,6 +38,8 @@ This section contains all the example problem sets I worked on while learning th
 
 ## Mathematical Modeling Optimization
 
+## Mathematical Modeling of Continuous and Discrete Dynamical Systems
+
 ### The Whale Problem
 
 **Part 1**
@@ -74,8 +76,6 @@ This section contains all the example problem sets I worked on while learning th
 
 	* [Github.com/Astronaut-Problem](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20(Math%20Modeling%20II)/MAT%204880-D692%20(Math%20Modeling%20II)%20Astronaut%20Problem.ipynb) 
 	* [nbviewer.jupyter.org/Astronaut-Problem](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/MAT%204880-D692%20%28Math%20Modeling%20II%29%20Astronaut%20Problem.ipynb)
-
-## Mathematical Modeling of Continuous and Discrete Dynamical Systems
 
 ## Numerical Analysis
 
