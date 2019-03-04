@@ -63,12 +63,14 @@ This section contains all the example problem sets I worked on while learning th
 
 **Part 3**
 
-* A variant of the previous Whale Problem which introduces the Dynamical System, a system of 'n' growth functions (here n = 2). On top of examining the Blue Whale in competition with the Fin Whale, we also consider a situation where there is harvesting. As a result, we are introduce another term. As with the previous whale problem, we evaluate the model using the Five-Step Method to produce a qualitive answer to our model. The links below show us this in detail. 
+* A variant of the previous Whale Problem. On top of examining the Blue Whale in competition with the Fin Whale, we also consider a situation where there is harvesting. As a result, we are introduce another term. As with the previous whale problem, we evaluate the model using the Five-Step Method to produce a qualitive answer to our model. The links below show us this in detail. 
 
-	* [Github.com/Whale-Problem-2](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20(Math%20Modeling%20II)/MAT%204880-D692%20(Math%20Modeling%20II)%20Whale%20Problem%203.ipynb) 
-	* [nbviewer.jupyter.org/Whale-Problem-2](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/MAT%204880-D692%20%28Math%20Modeling%20II%29%20Whale%20Problem%203.ipynb)
+	* [Github.com/Whale-Problem-3](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20(Math%20Modeling%20II)/MAT%204880-D692%20(Math%20Modeling%20II)%20Whale%20Problem%203.ipynb) 
+	* [nbviewer.jupyter.org/Whale-Problem-3](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/MAT%204880-D692%20%28Math%20Modeling%20II%29%20Whale%20Problem%203.ipynb)
 
 ### The Astronaut Problem
+
+* The Astronaut Problem is an example of a Discete Dynamical System. We examine the differences between the continous and Discrete Dynamica System. **"Vector Plots are no longer enough to determine stability!!!"** We learned that there is a time delay that affects the qualitative answers we get w/ continuous dynamical systems. 
 
 	* [Github.com/Astronaut-Problem](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20(Math%20Modeling%20II)/MAT%204880-D692%20(Math%20Modeling%20II)%20Astronaut%20Problem.ipynb) 
 	* [nbviewer.jupyter.org/Astronaut-Problem](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/MAT%204880-D692%20%28Math%20Modeling%20II%29%20Astronaut%20Problem.ipynb)
