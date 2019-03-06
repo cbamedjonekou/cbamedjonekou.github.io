@@ -34,7 +34,7 @@ During the Fall 2018 semester, I took three interrelated courses dealing w/ Tele
 
 ### Continuous Dynamical Systems
 
-##### The Whale Problem
+**The Whale Problem**
 
 **Part 1**
 
@@ -63,6 +63,13 @@ During the Fall 2018 semester, I took three interrelated courses dealing w/ Tele
 
 	* [Github.com/Whale-Problem-3](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20(Math%20Modeling%20II)/MAT%204880-D692%20(Math%20Modeling%20II)%20Whale%20Problem%203.ipynb) 
 	* [nbviewer.jupyter.org/Whale-Problem-3](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/MAT%204880-D692%20%28Math%20Modeling%20II%29%20Whale%20Problem%203.ipynb?flush_cache=true)
+
+**The Tree Problem**
+
+* The Whale Problem focused on evaluating dynamical systems for qualitive answers graphically. The tree problem, here, uses the Eigenvalue Method to answer the question of stability.
+
+	* [Github.com/Tree-Problem](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20(Math%20Modeling%20II)/MAT%204880-D692%20(Math%20Modeling%20II)%20Tree%20Model.ipynb) 
+	* [nbviewer.jupyter.org/Tree-Problem](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/MAT%204880-D692%20%28Math%20Modeling%20II%29%20Tree%20Model.ipynb?flush_cache=true)
 
 ### Discrete Dynamical Systems	
 
