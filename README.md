@@ -32,7 +32,9 @@ During the Fall 2018 semester, I took three interrelated courses dealing w/ Tele
 
 ## Mathematical Modeling of Continuous and Discrete Dynamical Systems
 
-### The Whale Problem
+### Continuous Dynamical Systems
+
+##### The Whale Problem
 
 **Part 1**
 
@@ -62,7 +64,9 @@ During the Fall 2018 semester, I took three interrelated courses dealing w/ Tele
 	* [Github.com/Whale-Problem-3](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20(Math%20Modeling%20II)/MAT%204880-D692%20(Math%20Modeling%20II)%20Whale%20Problem%203.ipynb) 
 	* [nbviewer.jupyter.org/Whale-Problem-3](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/MAT%204880-D692%20%28Math%20Modeling%20II%29%20Whale%20Problem%203.ipynb?flush_cache=true)
 
-### The Astronaut Problem
+### Discrete Dynamical Systems	
+
+##### The Astronaut Problem
 
 * The Astronaut Problem is an example of a Discete Dynamical System. We examine the differences between the continous and Discrete Dynamica System. **"Vector Plots are no longer enough to determine stability!!!"** We learned that there is a time delay that affects the qualitative answers we get w/ continuous dynamical systems. 
 
