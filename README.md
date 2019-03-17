@@ -75,10 +75,24 @@ During the Fall 2018 semester, I took three interrelated courses dealing w/ Tele
 
 ##### The Astronaut Problem
 
-* The Astronaut Problem is an example of a Discete Dynamical System. We examine the differences between the continous and Discrete Dynamica System. **"Vector Plots are no longer enough to determine stability!!!"** We learned that there is a time delay that affects the qualitative answers we get w/ continuous dynamical systems. 
+**Part 1**
+
+* The Astronaut Problem is an example of a Discete Dynamical System. We examine the differences between the continous and Discrete Dynamical System. **"Vector Plots are no longer enough to determine stability!!!"** We learned that there is a time delay that affects the qualitative answers we get w/ continuous dynamical systems. 
 
 	* [Github.com/Astronaut-Problem](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20(Math%20Modeling%20II)/MAT%204880-D692%20(Math%20Modeling%20II)%20Astronaut%20Problem.ipynb) 
 	* [nbviewer.jupyter.org/Astronaut-Problem](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/MAT%204880-D692%20%28Math%20Modeling%20II%29%20Astronaut%20Problem.ipynb?flush_cache=true)
 
+**Part 2**
+
+* We continue with the Astronaut Problem from last time. Since we could not examine the stability with a vector plot, we do this now with the Eigenvalue Method for Discrete Dynamical Systems. 
+
+	* [Github.com/Astronaut-Problem-2](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20(Math%20Modeling%20II)/MAT%204880-D692%20(Math%20Modeling%20II)%20Astronaut%20Problem%202_.ipynb) 
+	* [nbviewer.jupyter.org/Astronaut-Problem-2](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/MAT%204880-D692%20%28Math%20Modeling%20II%29%20Astronaut%20Problem%202_.ipynb?flush_cache=true)
+
 ## Fourier Series (Analog & Digital Communications)
+
+* We experimentally analyzed the spectra of various periodic signals and synthesize a square wave form using a programming language. This was done it python. And we created the square wave using Fourier Series. 
+
+	* [Github.com/Fourier-Series](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/TCET%203102-E316%20(Analog%20and%20Digital%20Communications)/TCET%203102-E316%20(Analog%20and%20Digital%20Communications)%20Lab%201.ipynb) 
+	* [nbviewer.jupyter.org/Fourier-Series](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/TCET%203102-E316%20%28Analog%20and%20Digital%20Communications%29/TCET%203102-E316%20%28Analog%20and%20Digital%20Communications%29%20Lab%201.ipynb)
 
