@@ -2,14 +2,6 @@
 
 The following portfolio contains work related to Data Analysis, Machine Learning, and Math Related Coursework (such as Optimization, Discrete/Continuous Dynamical Systems, Fourier Series/Transforms). The format used for these notebooks is of the extension .ipynb (Jupyter Notebooks) and all code segments contained in these notebooks are written in Python. This portfolio can be viewed as my journey learning about the previously mentioned topics. 
 
-# Python Modules:
-
-### EETCET_modkit: Electronics/Telecommunications Toolkit Module:
-
-[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/tree/master/Projects/EETCET_modkit)
-
-During the Fall 2018 semester, I took three interrelated courses dealing w/ Telecommunications, Digital Electronics, and Communication Electronics. When writing notes for the courses, I found myself having to do tedious calculations. Especially since I was typing my notes I decided that I should create a module that allowed me to access the functions without having to copy them from notebook to notebook. This module is a result of that problem.
-
 # Machine Learning/Artificial Intelligence:
 
 ## Kaggle Competitions:
@@ -27,6 +19,16 @@ During the Fall 2018 semester, I took three interrelated courses dealing w/ Tele
 ## Neural Networks:
 
 ## Data Exploration, Visualization, and Analysis:
+
+# Miscellaneous
+
+## Python Modules:
+
+### EETCET_modkit: Electronics/Telecommunications Toolkit Module:
+
+[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/tree/master/Projects/EETCET_modkit)
+
+During the Fall 2018 semester, I took three interrelated courses dealing w/ Telecommunications, Digital Electronics, and Communication Electronics. When writing notes for the courses, I found myself having to do tedious calculations. Especially since I was typing my notes I decided that I should create a module that allowed me to access the functions without having to copy them from notebook to notebook. This module is a result of that problem.
 
 # Math Related Coursework
 
