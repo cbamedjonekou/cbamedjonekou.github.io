@@ -1,0 +1,351 @@
+\documentclass[10pt,landscape]{article}
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage[landscape]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{color,graphicx,overpic}
+\usepackage{hyperref}
+
+
+\pdfinfo{
+  /Title (example.pdf)
+  /Creator (TeX)
+  /Producer (pdfTeX 1.40.0)
+  /Author (Seamus)
+  /Subject (Example)
+  /Keywords (pdflatex, latex,pdftex,tex)}
+
+% This sets page margins to .5 inch if using letter paper, and to 1cm
+% if using A4 paper. (This probably isn't strictly necessary.)
+% If using another size paper, use default 1cm margins.
+\ifthenelse{\lengthtest { \paperwidth = 11in}}
+    { \geometry{top=.2in,left=.2in,right=.2in,bottom=.2in} }
+    {\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
+        {\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+        {\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+    }
+
+% Turn off header and footer
+\pagestyle{empty}
+
+% Redefine section commands to use less space
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+\makeatother
+
+% Define BibTeX command
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+% Don't print section numbers
+\setcounter{secnumdepth}{0}
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0.5ex}
+
+%My Environments
+\newtheorem{example}[section]{Example}
+% -----------------------------------------------------------------------
+
+\begin{document}
+\raggedright
+\footnotesize
+\begin{multicols}{3}
+
+
+% multicol parameters
+% These lengths are set only within the two main columns
+%\setlength{\columnseprule}{0.25pt}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
+
+\begin{center}
+     \Large{\underline{A/D Comm. Formula Sheet}} \\
+\end{center}
+
+\section{SLIG}
+\subsection{Relative Power Gain}
+
+$$A_P = \frac{P_O}{P_I}$$
+\text{where } $P_O$ \text{ and } $P_I$ \text{ are defined as the following:}
+$$P_I = \frac{V_I^2}{R_I}$$
+$$P_O = \frac{V_O^2}{R_O}$$
+
+\subsection{Relative Voltage Gain}
+
+$$A_V = \frac{V_O}{V_I}$$
+
+\subsection{Relative Power Gain in dB}
+
+$$A_P(db) = 10 \log_{10}A_P$$
+$$\text{Given that } R_O = R_I$$  
+\text{ If } $R_O \neq R_I$ \text{ then the general form is given by the following:}
+$$A_P(db) = 10 \log_{10}\big(\frac{\frac{V_O^2}{R_O}}{\frac{V_I^2}{R_I}}\big)$$
+
+\subsection{Relative Voltage Gain in dB}
+
+$$A_V(db) = 20 \log_{10}\big(\frac{V_O}{V_I}\big) = 20 \log_{10} A_V$$
+$$\text{ If } R_O \neq R_I \text{ then the general form is given by the following:}$$
+$$A_V(db) = 20 \log_{10}\big(\frac{V_O}{V_I}\big) - 10 \log_{10}\big(\frac{R_O}{R_I}\big)$$  
+
+\subsubsection{Special Case}
+$$\text{If }R_O \neq R_I\text{ then the general form is given by the following:}$$  
+$$A_V(db) = 10 \log_{10}\big(\frac{V_O^2}{V_I^2}\big) - 10 \log_{10}\big(\frac{R_O}{R_I}\big)$$
+$$ = 20 \log_{10}\big(\frac{V_O}{V_I}\big) - 10 \log_{10}\big(\frac{R_O}{R_I}\big)$$
+
+\subsection{Absolute Power Gain dBm}
+
+$$A_{P(dBm)} = 10 \log_{10} \big(\frac{P}{1 \text{ mW}}\big), \text{ dBm}$$
+
+\subsection{Absolute Power Gain dBw}
+
+$$A_{P(dBw)} = 10 \log_{10} \big(\frac{P}{1 \text{ W}}\big), \text{ dBw}$$
+
+\subsection{Signal-to-Noise Ratio}
+
+$$\text{SNR } = 10 \log_{10}\big(\frac{\text{Signal Power}}{\text{Noise Power}}\big)$$ 
+$$\text{And given that } R_O = R_I,$$
+$$\text{SNR } = 10 \log_{10} \big(\frac{V_S^2}{V_N^2}\big)$$
+$$\text{SNR } = 20 \log_{10} \big(\frac{V_S}{V_N}\big)\text{dB}$$
+
+\subsection{Impulse Noise}
+
+$$ dB_S = 20 \log_{10} \big(\frac{P}{0.0002 \space \bar{\mu}}\big) \text{, where P is sound pressure in } \bar{\mu}$$
+$$ \bar{\mu} = 1 \space \frac{\text{dyne}}{\text{cm}^2} = 10^{-6} \text{ of atmospheric pressure at sea level}$$
+
+\subsection{Gaussian (White) Noise}
+
+$$P_n = kT\Delta f $$
+$$k = \text{ Boltzmann's Constant }(1.38 * 10^{-23})\text{ J/K}$$
+$$T = \text{ resistor temperature in Kelvin }(K)$$
+$$\Delta f = \text{ system bandwidth.}$$
+
+\subsubsection{Gaussian (White) Noise Formulas}
+
+$\text{Using the above proportionality we can relate}$
+$\text{bandwidth to noise, shown below:}$
+$\text{Given the noise can be represented as }e_n$
+$\text{then we can say the following:}$
+
+$$P_n = \frac{V_n^2}{R} =  kT\Delta f, \text{ where } V_n = \frac{e_n}{2}$$
+
+$\text{This is true by Ohm's law. By solving in terms of }e_n$
+$\text{we get the following:}$
+
+$$\frac{V_n^2}{R} =  kT\Delta f \text{ where } V_n = \frac{e_n}{2}$$
+$$\frac{\big(\frac{e_n}{2}\big)^2}{R} = \frac{\big(\frac{e_n^2}{4}\big)}{R} = kT\Delta f$$
+$$\big(\frac{e_n^2}{4}\big) =  kT\Delta f R$$
+$$e_n =  \sqrt{4kT\Delta f R}$$
+
+
+\subsection{Noise Ratio}
+
+$$NF = 10 \log_{10} \frac{\frac{S_i}{N_i}}{\frac{S_o}{N_o}} = 10 \log_{10} NR$$  
+$$NR = \frac{\frac{S_i}{N_i}}{\frac{S_o}{N_o}} \text{ is the Noise Ratio}$$  
+$$\frac{S_i}{N_i} = \text{ input SNR}$$  
+$$\frac{S_o}{N_o} = \text{ output SNR}$$    
+
+\subsection{Reactance Noise Effects}
+
+$$\Delta f_{eq} = \frac{\pi}{2} BW$$
+$$BW = 3 \text{ dB; bandwidth for } RC, \space LC, \text{ or }RLC \text{ circuits.}$$  
+
+\subsection{Noise Created by Amplifiers in Cascade}
+
+$$NR = NR_1 + \frac{NR_2 - 1}{P_{G_1}} + ... + \frac{NR_n - 1}{P_{G_1} * P_{G_2} * P_{G_{(n-1)}}}$$  
+$$NR = \text{overall noise ratio of } n \text{ stages}.$$  
+$$P_G = \text{power gain ratio}$$  
+
+\subsection{Equivalent Noise Temperature}
+
+$$T_{eq} = T_0(NR-1)$$
+
+$\text{where } T_0 = 290 \text{ K, a reference temperature in Kelvin.} $
+
+\subsection{Equivalent Noise Resistance}
+$\text{Sometimes used by Manufacturers to represent the}$
+$\text{noise generated by a device with a fictitious resistance.}$  
+$\text{The following represents this: }$
+
+$$R_{eq} = \sqrt{4kT\Delta f R}$$  
+
+\section{Modulation Index}
+
+$$m = \frac{E_i}{E_c}$$  
+$$\%m = \frac{E_i}{E_c} * 100\%$$  
+$$\%m = \frac{B-A}{B+A} * 100\%$$  
+$$B = \text{ AM Waveform}$$  
+$$A = \text{ The Minimum Peak-to-Peak value}$$  
+
+\subsection{Overmodulation}
+
+$$\%m = \frac{B-O}{B+O} * 100\%$$  
+$$B = \text{ AM Waveform}$$  
+$$O = \text{ The Minimum Peak-to-Peak value} \leq 0$$  
+
+\subsection{Amplitude Modulation/Mixing in Frequency Domain}
+
+\subsubsection{Carrier Signal}
+
+$$e_c = E_C \sin \omega_{c}t$$  
+$$\text{where }e_i = \text{ is the instantaneous value of the carrier}$$  
+$$E_C = \text{ is the maximum peak value of the carrier when unmodulated}$$  
+$$\omega = 2 \pi f \text{ ("f" is the carrier frequency)}$$ 
+$$t = \text{ is a unit of measure}$$ 
+
+\subsubsection{Information Signal}
+
+$$e_i = E_I \sin \omega_{i}t$$  
+$$\text{where }e_i = \text{ is the instantaneous value of the information}$$  
+$$E_i = \text{ is the maximum peak value of the intelligence}$$
+$$\text{when unmodulated}$$  
+$$\omega = 2 \pi f \text{ ("f" is the carrier frequency)}$$ 
+$$t = \text{ is a unit of measure}$$ 
+
+\subsubsection{AM Modulated Waveform}
+
+$$e = E_c \sin \omega_{c}t + \frac{mE_c}{2} \cos (\omega_{c} - \omega_{i})t - \frac{mE_c}{2} \cos (\omega_{c} + \omega_{i})t$$  
+$1. \space E_c \sin \omega_{c}t \textbf{ relates to the carrier } (1)$
+
+$2. \space \frac{mE_c}{2} \cos (\omega_{c} - \omega_{i})t \textbf{ relates to the the}$
+$\textbf{lower sideband at } f_c - f_i \space(2)$  
+
+$3. \space \frac{mE_c}{2} \cos (\omega_{c} + \omega_{i})t \textbf{ relates to the the}$
+$\textbf{upper sideband at } f_c + f_i \space(3)$
+
+\subsection{Power Distribution in Carriers and Sidebands}
+
+$$E_{SF} = \frac{mE_C}{2}$$  
+$$E_{SF} = \text{ side frequency amplitude}$$  
+$$m = \text{ modulation index}$$  
+$$E_C = \text{ carrier amplitude}$$  
+
+\subsubsection{Total Transmitted Power}
+
+$$P_{t} = P_c \left( 1 +\frac{m^2}{2} \right)$$  
+$$P_{t} = \text{ Total Transmitted Power (sidebands and carrier)}$$  
+$$m = \text{ modulation index}$$  
+$$P_c = \text{ carrier power}$$  
+
+\subsubsection{Total Transmitted Current}
+
+$$I_{t} = \text{ Total Transmitted Current (sidebands and carrier)}$$  
+$$I = \text{ modulation index}$$  
+$$I_c = \text{ carrier current}$$  
+
+\section{Frequency Modulation}
+
+\subsection{How FM Generator Works? "The Concept of Deviation"}
+
+$$f_{OUT} = f_C + ke_i$$  
+$$f_{OUT} = \text{ instantaneous output frequency}$$  
+$$f_C = \text{ output carrier frequency}$$  
+$$k = \text{ deviation constant [kHz/V]}$$  
+$$e_i = \text{ modulating (intelligence) input}$$  
+
+\subsection{Quick Facts}
+
+$\text{1. Deviation constant defines how much carrier frequency}$ 
+$\text{will deviate for input voltage level.}$
+$\text{2. Deviation constant dependent on system design.}$
+$\text{3. Knowing deviation on either side of carrier is essential for}$ 
+$\text{determining occupied bandwidth of modulated signal.}$
+
+\subsection{Direct FM}
+
+$\text{Direct FM involves messing w/ the frequency component}$
+$\text{of a sinusoidal wave:}$
+$$f \text{ in } \omega \space (\space A_P \sin (\omega t + \theta) = A_P \sin (2 \pi f t + \theta) \space)$$ 
+
+\subsection{Indirect FM}
+
+$\text{Indirect FM involves messing w/ the phase angle component}$
+$\text{of a sinusoidal wave:}$
+$$\theta \text{ in the sinusoid}\space (\space A_P \sin (\omega t + \theta) = A_P \sin (2 \pi f t + \theta) \space)$$
+
+\section{FM IN THE FREQUENCY DOMAIN}
+
+$$e = A \sin(\omega_ct + m_f\sin \omega_it)$$  
+$$e = \text{ instantaneous voltage}$$  
+$$A = \text{ peak value of original carrier wave}$$  
+$$\omega_c = \text{ carrier carrier angular velocity } (2\pi f_c)$$     
+$$\omega_i = \text{ modulating intelligence signal angular velocity } (2\pi f_i)$$  
+
+\subsection{Modulation Index}
+
+$$m_f = \text{FM Modulation Index} = \frac{\delta}{f_i}$$  
+$\delta = \text{maximum frequency shift caused by the}$
+$\text{intelligence signal (deviation)}$
+$\text{either above or below the carrier; therefore, deviation}$
+$\text{written as 3 kHz, for example, has }$
+$\delta = \text{ 3 kHz (not 6 kHz) in the above.}$
+$f_i = \text{ of the intelligence (modulating) signal}$  
+
+\section{FM Spectrum Analyzer}
+
+$\text{Remember that each Bessel table entry represents}$
+$\text{the ratio } \frac{V_2}{V_1} \text{ for its respective carrier}$
+$J_0 \text{ or sideband } J_1 \text{ and above signal component, for}$
+$\text{a given modulation index.}$
+$$P_{dB} = 20 \log_{10} \frac{V_2}{V_1}$$
+
+\section{Power Distribution}
+
+\subsection{Carson's Rule Approximation}
+
+$$BW \cong 2(\delta_{max} + f_{i_{max}})$$
+
+\subsection{Percent of Modulation and Deviation Ratio}
+
+$$DR = \frac{\text{max possible freq deviation}}{\text{max input freq}} = \frac{f_{dev(max)}}{f_{i(max)}}$$
+
+\section{Fourier Series}
+
+$$a_0 = \frac{1}{2 \pi}\int\limits_{-\pi}^{\pi} f(x) dx$$
+$$a_n = \frac{1}{ \pi}\int\limits_{-\pi}^{\pi} \cos(nx) dx$$  
+$$b_n = \frac{1}{ \pi}\int\limits_{-\pi}^{\pi} \sin(nx) dx$$
+
+\subsection{A0}
+
+$$a_0 = \frac{1}{2 \pi}\int\limits_{-\pi}^{\pi} f(x) dx$$
+$$= \frac{1}{2 \pi}\int\limits_{-\pi}^{0} 0 dx + \frac{1}{2 \pi}\int\limits_{0}^{\pi} 0 dx$$
+$$= 0 + \frac{1}{2 \pi} = \frac{1}{2}$$
+
+\subsection{An}
+
+$$\text{For } n \geq 1$$
+$$a_n = \frac{1}{ \pi}\int\limits_{-\pi}^{\pi} \cos(nx) dx$$
+$$= \frac{1}{\pi}\int\limits_{-\pi}^{0} 0 dx + \frac{1}{\pi}\int\limits_{0}^{\pi} \cos(nx) dx$$
+$$= 0 + \frac{1}{\pi}\frac{\sin(nx)}{n}\int\limits_{0}^{\pi} = \frac{1}{n\pi}(\sin(n\pi)-\sin(0)) = 
+0$$
+
+\subsection{Bn}
+
+$$\text{For } n \geq 1$$
+$$b_n = \frac{1}{ \pi}\int\limits_{-\pi}^{\pi} \sin(nx) dx$$
+$$= \frac{1}{\pi}\int\limits_{-\pi}^{0} 0 dx + \frac{1}{\pi}\int\limits_{0}^{\pi} \sin(nx) dx$$
+$$= -\frac{1}{\pi}\frac{\cos(nx)}{n}\int\limits_{0}^{\pi} = -\frac{1}{n\pi}(\cos(n\pi)-\cos(0)) =$$ 
+$$0 \text{ if } n \text{ is even}; \frac{2}{n\pi} \text{ if } n \text{ is odd}$$
+
+% You can even have references
+\rule{0.3\linewidth}{0.25pt}
+\scriptsize
+\bibliographystyle{abstract}
+\bibliography{refFile}
+\end{multicols}
+\end{document}
