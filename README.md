@@ -10,6 +10,12 @@ The following portfolio contains work related to Data Analysis, Machine Learning
 
 ## Classification problems:
 
+### RRLyrae Dataset 
+
+***Decision Trees/Cross Validation***
+
+* For this particular dataset we investigated the pitfalls of unbalanced data. RRLyrae are 
+
 ## Regression problems:
 
 ## Natural language processing:
