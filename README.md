@@ -30,9 +30,9 @@ The following portfolio contains work related to Data Analysis, Machine Learning
 
 ## Python Modules:
 
-### EETCET_modkit: Electronics/Telecommunications Toolkit Module:
+### School_Toolkit: School Toolkit Module:
 
-[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/tree/master/Projects/EETCET_modkit)
+[Github](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/tree/master/Projects/School_Toolkit)
 
 During the Fall 2018 semester, I took three interrelated courses dealing w/ Telecommunications, Digital Electronics, and Communication Electronics. When writing notes for the courses, I found myself having to do tedious calculations. Especially since I was typing my notes I decided that I should create a module that allowed me to access the functions without having to copy them from notebook to notebook. This module is a result of that problem.
 
@@ -79,6 +79,14 @@ During the Fall 2018 semester, I took three interrelated courses dealing w/ Tele
 	* [Github.com/Tree-Problem](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20(Math%20Modeling%20II)/MAT%204880-D692%20(Math%20Modeling%20II)%20Tree%20Model.ipynb) 
 	* [nbviewer.jupyter.org/Tree-Problem](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/MAT%204880-D692%20%28Math%20Modeling%20II%29%20Tree%20Model.ipynb?flush_cache=true)
 
+
+**The Whale Problem**
+
+* We model a simple series RLC Circuit, particulary charge vs. it's rate of change. We include a Portrait of the Continuous Dynamical System.
+
+	* [Report]() 
+	* [Appendix]()
+
 ### Discrete Dynamical Systems	
 
 ##### The Astronaut Problem
@@ -97,6 +105,14 @@ During the Fall 2018 semester, I took three interrelated courses dealing w/ Tele
 	* [Github.com/Astronaut-Problem-2](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20(Math%20Modeling%20II)/MAT%204880-D692%20(Math%20Modeling%20II)%20Astronaut%20Problem%202_.ipynb) 
 	* [nbviewer.jupyter.org/Astronaut-Problem-2](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/MAT%204880-D692%20%28Math%20Modeling%20II%29%20Astronaut%20Problem%202_.ipynb?flush_cache=true)
 
+**Part 3**
+
+* Now includes the Phase Portrait for Part 2.
+
+	* [Github.com/Astronaut-Problem-3]() 
+	* [nbviewer.jupyter.org/Astronaut-Problem-3]()
+
+
 ## Fourier Series (Analog & Digital Communications)
 
 * We experimentally analyzed the spectra of various periodic signals and synthesize a square wave form using a programming language. This was done it python. And we created the square wave using Fourier Series. 
@@ -104,3 +120,4 @@ During the Fall 2018 semester, I took three interrelated courses dealing w/ Tele
 	* [Github.com/Fourier-Series](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/TCET%203102-E316%20(Analog%20and%20Digital%20Communications)/TCET%203102-E316%20(Analog%20and%20Digital%20Communications)%20Lab%201.ipynb) 
 	* [nbviewer.jupyter.org/Fourier-Series](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/TCET%203102-E316%20%28Analog%20and%20Digital%20Communications%29/TCET%203102-E316%20%28Analog%20and%20Digital%20Communications%29%20Lab%201.ipynb)
 
+## Transfer Functions (Analog & Digital Communications)

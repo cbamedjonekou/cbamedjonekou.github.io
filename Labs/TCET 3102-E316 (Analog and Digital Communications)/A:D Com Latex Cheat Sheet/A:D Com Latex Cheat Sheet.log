@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  27 MAR 2019 18:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 MAR 2019 11:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -401,20 +401,20 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 (./A:D Com Latex Cheat Sheet.aux)
 \openout1 = `"A:D Com Latex Cheat Sheet.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -481,7 +481,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box58
-Package hyperref Info: Link coloring OFF on input line 65.
+Package hyperref Info: Link coloring OFF on input line 64.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -491,62 +491,62 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count147
 )
-LaTeX Info: Redefining \ref on input line 65.
-LaTeX Info: Redefining \pageref on input line 65.
-LaTeX Info: Redefining \nameref on input line 65.
+LaTeX Info: Redefining \ref on input line 64.
+LaTeX Info: Redefining \pageref on input line 64.
+LaTeX Info: Redefining \nameref on input line 64.
 
 (./A:D Com Latex Cheat Sheet.out) (./A:D Com Latex Cheat Sheet.out)
 \@outlinefile=\write3
 \openout3 = `"A:D Com Latex Cheat Sheet.out"'.
 
 \c@lstlisting=\count148
-LaTeX Font Info:    Try loading font information for U+msa on input line 80.
+LaTeX Font Info:    Try loading font information for U+msa on input line 79.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 80.
+LaTeX Font Info:    Try loading font information for U+msb on input line 79.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 131.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 130.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 131.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 130.
 Missing character: There is no Â in font cmr8!
 Missing character: There is no ° in font cmr8!
  [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (7.29225pt too wide) in paragraph at lines 291--292
+Overfull \hbox (7.29225pt too wide) in paragraph at lines 287--288
 [][]  
  []
 
 No file "A:D Com Latex Cheat Sheet".bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 322.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 327.
 [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 322.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 327.
  (./A:D Com Latex Cheat Sheet.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 322.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 322.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 327.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 327.
 Package rerunfilecheck Info: File `"A:D Com Latex Cheat Sheet".out' has not cha
 nged.
-(rerunfilecheck)             Checksum: 42C4A72ACBE129DAA5E9416402D82C78;1005.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 322.
+(rerunfilecheck)             Checksum: 47B5B74AC3A28B3A9A043826F3BAC273;1138.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 327.
  ) 
 Here is how much of TeX's memory you used:
- 8123 strings out of 492995
- 117973 string characters out of 6132704
+ 8129 strings out of 492995
+ 118035 string characters out of 6132704
  245961 words of memory out of 5000000
- 11513 multiletter control sequences out of 15000+600000
+ 11515 multiletter control sequences out of 15000+600000
  11813 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,7n,32p,452b,1000s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,7n,32p,461b,1000s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
@@ -561,10 +561,10 @@ texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
 live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
 e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
 2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on "A:D Com Latex Cheat Sheet.pdf" (2 pages, 168518 bytes).
+Output written on "A:D Com Latex Cheat Sheet.pdf" (2 pages, 171796 bytes).
 PDF statistics:
- 194 PDF objects out of 1000 (max. 8388607)
- 174 compressed objects within 2 object streams
- 56 named destinations out of 1000 (max. 500000)
- 145 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 204 PDF objects out of 1000 (max. 8388607)
+ 184 compressed objects within 2 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 

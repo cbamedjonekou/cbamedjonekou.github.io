@@ -7,7 +7,6 @@
 \usepackage{color,graphicx,overpic}
 \usepackage{hyperref}
 \usepackage{listings}
-\usepackage{graphicx}
 
 
 \pdfinfo{
@@ -131,9 +130,6 @@ $$x \space \Omega = 1120 \space \Omega$$
   \item $\text{miles} * \text{Attenuation (dB/mile unloaded)} < 7 \space dB$
   \item $\text{miles} * \text{Round Trip Loop Resistance} < 1120 \space \Omega$
 \end{itemize}
-
-\textbf{Find :}
-$$ 7 \space mi = \frac{9 \space dB}{x \frac{dB}{mi}} $$
 
 
 \subsubsection{Example 2:}
@@ -306,7 +302,16 @@ def voltageSpectralDensity(freq,
   \item \text{Convolution of two rectangular pulses of equal} \\ \text{duration will be a triangle}
 \end{itemize}
 
-$$y(t) = \int_{-\infty}^{\infty} x(\tau)h(t-\tau) d \tau$$
+$$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty} x(\tau)h(t-\tau) d \tau$$
+
+\subsection{Official Steps}
+
+\begin{enumerate}
+  \item \text{Given the function }  $$y(t) = \int_{-\infty}^{\infty} x(\tau)h(t-\tau) d \tau$$ \\ \text{we take the wave representing } $$h(t-\tau)$$ \\ \text{and flip it across the y-axis. We then start the wave at the } \\ \text{point on the x-axis closest to } $-\infty$.  
+  \item \text{The magnitudes of } $x(\tau)$ and $h(t-\tau)$ \text{ is the amplitude} \\ \text{of the waves}
+\end{enumerate}
+
+\subsection{Unofficial Idea/Steps}
 
 \begin{itemize}
   \item \text{basically we use the above function for output.} \\ \text{we only calculate the integral when both square waves} \\ \text{intersect.}
