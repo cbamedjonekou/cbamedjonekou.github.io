@@ -84,7 +84,7 @@ During the Fall 2018 semester, I took three interrelated courses dealing w/ Tele
 
 * We model a simple series RLC Circuit, particulary charge vs. it's rate of change. We include a Phase Portrait of the Continuous Dynamical System.
 
-	* [Report]() 
+	* [Report](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/MAT%204880-D692%20%28Math%20Modeling%20II%29%20RLC%20Model%20Project%202.pdf) 
 	* [Appendix](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/Appendix%20to%20the%20RLC%20Electrical%20Circuit%20Model.ipynb?flush_cache=true)
 
 ### Discrete Dynamical Systems	
