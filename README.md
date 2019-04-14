@@ -42,7 +42,7 @@ During the Fall 2018 semester, I took three interrelated courses dealing w/ Tele
 
 ### Continuous Dynamical Systems
 
-**The Whale Problem**
+##### The Whale Problem
 
 **Part 1**
 
@@ -72,7 +72,7 @@ During the Fall 2018 semester, I took three interrelated courses dealing w/ Tele
 	* [Github.com/Whale-Problem-3](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20(Math%20Modeling%20II)/MAT%204880-D692%20(Math%20Modeling%20II)%20Whale%20Problem%203.ipynb) 
 	* [nbviewer.jupyter.org/Whale-Problem-3](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/MAT%204880-D692%20%28Math%20Modeling%20II%29%20Whale%20Problem%203.ipynb?flush_cache=true)
 
-**The Tree Problem**
+##### The Tree Problem
 
 * The Whale Problem focused on evaluating dynamical systems for qualitive answers graphically. The tree problem, here, uses the Eigenvalue Method to answer the question of stability.
 
@@ -80,7 +80,7 @@ During the Fall 2018 semester, I took three interrelated courses dealing w/ Tele
 	* [nbviewer.jupyter.org/Tree-Problem](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20%28Math%20Modeling%20II%29/MAT%204880-D692%20%28Math%20Modeling%20II%29%20Tree%20Model.ipynb?flush_cache=true)
 
 
-**The RLC Circuit Problem**
+##### The RLC Circuit Problem
 
 * We model a simple series RLC Circuit, particulary charge vs. it's rate of change. We include a Phase Portrait of the Continuous Dynamical System.
 
@@ -112,12 +112,9 @@ During the Fall 2018 semester, I took three interrelated courses dealing w/ Tele
 	* [Github.com/Astronaut-Problem-3]() 
 	* [nbviewer.jupyter.org/Astronaut-Problem-3]()
 
+### Simulations of Discrete/Continuous Dynamical Systems
 
-## Fourier Series (Analog & Digital Communications)
+* Now includes the Phase Portrait for Part 2.
 
-* We experimentally analyzed the spectra of various periodic signals and synthesize a square wave form using a programming language. This was done it python. And we created the square wave using Fourier Series. 
-
-	* [Github.com/Fourier-Series](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/TCET%203102-E316%20(Analog%20and%20Digital%20Communications)/TCET%203102-E316%20(Analog%20and%20Digital%20Communications)%20Lab%201.ipynb) 
-	* [nbviewer.jupyter.org/Fourier-Series](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/TCET%203102-E316%20%28Analog%20and%20Digital%20Communications%29/TCET%203102-E316%20%28Analog%20and%20Digital%20Communications%29%20Lab%201.ipynb)
-
-## Transfer Functions (Analog & Digital Communications)
+	* [Github.com/Astronaut-Problem-3]() 
+	* [nbviewer.jupyter.org/Astronaut-Problem-3]()
