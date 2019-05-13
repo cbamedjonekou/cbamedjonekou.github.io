@@ -132,6 +132,40 @@ def poorManJacobian(func1, func2, var1, var2, points, Jac_matrix_On= True):
                             float(sp.diff(func2, var2).subs({var1:point[0], var2:point[1]}))]])
             return solMatrix
 
+def poorManJacobian2(func1, func2, var1, var2, points, Jac_matrix_On= True):
+    """
+    Plots the phase portrait of the actual dynamical system.
+
+    Parameters
+    ----------
+    func1,func2 : sympy data type called for form sympy.core.add.Add.
+        The data types of the functions we define using sympy.
+        It just returns sympy.core.add.Add.
+    var1, var2 : sympy data type called for form sympy.core.symbol.Symbol.
+        The data types of the variables we define using sympy.
+        It just returns sympy.core.symbol.Symbol.
+    A_matrix_On : just a boolean check to return different things.
+        If it's 'True' the it just returns the Jacobian w/o being
+        evaluated at certain values of x1 and x2.
+        Default value is 'True'
+
+    Returns
+    -------
+    output : Matplotlib Axis instance
+        Axis with streamplot included.
+    """
+    if Jac_matrix_On:
+        Jac_matrix = sp.Array([[sp.diff(func1, var1), sp.diff(func1, var2)],
+                             [sp.diff(func2, var1), sp.diff(func2, var2)]])
+        return Jac_matrix
+    else:
+        for point in points:
+            solMatrix = np.array([[sp.diff(func1, var1).subs({var1:point[0], var2:point[1]}),
+                                   sp.diff(func1, var2).subs({var1:point[0], var2:point[1]})],
+                                  [sp.diff(func2, var1).subs({var1:point[0], var2:point[1]}),
+                                   sp.diff(func2, var2).subs({var1:point[0], var2:point[1]})]])
+            return solMatrix
+
 
 def phasePortrait(func1, func2, points, start= -3, stop= 3, 
                   jacobian_00= 4/5 , jacobian_01= -1/10, discreteON = False):
