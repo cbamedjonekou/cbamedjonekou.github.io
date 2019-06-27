@@ -1,7 +1,9 @@
 # CBA's Portfolio:
 
-This portfolio covers the following topics: Machine Learning Models (both classical and deep learning models), Mathematical Modeling using Discrete and Continuous Dynamical Systems, Data Structures and Algorithms, IoT/Embedded Systems, Drones, pentesting, and anything else that catches my eye. Formally, I'm an Applied Mathematics student but through my continuous exposure with different technologies (while using Math as a base/springboard) I hope to co-op the title '***Hacker***'.
-Follow me throughout my journey.
+This portfolio covers the following topics: Machine Learning Models (both classical and deep learning models), Mathematical Modeling using Discrete and Continuous Dynamical Systems, Data Structures and Algorithms, IoT/Embedded Systems, Drones, Red/Blue Teaming, and anything else that catches my eye. Formally, I'm an Applied Mathematics student but through my continuous exposure with different technologies/methods (while using Math as a base/springboard) I hope to co-op the title '***Hacker***'.
+
+
+**Follow me throughout my journey.**
 
 ***Definition: Hacker | Hacker Culture - subculture of individuals who enjoy the intellectual challenge of creatively overcoming limitations of systems to achieve novel and clever outcomes***  
 
