@@ -1,0 +1,14 @@
+# Initial Conditions
+    L = [[0, S, E, I, R, V]]
+    
+    # Euler's Implementation
+    for i in range(N):
+        t_last, S_last, E_last = L[-1][0], L[-1][1], L[-1][2] 
+        I_last, R_last, V_last = L[-1][3], L[-1][4], L[-1][5]
+        t_next = t_last + delT
+        S_next = S_last + (delT * deltaS(S_last, E_last, I_last, R_last, V_last))
+        E_next = E_last + (delT * deltaE(S_last, E_last, I_last, R_last, V_last))
+        I_next = I_last + (delT * deltaI(S_last, E_last, I_last, R_last, V_last))
+        R_next = R_last + (delT * deltaR(S_last, E_last, I_last, R_last, V_last))
+        V_next = V_last + (delT * deltaV(S_last, E_last, I_last, R_last, V_last))
+        L.append([t_next, S_next, E_next, I_next, R_next, V_next])
