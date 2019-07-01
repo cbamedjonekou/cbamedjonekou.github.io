@@ -50,11 +50,13 @@ This portfolio covers the following topics: Machine Learning Models (both classi
 
 **| [View]() | [Download]() |**
 
-To illustrate the KMeans (unsupervised) clustering model, we use the Galaxies Dataset which is a collection of images of different types of Galaxies.  
+* To illustrate the KMeans (unsupervised) clustering model, we use the a sample of the Galaxy Zoo Dataset (found on [Kaggle](https://www.kaggle.com/c/galaxy-zoo-the-galaxy-challenge)) which is a collection of images of different types of Galaxies. The collection has Since this is an unsupervised task, we use the KMeans clustering model primarily as an exploratory tool. 
 
 ### Convolutional | Deep Neural Networks:
 
-**| [View]() | [Download]() |**
+* For this project, we set out to create a Deep Learning Model, specifically a Convoluational Neural Network (CNN), to analyze the Galaxies Dataset. The goal of this assignment is to act as a introduction to Deep Learning, and Neural Networks. We present the results of our implementation of the CNN, parameter validation, generalization errors, and visualizations. Python, and Google's open source **Tensorflow**, were used to implement the CNN for this problem. We will give you an overview of our experience playing around with tutorials/examples then show the results for the morphology classification of galaxies.
+
+**| [READ ME](https://github.com/deaththeberry/NeuralNetworkProject/blob/master/README.md)|**
 
 # Python Modules:
 
