@@ -22,7 +22,7 @@ This portfolio covers the following topics: Machine Learning Models (both classi
 
 ### Logistic Regressions Model
 
-Using the RR Lyrae Dataset again, we continue to explore classification Machine Learning algorithms, particularly Logistic Regression. Logistic Regression despite its name is a Classification algorithm. Logistic Regression is modeled after the Logistic Function which itself is a type of Sigmoid Function. Sigmoid Functions are valuable in that that calculate the log-odds; Log-odds is an alternative representation of probabilities. A little more specifically, they represent odds of an event happening (the ratio of the probability of success to the probability of failure). Logistics Regression assigns weight (probabilities) to a particular instance which determines the odds of it falling in one *class* or the other. We explore the effectiveness of the algorithm as well as its pitfalls. 
+* Using the RR Lyrae Dataset again, we continue to explore classification Machine Learning algorithms, particularly Logistic Regression. Logistic Regression despite its name is a Classification algorithm. Logistic Regression is modeled after the Logistic Function which itself is a type of Sigmoid Function. Sigmoid Functions are valuable in that that calculate the log-odds; Log-odds is an alternative representation of probabilities. A little more specifically, they represent odds of an event happening (the ratio of the probability of success to the probability of failure). Logistics Regression assigns weight (probabilities) to a particular instance which determines the odds of it falling in one *class* or the other. We explore the effectiveness of the algorithm as well as its pitfalls. 
 
 [View]()
 [Download]() 
@@ -31,16 +31,22 @@ Using the RR Lyrae Dataset again, we continue to explore classification Machine 
 
 ### Linear Regression | Gradient Descent Model:
 
-Here, we use the Study Hours Dataset. The Study Hours Dataset contains one feature vector (amount of hours studied) and one target vector (scores on the exam), both of which are continuous (There are no categories) so Regression seems appropriate here. It's a simple dataset which we'll use to illustrate the Linear Regression | Gradient Descent Models.  
+* Here, we use the Study Hours Dataset. The Study Hours Dataset contains one feature vector (amount of hours studied) and one target vector (scores on the exam), both of which are continuous (There are no categories) so Regression seems appropriate here. It's a simple dataset which we'll use to illustrate the Linear Regression | Gradient Descent Models.  
 
-[View]()
+[View]()  
 [Download]() 
 
 ## Higgs Boson Dataset
 
 ### Support Vector Machines:
 
+[View]()
+[Download]()
+
 ### Ensemble Methods: Random Forests | Extremely Random Trees:
+
+[View]()
+[Download]()
 
 ## Galaxies Dataset
 
@@ -54,9 +60,7 @@ To illustrate the KMeans (unsupervised) clustering model, we use the Galaxies Da
 
 ## School_Toolkit: School Toolkit Module:
 
-[View](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/tree/master/Projects/School_Toolkit)
 
-During the Fall 2018 semester, I took three interrelated courses dealing w/ Telecommunications, Digital Electronics, and Communication Electronics. When writing notes for the courses, I found myself having to do tedious calculations. Especially since I was typing my notes I decided that I should create a module that allowed me to access the functions without having to copy them from notebook to notebook. This module is a result of that problem.
 
 # Mathematical Modeling of Continuous and Discrete Dynamical Systems Coursework:
 
@@ -74,3 +78,5 @@ During the Fall 2018 semester, I took three interrelated courses dealing w/ Tele
 
 [Report]()
 [Jupyter]() 
+
+**More Coursework [Here](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/MAT%204880-D692%20(Math%20Modeling%20II)/README.md)**
