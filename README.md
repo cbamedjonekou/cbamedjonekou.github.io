@@ -17,8 +17,6 @@ This portfolio covers the following topics: Machine Learning Models (both classi
 
 ## RR Lyrae Dataset
 
-
-
 ### Decision Tree Model | Cross Validation
 
 ***[under construction]***
