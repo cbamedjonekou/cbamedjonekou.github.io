@@ -7,19 +7,29 @@ This portfolio covers the following topics: Machine Learning Models (both classi
 
 ***Definition: Hacker | Hacker Culture - subculture of individuals who enjoy the intellectual challenge of creatively overcoming limitations of systems to achieve novel and clever outcomes***  
 
+#### Editor Note:
+
+* I'm currently doing an overhaul of this repo/portfolio. Anything labeled ***under construction*** is currently being modified and is not yet complete. 
+
 # Machine Learning In Astronomy Coursework:
 
 * Spring 2019 PHYS3600ID: Machine Learning In Astronomy Coursework.
 
-## RR Lyrae Dataset 
+## RR Lyrae Dataset
+
+
 
 ### Decision Tree Model | Cross Validation
+
+***[under construction]***
 
 [View](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/PHYS%203600ID-D862%20%28Machine%20Learning%29/PHYS%203600ID-D862%20%28Machine%20Learning%29%20RR-Lyrae%20Decision%20Tree%20Classifier.ipynb?flush_cache=true)|[Download](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/PHYS%203600ID-D862%20(Machine%20Learning)/PHYS%203600ID-D862%20(Machine%20Learning)%20RR-Lyrae%20Decision%20Tree%20Classifier.ipynb)
 
 * RR Lyrae are variable stars in the Lyra constellation. It plays a significant role in astronomy and has been studied extensively by Astronomers. The reason for this is because they are the brightest star in their class. This particular characteristic of RR Lyrae is important as it acts as a ***standard candle*** that can be used to meaure astronimical distances ([more on RR Lyrae here](https://en.wikipedia.org/wiki/RR_Lyrae_variable)). For this particular problem, we are presented with a dataset that contains 93141 instances (stars) with each instance containing 4 features which are the colors of the star. These colors which give an indication of whether a star emits more blue, green, yellow, or red light. We are also provided with the target vector implying that this is a supervised task. We use Decisions Trees in an attempt to classify the 93141 instances (stars) either as an RR Lyrae variable star or not. We also have an instance of unbalanced data here (we investigate the pitfalls of unbalanced data) and use methods in an attempt to resolve this issue.  
 
 ### Logistic Regressions Model
+
+***[under construction]***
 
 [View](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/PHYS%203600ID-D862%20%28Machine%20Learning%29/PHYS%203600ID-D862%20%28Machine%20Learning%29%20RR-Lyrae%20Logistic%20Regression.ipynb?flush_cache=true)|[Download](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/PHYS%203600ID-D862%20(Machine%20Learning)/PHYS%203600ID-D862%20(Machine%20Learning)%20RR-Lyrae%20Logistic%20Regression.ipynb)
 
@@ -28,6 +38,8 @@ This portfolio covers the following topics: Machine Learning Models (both classi
 ## Study Hours Dataset 
 
 ### Linear Regression | Gradient Descent Model
+
+***[under construction]***
 
 [View](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/PHYS%203600ID-D862%20%28Machine%20Learning%29/PHYS%203600ID-D862%20%28Machine%20Learning%29%20Study%20Hours%20Linear%20Regression.ipynb?flush_cache=true)|[Download](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/PHYS%203600ID-D862%20(Machine%20Learning)/PHYS%203600ID-D862%20(Machine%20Learning)%20Study%20Hours%20Linear%20Regression.ipynb)  
 
@@ -38,11 +50,15 @@ This portfolio covers the following topics: Machine Learning Models (both classi
 
 ### Support Vector Machines:
 
+***[under construction]***
+
 [View](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/PHYS%203600ID-D862%20%28Machine%20Learning%29/PHYS%203600ID-D862%20%28Machine%20Learning%29%20Higgs%20Boson%20SVM.ipynb?flush_cache=true)|[Download](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/PHYS%203600ID-D862%20(Machine%20Learning)/PHYS%203600ID-D862%20(Machine%20Learning)%20Higgs%20Boson%20SVM.ipynb)
 
 * We use the Higgs Boson Dataset, to implement/evaluate the Support Vector Machine (SVM) ML Model. Higgs Bosons, and the Higgs Field, are fundamentals in the Standard Model of Particle Physics. They are necessary in linking Electromagnetic force to Weak force (Electroweak force). More on the Higgs Boson [here](https://home.cern/science/physics/higgs-boson). We use the SVM to classify events into "tau tau decay of a Higgs boson" versus "background"; The dataset contained Simulated data with features characterizing events detected by ATLAS. More on the Higgs Dataset [here](https://www.kaggle.com/c/higgs-boson). We compare the result to a Decision Tree Classifier.
 
 ### Ensemble Methods: Random Forests | Extremely Random Trees:
+
+***[under construction]***
 
 [View](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/PHYS%203600ID-D862%20%28Machine%20Learning%29/PHYS%203600ID-D862%20%28Machine%20Learning%29%20Higgs%20Boson%20Ensemble%20Methods.ipynb?flush_cache=true)|[Download](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/PHYS%203600ID-D862%20(Machine%20Learning)/PHYS%203600ID-D862%20(Machine%20Learning)%20Higgs%20Boson%20Ensemble%20Methods.ipynb)
 
@@ -53,11 +69,15 @@ This portfolio covers the following topics: Machine Learning Models (both classi
 
 ### KMeans Clustering:
 
+***[under construction]***
+
 [View](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/PHYS%203600ID-D862%20%28Machine%20Learning%29/PHYS%203600ID-D862%20%28Machine%20Learning%29%20Galaxy%20Classifier%20KMeans%20Clustering.ipynb?flush_cache=true)|[Download](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/PHYS%203600ID-D862%20(Machine%20Learning)/PHYS%203600ID-D862%20(Machine%20Learning)%20Galaxy%20Classifier%20KMeans%20Clustering.ipynb)
 
 * To illustrate the KMeans (unsupervised) clustering model, we used a sample of the Galaxy Zoo Dataset (found on [Kaggle](https://www.kaggle.com/c/galaxy-zoo-the-galaxy-challenge)) which is a collection of images of different types of Galaxies. Galaxies, independent of this dataset, are classified into several different categories (shapes): Ellipticals, Spirals/Barred spirals, Irregulars. Since this is an unsupervised task (we withheld the target data), we use the KMeans clustering model primarily as an exploratory tool. The goal, ultimately, is to see the ability of KMeans in clustering galaxies together based off of similar characteristics.  
 
 ### Convolutional | Deep Neural Networks:
+
+***[under construction]***
 
 * For this project, we set out to create a Deep Learning Model, specifically a Convoluational Neural Network (CNN), to analyze the Galaxies Dataset. The goal of this assignment is to act as a introduction to Deep Learning, and Neural Networks. We present the results of our implementation of the CNN, parameter validation, generalization errors, and visualizations. Python, and Google's open source **Tensorflow**, were used to implement the CNN for this problem. We will give you an overview of our experience playing around with tutorials/examples then show the results for the morphology classification of galaxies.
 
