@@ -37,7 +37,7 @@ This portfolio covers the following topics: Machine Learning Models (both classi
 
 ### Linear Regression | Gradient Descent Model
 
-***[under construction]***
+***[Close to Completion***
 
 [View](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/PHYS%203600ID-D862%20%28Machine%20Learning%29/PHYS%203600ID-D862%20%28Machine%20Learning%29%20Study%20Hours%20Linear%20Regression.ipynb?flush_cache=true)|[Download](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/PHYS%203600ID-D862%20(Machine%20Learning)/PHYS%203600ID-D862%20(Machine%20Learning)%20Study%20Hours%20Linear%20Regression.ipynb)  
 
