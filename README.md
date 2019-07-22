@@ -39,7 +39,7 @@ This portfolio covers the following topics: Machine Learning Models (both classi
 
 ***[Close to Completion]***
 
-[View](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/PHYS%203600ID-D862%20%28Machine%20Learning%29/PHYS%203600ID-D862%20%28Machine%20Learning%29%20Study%20Hours%20Linear%20Regression.ipynb?flush_cache=true)|[Download](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/PHYS%203600ID-D862%20(Machine%20Learning)/PHYS%203600ID-D862%20(Machine%20Learning)%20Study%20Hours%20Linear%20Regression.ipynb)  
+[View](https://nbviewer.jupyter.org/github/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/PHYS%203600ID-D862%20%28Machine%20Learning%29/PHYS%203600ID-D862%20%28Machine%20Learning%29%20Study%20Hours%20Linear%20Regression.ipynb)|[Download](https://github.com/deaththeberry/ML-AI-HKG_Portfolio/blob/master/Labs/PHYS%203600ID-D862%20(Machine%20Learning)/PHYS%203600ID-D862%20(Machine%20Learning)%20Study%20Hours%20Linear%20Regression.ipynb)  
 
 * Here, we use the Study Hours Dataset. The Study Hours Dataset contains one feature vector (amount of hours studied) and one target vector (scores on the exam), both of which are continuous (There are no categories) so Regression seems appropriate here. It's a simple dataset which we'll use to illustrate the Linear Regression | Gradient Descent Models for regression tasks. A concise theory is provided and implementations are done from scratch as well as will Scikit-Learn & TensorFlow.  
 
