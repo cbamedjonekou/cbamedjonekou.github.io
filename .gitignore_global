@@ -2,4 +2,5 @@
 .ipynb_checkpoints
 
 ### macOS ###
-.DS_Store
+.DS_Store 
+Labs/.DS_Store
