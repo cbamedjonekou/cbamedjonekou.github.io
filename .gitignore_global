@@ -1,6 +1,11 @@
 ### Jupyter Notebook ###
 .ipynb_checkpoints
 
+### Jekyll
+
+_site/
+
 ### macOS ###
 .DS_Store 
 Labs/.DS_Store
+blog/.DS_Store
