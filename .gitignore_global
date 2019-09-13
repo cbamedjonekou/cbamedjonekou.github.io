@@ -1,8 +1,7 @@
 ### Jupyter Notebook ###
 .ipynb_checkpoints
 
-### Jekyll
-
+### Jekyll ###
 _site/
 
 ### macOS ###
