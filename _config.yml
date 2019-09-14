@@ -1,2 +1,3 @@
 name: CB.Amedjonekou, l33t Warrior.
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
