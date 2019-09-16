@@ -1,9 +1,11 @@
 ---
 layout: default
-title: CB.Amedjonekou, L33T Warrior
+title: CB.Amedjonekou's Blog
 ---
+	<h1>{{ page.title }}</h1>
+	<ul class="posts">
 
-<div class="blurb">
-        <h1>Hi there, I'm CB.Amedjonekou!</h1>
-	<p><a href="/about">Read more about my life...</a></p>
-</div><!-- /.blurb -->
+	  {% for post in site.posts %}
+	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	  {% endfor %}
+	</ul>
