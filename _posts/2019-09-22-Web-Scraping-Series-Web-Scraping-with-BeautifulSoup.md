@@ -4,11 +4,11 @@ title: "Web Scraping Series: Web Scraping w/ the BeautifulSoup"
 date: 2019-09-22
 ---
 
-**This blog post is the first of a series of blog posts on Web Scraping**. Web Scraping is a very useful/important tool for gathering data off the web for data related tasks/projects. While there are various methods/approaches in which one can accomplish this task, this series will cover how to approach web scraping using python. For this particular entry, I will introduce the BeautifulSoup and Request packages and demonstrate how they can be used to extract Wheel of Fortune data from this [link](http://www.angelfire.com/mi4/malldirectories/wheel/wheelbonus.html). By the conclusion of this blog post you should be able to extrapolate what we covered for your own use cases. Let's get started.
+**This blog post is the first of a series of blog posts on Web Scraping**. Web Scraping is a very useful/important tool for gathering data off the web for data related tasks/projects. While there are various methods/approaches in which one can accomplish this task, this series will cover how to approach web scraping using python (specifically Python 3). For this particular entry, I will introduce the BeautifulSoup and Request packages and demonstrate how they can be used to extract Wheel of Fortune data from this [link](http://www.angelfire.com/mi4/malldirectories/wheel/wheelbonus.html). By the conclusion of this blog post you should be able to extrapolate what we covered for your own use cases. Let's get started.
 
 ## Getting Started:
 
-The initial step is to check if you have the appropriate packages (and dependencies) installed. We can do this using `pip`, the python package manager. By default it should be installed if you’re using `Python 2.7.9 (or greater)` or `Python 3.4 (or greater)`. If that is not the case, then you should refer to this [link](https://www.makeuseof.com/tag/install-pip-for-python/) for instructions on how to accomplish this. Otherwise, to install the BeautifulSoup and Requests package complete the following:
+We will begin by assuming you already have Python 3 installed. [Click here if you don't](https://www.python.org/downloads/). If you do, then the initial step is to check if you have the appropriate packages (and dependencies) installed. We can do this using `pip`, the python package manager. By default it should be installed if you’re using `Python 3.4 (or greater)`. If that is not the case, then you should refer to this [link](https://www.makeuseof.com/tag/install-pip-for-python/) for instructions on how to accomplish this. Otherwise, to install the BeautifulSoup and Requests package complete the following:
 
 <script src="https://gist.github.com/cbamedjonekou/2c631eac175038d7eafa8988fe51bd0e.js"></script>
 
@@ -38,10 +38,12 @@ Now here's the groovy part. Once we parse the link we're interested in, we can p
 
 So to acquire our links of interest we'll write a conditional statement that selects only the years (which are also hyperlinks) on the page. This is done in a round about way by skipping over any `link.text` (text between the `<a>` tags) that are new line characters and the word *'back'* as it is a navigation link. If the link is what we're looking for then we'll append it (grabbed using the .attrs['href'] attribute; `'href'` is assigned the address) to an empty list called `container`. The expected output should be the following:
 
-<img src= "/assets/seg1_output.png" height= "300" width= "700">
+<img src= "/assets/seg1_output.png" id= "above" height= "300" width= "700">
 
-We now have the first layer of links. We will have to scrape these links as well in order to get to our tables. The code to scrape these links will be similar to the one above. The code segment below will get our second layer of links: the months for each year. This is shown below:
+We now have the first layer of links. We will have to scrape these links as well to get the second layer of links: the months for each year. The code to scrape these links will be similar to the one above. This is shown below:
 
 <script src="https://gist.github.com/cbamedjonekou/49ee4e32bc68f1ece5165fb257c7e630.js"></script>
 
-The result will look a lot like the list of links pictured above. 
+The result will look a lot like the list of links (but with more links) pictured <a href="above">above</a>.
+
+We've reached the 
