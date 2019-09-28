@@ -44,6 +44,6 @@ We now have the first layer of links. We will have to scrape these links as well
 
 <script src="https://gist.github.com/cbamedjonekou/49ee4e32bc68f1ece5165fb257c7e630.js"></script>
 
-The result will look a lot like the list of links (but with more links) pictured <a href="above">above</a>.
+The result will look a lot like the list of links (but with more links) pictured <a href="#above">above</a>.
 
-We've reached the 
+We've reached the **final task** which is the scrape the second layer of links to obtain our tables. We will employ code similar to the one we use to scrape the site for the first and second layer of links, scraping each link in the list via a loop. After, we will convert each HTML table into a pandas dataframe and write them to a file of the `.csv` (comma seperated value) type.
