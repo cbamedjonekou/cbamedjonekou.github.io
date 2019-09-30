@@ -2,6 +2,7 @@
 layout: post
 title: "Web Scraping (A Series): Web Scraping w/ the BeautifulSoup and Requests Packages"
 date: 2019-09-25
+tags: wheel-of-fortune web-scraping beautifulsoup requests python3
 ---
 
 <h2 id= "ToC">Table of Contents:</h2>
