@@ -2,6 +2,7 @@
 layout: post
 title: "Blackhat Series: Creating TCP Client w/ Socket Module & Python 3"
 date: 2019-09-23
+tags: blackhat python3 tcp-client socket 
 ---
 
 ### Creating a TCP CLient using the socket module 
