@@ -2,6 +2,7 @@
 layout: post
 title: "Web Scraping (A Series): Web Scraping w/ the BeautifulSoup and Requests Packages"
 date: 2019-09-25
+description: A blog post from a series of blog posts on Web Scraping using Python. Introduces the BeautifulSoup and Request packages and demonstrates how they can be used to extract Wheel of Fortune data from a WoF Bonus Round Puzzle repo.
 tags: wheel-of-fortune web-scraping beautifulsoup requests python3
 ---
 
