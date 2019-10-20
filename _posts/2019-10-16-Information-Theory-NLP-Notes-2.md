@@ -17,15 +17,15 @@ tags: natural-language-processing artificial-intelligence information-theory int
 
     * That we cannot learn from the past
 
-2. He then claims not to have the scope to choose which is correct and instead asserts two view points of his own:
+2. He avoids choosing which of the two is correct (due to a lack of scope/breadth of knowledge) and instead asserts two view points of his own:
 
-    * That we learn the most from phenomena in man-made things rather than from phenomena in nature citing the study/creation of the steam engine, planes, and ships as catalyst for the creation of thermodynamics, aerodynamics, and hydrodynamics, respectively.
+    * That we learn the most from phenomena in man-made things rather than from phenomena in nature. He cites the study/creation of the steam engine, planes, and ships as catalyst for the creation of thermodynamics, aerodynamics, and hydrodynamics, respectively.
 
-    * That with difficulty understanding is won. And it is through this process that we can appreciate the value of our understanding of scientific origin. (There’s some truth to this anecdote but is this a hard fact? Don’t know.)
+    * That with difficulty, understanding is won. And it is through this process that we can appreciate the value of our understanding of scientific origin. (There’s some truth to this anecdote but is this a hard fact? Don’t know.)
 
     which serve to set the tone for the chapter.
 
-3. He discusses some topics that may lead the reader astray; one being entropy. Entropy is a term that represent two weakly related quantities: the entropy of thermodynamics/statistical mechanics, and (it’s analogous counterpart) the entropy of information theory:
+3. He discusses some topics that may lead the reader astray; One topic fitting the criteria is entropy. Entropy is a term that represents two weakly related quantities: the entropy of thermodynamics/statistical mechanics, and (it’s analogous counterpart) the entropy of information theory:
 
     <blockquote>
         <p>
@@ -33,7 +33,7 @@ tags: natural-language-processing artificial-intelligence information-theory int
         </p>
     </blockquote>
 
-    Pierce asserts that they are not related quantities, thus, their applications are different in the different domains. Below is an excerpt featuring the definitions.
+    Pierce asserts that they are not related quantities, thus, their applications are different (in different domains). Below is an excerpt featuring the definitions:
 
     <blockquote>
         <p>
@@ -43,13 +43,15 @@ tags: natural-language-processing artificial-intelligence information-theory int
 
     He, however, relents that they are seen as analogous to each other. [Attempts to form a relationship](https://en.wikipedia.org/wiki/Entropy_in_thermodynamics_and_information_theory) between the two have occurred, but it's safer to think of these quantities as distinct; The quantities involved in solving each entropy differ in context.
 
-4. He also goes into depth about the history of electrical communication here in Chapter 2, after he briefly touched upon it in Chapter 1. The reason, as emphasized in Chapter 1, is to give the reader an understanding of the problems and trials faced when developing the theory. Specifically, he discusses the following:
+4. He also goes into depth about the history of electrical communication for which information theory was derived. The reason, as emphasized in Chapter 1, is to give the reader an understanding of the problems and trials faced when developing the theory:
 
-    * Morse Code and the creation of the electrical telegraph. [Morse Code](https://en.wikipedia.org/wiki/Morse_code) encodes letters, and words, as a series of dots, dashes, and spaces. The most frequent letters retained short code symbols (such as the most frequent letter in English, the letter 'e') while the least frequent letters used long combinations of code symbols. The lesson (the one Pierce would like the reader to retain) provided by Morse's code is that it matters profoundly how one translates a message into electrical signals.
+    * Pierce discusses Morse Code and the creation of the electrical telegraph. [Morse Code](https://en.wikipedia.org/wiki/Morse_code) encodes letters, and words, as a series of dots, dashes, and spaces. The most frequent letters retained short code symbols (such as the most frequent letter in English, the letter 'e') while the least frequent letters used long combinations of code symbols. The lesson (the one Pierce would like the reader to retain) provided by Morse's code is that it matters profoundly how one translates a message into electrical signals.
 
-    * The construction of a Telegraph Circuit between Washington and Baltimore (circa. 1843).  The construction of the telegraph circuit ran into some difficulties with underground cables. These difficulties later plagued submarine cables as well. If one where to send multiple messages over underground/undersea circuits the messages would merge at the receiving end. To combat this phenomenon, increasing the length of the symbols was an option. However, the result was slow rate of transmission (a limit in transmission speed, in general).
+    * He also recalls the construction of a Telegraph Circuit between Washington and Baltimore (circa. 1843). The construction of the telegraph circuit ran into some difficulties with underground cables. These difficulties later plagued submarine cables as well. If one where to send multiple messages over underground/undersea circuits the messages would merge at the receiving end. To combat this phenomenon, increasing the length of the symbols is an option. However, the result is slow rate of transmission (a limit in transmission speed, in general).
 
-5. Pierce continues to discuss the methods used to increase the amount of symbols to be transmitted over a given period of time. One solution was to increase the number of elements (current states) used in telegraphy. Single current, double current, and quadruplex telegraph systems are discussed below:
+    By this point the 1st set of problems makes itself aware to us: merging of signals at the receiving end of a transmission, and the limits in transmission speeds.
+
+5. Pierce then discusses the method used to increase the amount of symbols to be transmitted over a given period of time. One solution is to increase the number of elements (current states) used in telegraphy. Single current, double current, and quadruplex telegraph systems are results are implementations of this method; they're discussed below:
 
     * The Single Current Telegraph has two elements or states which can be used to construct the morse code: current (on, '1'), and no current (off, '0'). You can only send one symbol at a time.
 
@@ -57,13 +59,17 @@ tags: natural-language-processing artificial-intelligence information-theory int
 
     * The Quadruplex Telegraph has four elements or states which can be used to construct the morse code. Two of the current states indicate direction while the other two indicate intensity. forward current (current in wire, '+1' and '+3'),and backward current (current out wire, '-1' and '-3'). A magnitude of '3' indicates higher intensity. You can send twice as many as the previous two, with the ablility to send two symbols at a time.
 
-6. Pierce discusses two ways of increasing the amount of symbols being sent via telegraph: increase in the speed of successive current values (symbols) over the circuit, and increase in the amount of different current values (symbols) available. But neither of these really solve our issues regarding the spread and overlap of the symbols, and noise. Increasing power can help with noise but cables have limits. Ultimately, it was these problems that acted as a catalyst for the creation of Information Theory (in all its mathy goodness).
+6. By this point we are made aware of two ways of increasing the amount of symbols being sent via telegraph: increase in the speed of successive current values (symbols) over the circuit, and increase in the amount of different current values (symbols) available. But neither of these really solve our issues regarding the spread and overlap of the symbols, and noise. Increasing power can help with noise but cables have limits. Ultimately, it was these problems that acted as a catalyst for the creation of Information Theory (in all its mathy goodness).
 
-    * “Early telegraphists understoond intuitively a good deal about the limitations associated with speed of signaling, interference (or noise), difficultiy in distinguishing among many alternative values in current, and the limitation on the power that one could use. More than an intuitive understanding was required. An exact Mathematical Analysis of such problems was needed.” -Pierce, John R.
+    <blockquote>
+        <p>
+            “Early telegraphists understoond intuitively a good deal about the limitations associated with speed of signaling, interference (or noise), difficultiy in distinguishing among many alternative values in current, and the limitation on the power that one could use. More than an intuitive understanding was required. An exact Mathematical Analysis of such problems was needed.” -Pierce, John R.
+        </p>
+    </blockquote>
 
-7. He then goes on to cite the contributions of many people (p.30), and specifically French Mathematician/Physicist Fourier.
+7. He then goes on to cite the contributions of many people (p.30), and specifically French Mathematician/Physicist Fourier, as central to the development of information to solve aforementioned problems.
 
-    * Fourier’s contribution to  electrical communication came in the form of proofs and analysis, specifically his proof concerning electric signals.
+    * Fourier’s contribution to  electrical communication came in the form of [proofs and analysis](https://en.wikipedia.org/wiki/Fourier_analysis), specifically his proof concerning electric signals.
 
     * Electrical Signals can be viewed as a bunch of sine waves, typically. Fourier proved a theorem which showed that “any variation of a quantity with time can be accurately represented as the sum of a number of sinusoïdal variations of different amplitudes, phases, and frequencies”.
 
@@ -71,8 +77,14 @@ tags: natural-language-processing artificial-intelligence information-theory int
 
     * Criterion/Identifiers for defining Linear Circuits: Signals have to act independently of each other.
 
-8. He continues to discuss electric signals, specifically events that occur as signals enter and exit a circuit:
+8. He continues the discussion about propertiers of electric signals, specifically events that occur as signals enter and exit a circuit:
 
-    * Output signals that exit electric circuits tend to be different from the input signals in which they were derived. This can be a change in phase via delay ([Phase Shift](https://en.wikipedia.org/wiki/Phase_(waves)#Phase_shift)), or a shrinkage in amplitude ([Attenuation](https://en.wikipedia.org/wiki/Attenuation)).
+    * Input signals (especially ones with multiple sinusoidal components) produce output signals (also w/ multiple sinusoidal components) of the same frequency but with a different phase via a delay ([Phase Shift](https://en.wikipedia.org/wiki/Phase_(waves)#Phase_shift)), and a shrinkage in amplitude ([Attenuation](https://en.wikipedia.org/wiki/Attenuation)).
 
     * The amounts of attenuation and delay depend on the frequency of the sine wave.
+
+    * Generally speaking, it is expected that the output sginal will have a different shape in comparison to the input signal (p. 34).
+
+    * Caveat: "If the attenuation and delay of a circuit is the same for all frequencies, the shape of the output signal will be the same as that of the input signal; such a circuit is [distortionless](https://en.wikipedia.org/wiki/Heaviside_condition)." (p. 34)
+
+9. 
