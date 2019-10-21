@@ -13,19 +13,17 @@ tags: natural-language-processing artificial-intelligence information-theory int
 
 1. Pierce starts the discussion by asserting two historically opposing view points:
 
-    * That we can learn from the past (learn by studying earlier times/passed transgressions)
+    * That we can learn from the past (learn by studying earlier times &passed transgressions)
 
-    * That we cannot learn from the past
+    * And opposingly, that we cannot learn from past events
 
-2. He avoids choosing which of the two is correct (due to a lack of scope/breadth of knowledge) and instead asserts two view points of his own:
+2. He avoids choosing which of the two is correct (due to a lack of scope/breadth in the subject) and instead asserts two view points of his own, which serve to set the tone for the chapter:
 
-    * That we learn the most from phenomena in man-made things rather than from phenomena in nature. He cites the study/creation of the steam engine, planes, and ships as catalyst for the creation of thermodynamics, aerodynamics, and hydrodynamics, respectively.
+    * That we learn the most from phenomena in man-made things rather than from phenomena in nature. He cites the creation & study of the steam engine, planes, and ships as catalyst for the creation of thermodynamics, aerodynamics, and hydrodynamics, respectively.
 
-    * That with difficulty, understanding is won. And it is through this process that we can appreciate the value of our understanding of scientific origin. (There’s some truth to this anecdote but is this a hard fact? Don’t know.)
+    * That with difficulty, understanding is won. And it is through this process that we can appreciate the value of our understanding of scientific discoveries & origins. (There’s some truth to this anecdote but is this a hard fact? Don’t know.)
 
-    which serve to set the tone for the chapter.
-
-3. He discusses some topics that may lead the reader astray; One topic fitting the criteria is entropy. Entropy is a term that represents two weakly related quantities: the entropy of thermodynamics/statistical mechanics, and (it’s analogous counterpart) the entropy of information theory:
+3. He discusses some topics that may lead the reader astray; One topic fitting the criteria is entropy. Entropy is a term that represents two weakly related quantities: the entropy of thermodynamics/statistical mechanics, and the entropy of information theory:
 
     <blockquote>
         <p>
@@ -33,7 +31,7 @@ tags: natural-language-processing artificial-intelligence information-theory int
         </p>
     </blockquote>
 
-    Pierce asserts that they are not related quantities, thus, their applications are different (in different domains). Below is an excerpt featuring the definitions:
+    Pierce asserts that they are not related quantities, thus, their applications are different (and in different domains). Below is an excerpt featuring the definitions:
 
     <blockquote>
         <p>
@@ -41,29 +39,29 @@ tags: natural-language-processing artificial-intelligence information-theory int
         </p>
     </blockquote>
 
-    He, however, relents that they are seen as analogous to each other. [Attempts to form a relationship](https://en.wikipedia.org/wiki/Entropy_in_thermodynamics_and_information_theory) between the two have occurred, but it's safer to think of these quantities as distinct; The quantities involved in solving each entropy differ in context.
+    He, however, relents that they're analogous to each other. [Attempts to form a relationship](https://en.wikipedia.org/wiki/Entropy_in_thermodynamics_and_information_theory) between the two have occurred, but it's safer to think of these quantities as distinct; The quantities involved in solving each entropy differ in context.
 
-4. He also goes into depth about the history of electrical communication for which information theory was derived. The reason, as emphasized in Chapter 1, is to give the reader an understanding of the problems and trials faced when developing the theory:
+4. He also speaks in depth about the history of electrical communication for which information theory was derived. The reason, as emphasized in Chapter 1, is to give the reader an understanding of the problems and trials faced when developing the theory:
 
     * Pierce discusses Morse Code and the creation of the electrical telegraph. [Morse Code](https://en.wikipedia.org/wiki/Morse_code) encodes letters, and words, as a series of dots, dashes, and spaces. The most frequent letters retained short code symbols (such as the most frequent letter in English, the letter 'e') while the least frequent letters used long combinations of code symbols. The lesson (the one Pierce would like the reader to retain) provided by Morse's code is that it matters profoundly how one translates a message into electrical signals.
 
-    * He also recalls the construction of a Telegraph Circuit between Washington and Baltimore (circa. 1843). The construction of the telegraph circuit ran into some difficulties with underground cables. These difficulties later plagued submarine cables as well. If one where to send multiple messages over underground/undersea circuits the messages would merge at the receiving end. To combat this phenomenon, increasing the length of the symbols is an option. However, the result is slow rate of transmission (a limit in transmission speed, in general).
+    * He also recalls the construction of a Telegraph Circuit between Washington and Baltimore (circa. 1843). The construction of the telegraph circuit ran into some difficulties with underground cables. These difficulties later plagued submarine cables as well. If one where to send multiple messages over underground/undersea circuits the messages would merge at the receiving end. To combat this phenomenon, increasing the length of the symbols is an option. However, the result is a slow rate of transmission (a limit in transmission speed, in general).
 
-    By this point the 1st set of problems makes itself aware to us: merging of signals at the receiving end of a transmission, and the limits in transmission speeds.
+    By this point a few of the problems Information Theory addresses makes themselves aware to us: merging of signals at the receiving end of a transmission, and the limits in transmission speeds.
 
-5. Pierce then discusses the method used to increase the amount of symbols to be transmitted over a given period of time. One solution is to increase the number of elements (current states) used in telegraphy. Single current, double current, and quadruplex telegraph systems are results are implementations of this method; they're discussed below:
+5. Pierce also discusses another method (increasing transmission speeds is one method previously discussed) used to increase the amount of symbols being transmitted over a given period of time. This method suggests an increase the number of elements (current states) used in telegraphy. Single current, double current, and quadruplex telegraph systems are implementations of this method. They're discussed below:
 
-    * The Single Current Telegraph has two elements or states which can be used to construct the morse code: current (on, '1'), and no current (off, '0'). You can only send one symbol at a time.
+    * The Single Current Telegraph has two elements or states which can be used to construct the morse code: current (on, '1'), and no current (off, '0').
 
-    * The Double Current Telegraph has three elements or states which can be used to construct the morse code: forward current (current in wire, '+1'), no current (off, '0'), backward current (current out wire, '-1'). Equivalent response as the Single Current Telegraph, you can only send one symbol at a time.
+    * The Double Current Telegraph has three elements or states which can be used to construct the morse code: forward current (current in wire, '+1'), no current (off, '0'), backward current (current out wire, '-1'). Equivalent response as the Single Current Telegraph.
 
-    * The Quadruplex Telegraph has four elements or states which can be used to construct the morse code. Two of the current states indicate direction while the other two indicate intensity. forward current (current in wire, '+1' and '+3'),and backward current (current out wire, '-1' and '-3'). A magnitude of '3' indicates higher intensity. You can send twice as many as the previous two, with the ablility to send two symbols at a time.
+    * The Quadruplex Telegraph has four elements or states which can be used to construct the morse code. Two of the current states indicate direction while the other two indicate intensity. forward current (current in wire, '+1' and '+3'),and backward current (current out wire, '-1' and '-3'). A magnitude of '3' indicates higher intensity. You can send twice as many letters per minute as the previous two, with the ablility to send two symbols at a time.
 
-6. By this point we are made aware of two ways of increasing the amount of symbols being sent via telegraph: increase in the speed of successive current values (symbols) over the circuit, and increase in the amount of different current values (symbols) available. But neither of these really solve our issues regarding the spread and overlap of the symbols, and noise. Increasing power can help with noise but cables have limits. Ultimately, it was these problems that acted as a catalyst for the creation of Information Theory (in all its mathy goodness).
+6. By this point we are made aware of the two factors necessary to determine the amount of information being sent via telegraph: the speed of successive symbols (successive current values) over the circuit, or transmission speeds; and the amount of different symbols (different current values) available to choose from, or [multiplexing](https://en.wikipedia.org/wiki/Multiplexing). But neither of these really solve our issues regarding the spread and overlap of the symbols, and noise. Increasing power can help with noise but cables have limits. Ultimately, it was these problems that acted as a catalyst for the creation of Information Theory (in all its mathy goodness).
 
     <blockquote>
         <p>
-            “Early telegraphists understoond intuitively a good deal about the limitations associated with speed of signaling, interference (or noise), difficultiy in distinguishing among many alternative values in current, and the limitation on the power that one could use. More than an intuitive understanding was required. An exact Mathematical Analysis of such problems was needed.” -Pierce, John R.
+            “Early telegraphists understood intuitively a good deal about the limitations associated with speed of signaling, interference (or noise), difficultiy in distinguishing among many alternative values in current, and the limitation on the power that one could use. More than an intuitive understanding was required. An exact Mathematical Analysis of such problems was needed.” -Pierce, John R.
         </p>
     </blockquote>
 
