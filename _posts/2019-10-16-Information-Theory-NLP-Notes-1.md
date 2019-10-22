@@ -1,7 +1,7 @@
 ---
 layout: post
 mathjax: true
-title: "A Concise Introduction to Information Theory Part 1"
+title: "A Brief Summary: Pierce's Introduction to Information Theory (Part 1)"
 date: 2019-10-16
 description: The first of a series of blog posts that attempts to give a concise introduction to Information Theory. This series of posts can act as a supplement to Pierce's "An Introduction to Information Theory-Symbols, Signals and Noise".
 tags: natural-language-processing artificial-intelligence information-theory introduction shannon concise wheel-of-fortune
