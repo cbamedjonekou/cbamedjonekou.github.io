@@ -13,17 +13,17 @@ tags: natural-language-processing artificial-intelligence information-theory int
 
 1. Pierce starts the discussion by asserting two historically opposing view points:
 
-    * That we can learn from the past (learn by studying earlier times &passed transgressions)
+    * That we can learn from the past (learn by studying earlier times & passed transgressions)
 
-    * And opposingly, that we can't learn from past events
+    * And opposingly, that we can't learn from the past
 
-2. He avoids choosing which of the two is correct (due to a lack of scope/breadth in the subject) and instead asserts two view points of his own, which serve to set the tone for the chapter:
+2. He avoids choosing which of the two is correct (due to his lack of expertise in the subject) and instead asserts two view points of his own, which serve to set the tone for the chapter:
 
-    * That we learn the most from phenomena in man-made things rather than from phenomena in nature. He cites the creation & study of the steam engine, planes, and ships as catalyst for the creation of thermodynamics, aerodynamics, and hydrodynamics, respectively.
+    * The first is that we learn the most from phenomena in man-made things rather than from phenomena in nature. He cites the creation & study of the steam engine, planes, and ships as catalysts for the creation of thermodynamics, aerodynamics, and hydrodynamics respectively.
 
-    * That with difficulty, understanding is won. And it is through this process that we can appreciate the value of our understanding of scientific discoveries & origins. (There’s some truth to this heuristic but is this a hard fact? Don’t know.)
+    * The second is that with difficulty, understanding is won. And it is through this process that we can appreciate the value of our understanding of scientific discoveries & origins. (There’s some truth to this heuristic but is this a hard fact? Don’t know.)
 
-3. He discusses some topics that may lead the reader astray; One topic fitting the criteria is entropy. Entropy is a term that represents two weakly related quantities: the entropy of thermodynamics/statistical mechanics, and the entropy of information theory:
+3. He discusses some topics that may lead the reader astray; One topic fitting the criteria is entropy. Entropy is a term that represents two weakly related quantities: the entropy of thermodynamics/statistical mechanics, and the entropy of information theory.
 
     <blockquote>
         <p>
@@ -45,11 +45,11 @@ tags: natural-language-processing artificial-intelligence information-theory int
 
     * Pierce discusses Morse Code and the creation of the electrical telegraph. [Morse Code](https://en.wikipedia.org/wiki/Morse_code) encodes letters, and words, as a series of dots, dashes, and spaces. The most frequent letters retained short code symbols (such as the letter 'e' which happens to be the most frequent letter in English) while the least frequent letters used long combinations of code symbols (the letter 'z' for instance). The lesson provided by Morse's code, the one Pierce would like the reader to retain, is that it matters profoundly how one translates a message into electrical signals.
 
-    * He also brings up the construction of a Telegraph Circuit between Washington and Baltimore (circa. 1843). The construction of the telegraph circuit ran into some difficulties with underground cables. These difficulties later plagued submarine cables as well. If one where to send multiple messages over underground/undersea circuits the messages would merge at the receiving end. To combat this phenomenon, increasing the length of the symbols is an option. However, the result is a slow rate of transmission (a limit in transmission speed, in general).
+    * He also brings up the construction of a Telegraph Circuit between Washington and Baltimore (circa. 1843). The construction of the telegraph circuit ran into some difficulties with underground cables, and later, submarine cables. If one where to send multiple messages over underground/undersea circuits the messages would merge at the receiving end. To combat this phenomenon, increasing the length of the symbols is an option. However, the result is a slow rate of transmission (a limit in transmission speed, in general).
 
     By this point a few of the problems Information Theory addresses makes themselves known to us: merging of signals at the receiving end of a transmission, and the limits in transmission speeds.
 
-5. Pierce also discusses another method (increasing transmission speeds is one method previously discussed) used to increase the amount of symbols being transmitted over a given period of time. This method suggests an increase in the number of elements (current states) used in telegraphy. Single current, double current, and quadruplex telegraph systems are implementations of this method. They're discussed below:
+5. Pierce also discusses another method used to increase the amount of symbols being transmitted over a given period of time; Increasing transmission speeds is one method (previously discussed). This method suggests an increase in the number of elements (current states) used in telegraphy. Single current, double current, and quadruplex telegraph systems are implementations of this method. They're discussed below:
 
     * The Single Current Telegraph has two elements or states which can be used to construct the morse code: current (on, '1'), and no current (off, '0').
 
@@ -57,7 +57,7 @@ tags: natural-language-processing artificial-intelligence information-theory int
 
     * The Quadruplex Telegraph has four elements or states which can be used to construct the morse code. Two of the current states indicate direction while the other two indicate intensity: forward current (current in wire, '+1' and '+3'), and backward current (current out wire, '-1' and '-3'). A magnitude of '3' indicates higher intensity. You can send twice as many letters per minute as the previous two, with the ablility to send two symbols at a time.
 
-6. By this point we are made aware of the two factors necessary to determine the amount of information being sent via telegraph: the speed of successive symbols (successive current values) over the circuit, or transmission speeds; and the amount of different symbols (different current values) available to choose from, or [multiplexing](https://en.wikipedia.org/wiki/Multiplexing). But neither of these really solve our issues regarding the spread and overlap of the symbols, and noise. Increasing power can help with noise but cables have limits. Ultimately, it was these problems that acted as a catalyst for the creation of Information Theory (in all its mathy goodness).
+6. By this point we are made aware of the two factors necessary to determine the amount of information being sent via telegraph: the speed of successive symbols (successive current values) over the circuit, or transmission speeds; and the amount of different symbols (different current values) available to choose from, or [multiplexing](https://en.wikipedia.org/wiki/Multiplexing#Telegraphy). But neither of these really solve our issues regarding the spread and overlap of the symbols, and noise. Increasing power can help with noise but cables have limits. Ultimately, it was these problems that acted as a catalyst for the creation of Information Theory (in all its mathy goodness).
 
     <blockquote>
         <p>
@@ -65,7 +65,7 @@ tags: natural-language-processing artificial-intelligence information-theory int
         </p>
     </blockquote>
 
-7. Pierce also goes on to cite the contributions of many people (p.30), and specifically French Mathematician/Physicist Fourier as central to the development of information theory to solve aforementioned problems.
+7. Pierce continues by citing the contributions of many people (p.30), and specifically French Mathematician/Physicist Fourier as central to the development of information theory to solve aforementioned problems.
 
     * Fourier’s contribution to  electrical communication came in the form of [proofs and analysis](https://en.wikipedia.org/wiki/Fourier_analysis), specifically his proof concerning electric signals.
 
@@ -75,7 +75,7 @@ tags: natural-language-processing artificial-intelligence information-theory int
 
     * Criterion/Identifiers for defining Linear Circuits: Signals have to act independently of each other.
 
-8. He continues the discussion about propertiers of electric signals, specifically events that occur as signals enter and exit a circuit:
+8. Pierce also speaks about the properties of electric signals (also attributed to [Fourier Analysis](https://en.wikipedia.org/wiki/Fourier_analysis)), specifically events that occur as signals enter and exit a circuit:
 
     * Input signals (especially ones with multiple sinusoidal components) produce output signals (also w/ multiple sinusoidal components) of the same frequency but with a different phase via a delay ([Phase Shift](https://en.wikipedia.org/wiki/Phase_(waves)#Phase_shift)), and a shrinkage in amplitude ([Attenuation](https://en.wikipedia.org/wiki/Attenuation)).
 
@@ -85,4 +85,10 @@ tags: natural-language-processing artificial-intelligence information-theory int
 
     * Caveat: "If the attenuation and delay of a circuit is the same for all frequencies, the shape of the output signal will be the same as that of the input signal; such a circuit is [distortionless](https://en.wikipedia.org/wiki/Heaviside_condition)." (p. 34)
 
-9. 
+9. Pierce concludes the discussion concerning Fourier's Analysis with this statement: "Fourier Analysis is a powerful tool for the analysis of transmission problems" (p. 34). He also notes that many who studied electrical communication (mathematicians, telegraphists, and engineers) did not understand the variety of results provided by Fourier Analysis, and the appropriate context in which they should be used. Hence, a lot of the combinations of signals created (touted as being desirable) failed mostly due to bad mathematics and wrong arguments. Enter Harry Nyquist. To put it simply, Nyquist was a better mathematician than most men who tackled telegraph problems.
+
+    <blockquote>
+        <p>
+            “In 1917, Harry Nyquist came to the American Telephon and Telegraph Company immediatly after receiving his Ph.D. at Yale  (Ph.D.'s were considerably rarer in those days). Nyquist was a much better mathematician than most men who tackled the problems of telegraphy, and he was a clear, original, and philosophical thinker concerning communication. He tackled problems of telegraphy with powerful methods and with clear insight...” -Pierce, John R.
+        </p>
+    </blockquote>
