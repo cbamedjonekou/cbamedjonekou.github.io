@@ -7,9 +7,25 @@ description: The second of a series of blog posts that attempts to give a concis
 tags: natural-language-processing artificial-intelligence information-theory introduction shannon concise wheel-of-fortune
 ---
 
-
-
 ### Chapter 2 - The Origins of Information Theory [[Pierce](https://archive.org/details/symbolssignalsan002575mbp/page/n27)]:
+
+<h2 id="TOC">Table of Contents</h2>
+<ul>
+    <li><a href="#tldr">TL;DR</a></li>
+    <li><a href="#LFH">Learning from History</a></li>
+    <li><a href="#Entropy-Confusion">Avoiding the Confusion w/ Entropy</a></li>
+    <li><a href="#Morse">Morse Code and the Telegraph</a></li>
+    <li><a href="#Fourier">Contributions of Joseph Fourier</a></li>
+    <li><a href="#Nyquist">Contributions of Harry Nyquist</a></li>
+    <li><a href="#Hartley">Contributions of R.V.L. Hartley</a></li>
+</ul>
+
+<h2 id="tldr">TL;DR</h2>
+
+To be added later
+
+<h2 id="LFH">Learning from History</h2>
+<a href="#TOC">Back to Table of Contents</a>
 
 Pierce starts the discussion by asserting two historically opposing view points:
 
@@ -22,6 +38,9 @@ He avoids choosing which of the two is correct (due to his lack of expertise in 
 * The first is that we learn the most from phenomena in man-made things rather than from phenomena in nature. He cites the creation & study of the steam engine, planes, and ships as catalysts for the creation of thermodynamics, aerodynamics, and hydrodynamics respectively.
 
 * The second is that with difficulty, understanding is won. And it is through this process that we can appreciate the value of our understanding of scientific discoveries & origins. (There’s some truth to this heuristic but is this a hard fact? Don’t know.)
+
+<h2 id="Entropy-Confusion">Avoiding the Confusion w/ Entropy</h2>
+<a href="#TOC">Back to Table of Contents</a>
 
 He discusses some topics that may lead the reader astray; One topic fitting the criteria is entropy. Entropy is a term that represents two weakly related quantities: the entropy of thermodynamics/statistical mechanics, and the entropy of information theory.
 
@@ -42,6 +61,9 @@ Pierce asserts that they are not related quantities, thus, their applications ar
 </blockquote>
 
 He, however, relents that they're analogous to each other. [Attempts to form a relationship](https://en.wikipedia.org/wiki/Entropy_in_thermodynamics_and_information_theory) between the two have occurred, but it's safer to think of these quantities as distinct; The quantities involved in solving each entropy differ in context.
+
+<h2 id="Morse">Morse Code and the Telegraph</h2>
+<a href="#TOC">Back to Table of Contents</a>
 
 He also speaks in depth about the history of electrical communication for which information theory was derived. The reason, as emphasized in Chapter 1, is to give the reader an understanding of the problems and trials previous contributors faced when developing our theory for communication:
 
@@ -68,6 +90,9 @@ By this point we are made aware of the two factors necessary to determine the am
     <footer>-Pierce, John R.</footer>
 </blockquote>
 
+<h2 id="Fourier">Contributions of Joseph Fourier</h2>
+<a href="#TOC">Back to Table of Contents</a>
+
 Pierce continues by citing the contributions of many people (p.30), and specifically French Mathematician/Physicist Fourier as central to the development of information theory to solve aforementioned problems.
 
 * Fourier’s contribution to  electrical communication came in the form of [proofs and analysis](https://en.wikipedia.org/wiki/Fourier_analysis), specifically his proof concerning electric signals.
@@ -87,6 +112,9 @@ Pierce also speaks about the properties of electric signals (also attributed to 
 * Generally speaking, it is expected that the output sginal will have a different shape in comparison to the input signal (p. 34).
 
 * Caveat: "If the attenuation and delay of a circuit is the same for all frequencies, the shape of the output signal will be the same as that of the input signal; such a circuit is [distortionless](https://en.wikipedia.org/wiki/Heaviside_condition)." (p. 34)
+
+<h2 id="Nyquist">Contributions of Harry Nyquist</h2>
+<a href="#TOC">Back to Table of Contents</a>
 
 Pierce concludes the discussion concerning Fourier's Analysis with this statement: "Fourier Analysis is a powerful tool for the analysis of transmission problems" (p. 34). He also notes that many who studied electrical communication (mathematicians, telegraphists, and engineers) did not understand the variety of results provided by Fourier Analysis, and the appropriate context in which they should be used. Hence, a lot of the combinations of signals created (touted as being desirable) failed mostly due to bad mathematics and wrong arguments. Enter Harry Nyquist. To put it simply, Nyquist was a better mathematician than most men who tackled telegraphy problems. His research in the field, like Fourier, was instrumental for the development of Information Theory.
 
@@ -209,3 +237,18 @@ The idea extends to $n \geq 4$ where $n$ is the base of the logarithm, and more 
 <a href= "/assets/Certain Factors Affecting Telegraph Speed Nyquist.pdf">OG Nyquist Paper found here</a>
 
 Nyquist, however, confirmed what those before him figured out: the use of more current values is difficult due to noise, attenuation, etc. Nyquist later published another, more quantitive, paper
+([found here](http://physics.oregonstate.edu/~hetheriw/whiki/ph415_s15/tasks/dsp/files/nyquist/Nyquist.pdf)) which showed that
+
+<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
+    <p>
+        "...if one sends some number $2N$ of different current values per second, all the sinusoidal components of the signal with frequencies greater that $N$ are redundant, in the sense that they are not needed in deducing from the received signal the succession of current values which were sent."
+    </p>
+    <footer>-Pierce, John R.</footer>
+</blockquote>
+
+Basically in removing all higher frequencies above the threshold, one could still figure out which current values were sent.
+
+<h2 id= "Hartley">Contributions of R.V.L. Hartley</h2>
+<a href="#TOC">Back to Table of Contents</a>
+
+Hartley, another contributer who Pierce speaks about, wrote a paper called [Transmission of Information](http://keszei.chem.elte.hu/entropia/Hartley1928text.pdf) (1928). In the paper, we see the first 
