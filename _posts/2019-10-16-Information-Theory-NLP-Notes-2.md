@@ -7,7 +7,9 @@ description: The second of a series of blog posts that attempts to give a concis
 tags: natural-language-processing artificial-intelligence information-theory introduction shannon concise wheel-of-fortune
 ---
 
-### Chapter 2 - The Origins of Information Theory [[Pierce](https://archive.org/details/symbolssignalsan002575mbp/page/n27)]:
+<h2>Introduction</h2>
+
+Providing a brief summary for Chapter 2 (<i>"The Origins of Information Theory"</i>) of [Pierce's](https://archive.org/details/symbolssignalsan002575mbp/page/n27) <i>"An Introduction to Information Theory: Symbols, Signals, and Noise</i>
 
 <h2 id="TOC">Table of Contents</h2>
 <ul>
@@ -251,4 +253,4 @@ Basically in removing all higher frequencies above the threshold, one could stil
 <h2 id= "Hartley">Contributions of R.V.L. Hartley</h2>
 <a href="#TOC">Back to Table of Contents</a>
 
-Hartley, another contributer who Pierce speaks about, wrote a paper called [Transmission of Information](http://keszei.chem.elte.hu/entropia/Hartley1928text.pdf) (1928). In the paper, we see the first 
+Hartley, another contributer who Pierce speaks about, wrote a paper called [Transmission of Information](http://keszei.chem.elte.hu/entropia/Hartley1928text.pdf) (1928). In this paper, he formulated 
