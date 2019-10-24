@@ -253,4 +253,24 @@ Basically in removing all higher frequencies above the threshold, one could stil
 <h2 id= "Hartley">Contributions of R.V.L. Hartley</h2>
 <a href="#TOC">Back to Table of Contents</a>
 
-Hartley, another contributer who Pierce speaks about, wrote a paper called [Transmission of Information](http://keszei.chem.elte.hu/entropia/Hartley1928text.pdf) (1928). In this paper, he formulated 
+Hartley, another contributer who Pierce speaks about, wrote a paper called [Transmission of Information](http://keszei.chem.elte.hu/entropia/Hartley1928text.pdf) (1928). In this paper, he regarded a sender of a message as:
+
+<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
+    <p>
+        "...equipped with a set of symbols (the letters of the alphabet for instance) from which he mentally selects symbol after symbol, thus generating a sequence of symbols. He observed that a chance event, such as rolling balls into pockets, might equally well generate such a sequence."
+    </p>
+    <footer>-Pierce, John R.</footer>
+</blockquote>
+
+The result of this premise was the following equation: $$H = n \log s$$ where $H$ is defined as the information of the message, $n$ is the number of symbols selected, and $s$ is the number of unique symbols in the set (from which symbols are selected). There are caveats, criteria that needs to be considered:
+
+<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
+    <p>
+        "This is acceptable...only if successive symbols are chosen independently and if any of the $s$ symbols is equally likely to be to be selected."
+    </p>
+    <footer>-Pierce, John R.</footer>
+</blockquote>
+
+Hartley's premise is analogous to what Nyquist proposed.
+
+
