@@ -7,7 +7,7 @@ description: The second of a series of blog posts that attempts to give a concis
 tags: natural-language-processing artificial-intelligence information-theory introduction shannon concise wheel-of-fortune
 ---
 
-<h2>Introduction</h2>
+<h2 id="Top">Introduction</h2>
 
 In this post we look to provide a brief summary for Chapter 2 (<i>"The Origins of Information Theory"</i>) of [Pierce's](https://archive.org/details/symbolssignalsan002575mbp/page/n27) <i>"An Introduction to Information Theory: Symbols, Signals, and Noise</i>. Skip to <a href="#tldr">TL;DR</a> for a summary of the summary (that's so [meta](https://www.grammarly.com/blog/meta-meaning/)).
 
@@ -289,3 +289,11 @@ Shannon, whose work is the basis of Pierce's Book, primarily considered the prob
     </p>
     <footer>-Pierce, John R.</footer>
 </blockquote>
+
+<h2>Conclusion</h2>
+
+Pierce does not go to much into depth about Shannon's contributions in Chapter 2, because he claims to have the whole book for that (which is fact). Therefore, our summary of Chapter 2 ends on that note. Again, refer to <a href="#tldr">TL;DR</a> for an even briefer summary of what was covered in Chapter 2.
+
+<img src="https://media.giphy.com/media/Y0btn5YtZRGNkTnvNx/giphy.gif">
+
+<a href="#Top">Back to the Top</a>
