@@ -1,15 +1,15 @@
 ---
 layout: post
 mathjax: true
-title: "A Brief Summary: Pierce's Introduction to Information Theory (Part 2)"
+title: "A Brief Summary to Pierce's Introduction to Information Theory (Part 2)"
 date: 2019-10-16
-description: The second of a series of blog posts that attempts to give a concise introduction to Information Theory. This series of posts can act as a supplement to Pierce's "An Introduction to Information Theory-Symbols, Signals and Noise".
+description: The second of a series of blog posts that attempts to give a concise introduction to Information Theory. This series of posts can act as a summary of events of Pierce's "An Introduction to Information Theory-Symbols, Signals and Noise".
 tags: natural-language-processing artificial-intelligence information-theory introduction shannon concise wheel-of-fortune
 ---
 
 <h2>Introduction</h2>
 
-Providing a brief summary for Chapter 2 (<i>"The Origins of Information Theory"</i>) of [Pierce's](https://archive.org/details/symbolssignalsan002575mbp/page/n27) <i>"An Introduction to Information Theory: Symbols, Signals, and Noise</i>
+In this post we look to provide a brief summary for Chapter 2 (<i>"The Origins of Information Theory"</i>) of [Pierce's](https://archive.org/details/symbolssignalsan002575mbp/page/n27) <i>"An Introduction to Information Theory: Symbols, Signals, and Noise</i>. Skip to <a href="#tldr">TL;DR</a> for a summary of the summary (that's so [meta](https://www.grammarly.com/blog/meta-meaning/)).
 
 <h2 id="TOC">Table of Contents</h2>
 <ul>
@@ -20,11 +20,12 @@ Providing a brief summary for Chapter 2 (<i>"The Origins of Information Theory"<
     <li><a href="#Fourier">Contributions of Joseph Fourier</a></li>
     <li><a href="#Nyquist">Contributions of Harry Nyquist</a></li>
     <li><a href="#Hartley">Contributions of R.V.L. Hartley</a></li>
+    <li><a href="#Shannon">Contributions of Claude Shannon,</a></li>
 </ul>
 
 <h2 id="tldr">TL;DR</h2>
 
-To be added later
+Chapter 2 discusses the history of Information Theory. The intent of the chapter is to give the reader an insight into motivation behind the creation of said theory. It discusses electrical communication, specifically Morse Code, the problems associated with send signals (such as Morse Code) over electric circuits (specifically telegraphy circuits) as well as key contributions from mathematicians, engineers, and telegraphist such as [Samuel Morse](https://en.wikipedia.org/wiki/Samuel_Morse), [Joseph Fourier](https://en.wikipedia.org/wiki/Joseph_Fourier), [Harry Nyquist](https://en.wikipedia.org/wiki/Harry_Nyquist), [R.V.L. Hartley](https://en.wikipedia.org/wiki/Ralph_Hartley), and [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon). Morse gives us the telegraph, and introduces to us the problem of encoding the letters of the alphabet for electrical communication (Morse Code). Morse also identifies several problems faced in electrical communication: failure to transmit accurately rapid changes in current, and unwanted noise. We also a learn of the greater choice of signals besides on and off. Fourier gives us Fourier Analysis: a way to generalize any signal as the sum of sinusoïds of various frequencies. We also learn from Fourier that most communication circuits are linear. Nyquist gave us clear methods to tackle these aforementioned problems --- Nyquist's formula $W = K \log_n m$ which describes the relationship between the speed of telegraphy and the number of current values, and ultimately, calculates transmission speeds. Hartley provided us with a formula ($H = n \log s$) that showed us the rate at which letters can be transmitted. Finally, we briefly go over Shannon's contribution which the entirety of Pierce's book covers.
 
 <h2 id="LFH">Learning from History</h2>
 <a href="#TOC">Back to Table of Contents</a>
@@ -262,7 +263,11 @@ Hartley, another contributer who Pierce speaks about, wrote a paper called [Tran
     <footer>-Pierce, John R.</footer>
 </blockquote>
 
-The result of this premise was the following equation: $$H = n \log s$$ where $H$ is defined as the information of the message, $n$ is the number of symbols selected, and $s$ is the number of unique symbols in the set (from which symbols are selected). There are caveats, criteria that needs to be considered:
+The result of this premise was the following equation:
+
+<p>$$H = n \log s$$</p>
+
+where $H$ is defined as the information of the message, $n$ is the number of symbols selected, and $s$ is the number of unique symbols in the set (from which symbols are selected). There are caveats, criteria that needs to be considered:
 
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
     <p>
@@ -271,6 +276,16 @@ The result of this premise was the following equation: $$H = n \log s$$ where $H
     <footer>-Pierce, John R.</footer>
 </blockquote>
 
-Hartley's premise is analogous to what Nyquist proposed.
+Hartley's premise is analogous to what Nyquist proposed. [Read More.](http://keszei.chem.elte.hu/entropia/Hartley1928text.pdf)
 
+<h2 id="Shannon">Contributions of Claude Shannon</h2>
+<a href="#TOC">Back to Table of Contents</a>
 
+Shannon, whose work is the basis of Pierce's Book, primarily considered the problem of dealing with any signal selected from a group of signals. Specifically, his research focused on encoding messages chosen from known groups (of signals) so they can be transmitted accurately and swiftly in the presence of noise. For example, given a source text (an English text ***not of our choosing***, for example) as well an electric circuit of some kind (such as a noisy telegraph cable ***also not of our choosing***), Shannon showed that we can transmit the messages accurately and swiftly since we are allowed to choose the way we represent the message as a signal (amount of current values we allow) as well as the transmission rate. Making these assumptions change the dynamic of the problem: we go from "how do we treat a signal with noise in order to get the best estimate" to "what sort of signal can we send to best convey our messages given a particular noisy circuit".
+
+<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
+    <p>
+        "Thus efficient coding and it's consequences form the chief substance of information theory."
+    </p>
+    <footer>-Pierce, John R.</footer>
+</blockquote>
