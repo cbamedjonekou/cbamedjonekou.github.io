@@ -1,7 +1,7 @@
 ---
 layout: post
 mathjax: true
-title: "A Brief Summary to Pierce's Introduction to Information Theory (Part 2)"
+title: "A Brief Summary to Pierce's Introduction to Information Theory (Part 3)"
 date: 2019-10-16
 description: The second of a series of blog posts that attempts to give a concise introduction to Information Theory. This series of posts can act as a summary of events of Pierce's "An Introduction to Information Theory-Symbols, Signals and Noise".
 tags: natural-language-processing artificial-intelligence information-theory introduction shannon concise wheel-of-fortune
@@ -9,12 +9,12 @@ tags: natural-language-processing artificial-intelligence information-theory int
 
 <h2 id="Top">Introduction</h2>
 
-In this post we look to provide a brief summary for Chapter 2 (<i>"The Origins of Information Theory"</i>) of [Pierce's](https://archive.org/details/symbolssignalsan002575mbp/page/n27) <i>"An Introduction to Information Theory: Symbols, Signals, and Noise</i>. Skip to <a href="#tldr">TL;DR</a> for a summary of the summary (that's so [meta](https://www.grammarly.com/blog/meta-meaning/)).
+In this post we look to provide a brief summary for Chapter 3 (<i>"The Origins of Information Theory"</i>) of [Pierce's](https://archive.org/details/symbolssignalsan002575mbp/page/n27) <i>"An Introduction to Information Theory: Symbols, Signals, and Noise</i>. Skip to <a href="#tldr">TL;DR</a> for a summary of the summary (that's so [meta](https://www.grammarly.com/blog/meta-meaning/)).
 
 <h2 id="TOC">Table of Contents</h2>
 <ul>
     <li><a href="#tldr">TL;DR</a></li>
-    <li><a href="#LFH">Learning from History</a></li>
+    <li><a href="#MM">What is a Mathematical Model?</a></li>
     <li><a href="#Entropy-Confusion">Avoiding the Confusion w/ Entropy</a></li>
     <li><a href="#Morse">Morse Code and the Telegraph</a></li>
     <li><a href="#Fourier">Contributions of Joseph Fourier</a></li>
@@ -28,20 +28,19 @@ In this post we look to provide a brief summary for Chapter 2 (<i>"The Origins o
 
 Chapter 2 discusses the history of Information Theory. The intent of the chapter is to give the reader an insight into motivation behind the creation of said theory. It discusses electrical communication, specifically Morse Code, the problems associated with send signals (such as Morse Code) over electric circuits (specifically telegraphy circuits) as well as key contributions from mathematicians, engineers, and telegraphist such as [Samuel Morse](https://en.wikipedia.org/wiki/Samuel_Morse), [Joseph Fourier](https://en.wikipedia.org/wiki/Joseph_Fourier), [Harry Nyquist](https://en.wikipedia.org/wiki/Harry_Nyquist), [R.V.L. Hartley](https://en.wikipedia.org/wiki/Ralph_Hartley), and [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon). Morse gives us the telegraph, and introduces to us the problem of encoding the letters of the alphabet for electrical communication (Morse Code). Morse also identifies several problems faced in electrical communication: failure to transmit accurately rapid changes in current, and unwanted noise. We also a learn of the greater choice of signals besides on and off. Fourier gives us Fourier Analysis: a way to generalize any signal as the sum of sinusoïds of various frequencies. We also learn from Fourier that most communication circuits are linear. Nyquist gave us clear methods to tackle these aforementioned problems --- Nyquist's formula $W = K \log_n m$ which describes the relationship between the speed of telegraphy and the number of current values, and ultimately, calculates transmission speeds. Hartley provided us with a formula ($H = n \log s$) that showed us the rate at which letters can be transmitted. Finally, we briefly go over Shannon's contribution which the entirety of Pierce's book covers.
 
-<h2 id="LFH">Learning from History</h2>
+<h2 id="MM">What is a Mathematical Model?</h2>
 <a href="#TOC">Back to Table of Contents</a>
 
-Pierce starts the discussion by asserting two historically opposing view points:
+We start Chapter 3 discussing what a mathematical model is. A mathematical Model is a simplification of our environment, the topic in mind; It is a simplified version of our world considering only what is relevant to the behavior that is under consideration.
 
-* That we can learn from the past (learn by studying earlier times & passed transgressions)
+<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
+    <p>
+        "A Mathematical Theory which seeks to explain and to predict the events in the world about us always deals with a simplified model of the world, a mathematical model in which only things pertinent to the behavior under consideration enter...The great beauty and power of a mathematical theory or model lies in the seperation of the releveant from the irrelevant, so that certain observable behavior can be related and understood without the need of comprehending the whole nature and behavior of the universe."
+    </p>
+    <footer>-Pierce, John R.</footer>
+</blockquote>
 
-* And opposingly, that we can't learn from the past
-
-He avoids choosing which of the two is correct (due to his lack of expertise in the subject) and instead asserts two view points of his own, which serve to set the tone for the chapter:
-
-* The first is that we learn the most from phenomena in man-made things rather than from phenomena in nature. He cites the creation & study of the steam engine, planes, and ships as catalysts for the creation of thermodynamics, aerodynamics, and hydrodynamics respectively.
-
-* The second is that with difficulty, understanding is won. And it is through this process that we can appreciate the value of our understanding of scientific discoveries & origins. (There’s some truth to this heuristic but is this a hard fact? Don’t know.)
+A benefit of creating mathematical models is that we can start simple and then iterate over them, adding (what we perceive to be) relevant features overtime. Additionally, mathematical models can have various degrees of application and accuracy. 
 
 <h2 id="Entropy-Confusion">Avoiding the Confusion w/ Entropy</h2>
 <a href="#TOC">Back to Table of Contents</a>
