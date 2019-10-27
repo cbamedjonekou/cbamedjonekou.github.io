@@ -17,7 +17,8 @@ In this post we look to provide a brief summary for Chapter 3 (<i>"The Origins o
     <li><a href="#MM">What is a Mathematical Model?</a></li>
     <li><a href="#ith-order-approx">$i$-th Order Letter Approximation of English Text</a>
         <ul>
-            <li><a href="#0th-order-approx">Zero Order Approximation of English Text</a></li>
+            <li><a href="#0th-order-approx">Zero Order Letter Approximation of English Text</a></li>
+            <li><a href="#1st-order-approx">First Order Letter Approximation of English Text</a></li>
         </ul>
     </li>
     <li><a href="#Morse">Morse Code and the Telegraph</a></li>
@@ -86,6 +87,20 @@ When we talk about Zero Order Letter Approximation of English Text, we consider 
 The problem with zero-order, as shown above, is that our sequence does not mimic English text at all with each letter appearing at equal frequency. We have a bunch of consonants appearing one after the other. We try and resolve this in our discussion of first-order approximations.
 
 <h3 id="1st-order-approx">First Order Letter Approximation of English Text</h3>
+
+First Order Letter Approximation differs from zero order approximation via one feature: letters no longer have equal probability, and follow more closely the frequency of letters in English text. The means certain letters, such as the letter 'E', have higher relative frequency (probability) than others. However, the fact that the letters are independent from each other still remains.
+
+<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
+    <p>
+        "...We can approach more nearly to English text by choosing letters independently of one another, but choosing E more often than W or Z. We could do this by putting many E's and few W's and Z's into the hat, mixing, and drawing out the letters. As the <i>probability</i> that a given letter is an E should be .13, out of every hundred letters we put in the hat 13 should be E's. As the probability that a letter will be W should be .02, out of each hundred letters we put in the hat, 2 should be W's, and so on. Here is the result of an equivalent procedure, which gives what Shannon calls a first-order approximation of English text:
+        <p> 1. First-order approximation (symbols are independent but with frequencies of English text):</p>
+        <p>OCRO HLI RGWR NMIELWIS EULL NBNESEBYA TH EEI ALHENHTTPA OOBTTVA NAH BRL</p>
+        "
+    </p>
+    <footer>-Pierce, John R.</footer>
+</blockquote>
+
+First order approximations move us closer to English text but we're still not quite there yet. The main problem with first-order, as shown above, is that letters in English (and other languages for that matter) are not independent of each other. For example, in English text we almosy never encounter any pairing of letters beginning 'Q' except 'QU'. This extends to other pairings as well. These pairings are called ***digram probabilities*** (in English text) and are the center our discussion for second-order approximations, next.
 
 <h2 id="Morse">Morse Code and the Telegraph</h2>
 <a href="#TOC">Back to Table of Contents</a>
