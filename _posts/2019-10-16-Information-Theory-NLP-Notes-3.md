@@ -15,7 +15,11 @@ In this post we look to provide a brief summary for Chapter 3 (<i>"The Origins o
 <ul>
     <li><a href="#tldr">TL;DR</a></li>
     <li><a href="#MM">What is a Mathematical Model?</a></li>
-    <li><a href="#ith-order-approx">$i$-th Order Approximation of English Text</a></li>
+    <li><a href="#ith-order-approx">$i$-th Order Letter Approximation of English Text</a>
+        <ul>
+            <li><a href="#0th-order-approx">Zero Order Approximation of English Text</a></li>
+        </ul>
+    </li>
     <li><a href="#Morse">Morse Code and the Telegraph</a></li>
     <li><a href="#Fourier">Contributions of Joseph Fourier</a></li>
     <li><a href="#Nyquist">Contributions of Harry Nyquist</a></li>
@@ -60,28 +64,28 @@ There are caveats to consider, however. Pierce infers that while certain phenome
 
 This is especially true for humans. Phenomena regarding human behavior, particularly human communication for which we are interested in, tend to be more successfully modeled by statistical models as opposed to [deterministic](https://en.wikipedia.org/wiki/Deterministic_system) ones. [Statistical Models](https://en.wikipedia.org/wiki/Statistical_model) allows for randomness which is the reason why we use them to model human behavior. [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon), the man whose work is considered in this post (and in Pierce's book in general), formed a mathematical process (and model) demonstrating how English words and text can be approximated and carried out by machines. We examine this below.
 
-<h2 id="Entropy-Confusion">Avoiding the Confusion w/ Entropy</h2>
+<h2 id="ith-order-approx">$i$-th Order Letter Approximation of English Text</h2>
 <a href="#TOC">Back to Table of Contents</a>
 
-He discusses some topics that may lead the reader astray; One topic fitting the criteria is entropy. Entropy is a term that represents two weakly related quantities: the entropy of thermodynamics/statistical mechanics, and the entropy of information theory.
+We begin to examine how Claude Shannon formed a mathematical process (and model) demonstrating how English words and text can be approximated and carried out by machines. We only consider letter approximations up to third order to demonstrate a point: with each increase in order, we start to form letter combinations that start to resemble words in English (or any other language). Finding probabilities of letters are important to this discussion.
+
+<h3 id="0th-order-approx">Zero Order Letter Approximation of English Text</h3>
+
+When we talk about Zero Order Letter Approximation of English Text, we consider that each letter (26 letters) have two qualities: that they have equal probability (the chance of selecting one letter is equal to another letter), and that they are independent from each other (selecting one letter has nothing to do with selecting another letter).
 
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
     <p>
-        "A particular quantity called entropy is used in thermodynamics and in statistical mechanics. A particular quantity called entropy is used in communication theory......In 1920, L. Szilard, a physicist, used an idea of information in resolving a particular physical paradox. From these facts we might conclude that communication theory somehow grew out of statistical mechanics"
+        "Suppose, for instance that we merely produce a sequence of letters and spaces with equal probabilities. We might do this by putting equal numbers of cards marked with each letter and with the space into a hat, mixing them up, drawing a card, recording its symbol, returning it, remixing, drawing a card, and so on. This gives what Shannon calls the zero-order approximation to English text. His example, obtained by an equivalent process goes:
+        <p> 1. Zero-order approximation (symbols independent and equi-probable):</p>
+        <p>XFOML RXKHRJFFJUJ ZLPWCFWKCYJ FFJEYVKCQSGHYD QPAAMKBZAACIBZLHJQD</p>
+        "
     </p>
     <footer>-Pierce, John R.</footer>
 </blockquote>
 
-Pierce asserts that they are not related quantities, thus, their applications are different (and in different domains). Below is an excerpt featuring the definitions:
+The problem with zero-order, as shown above, is that our sequence does not mimic English text at all with each letter appearing at equal frequency. We have a bunch of consonants appearing one after the other. We try and resolve this in our discussion of first-order approximations.
 
-<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-    <p>
-        "In physics, <a href="https://en.wikipedia.org/wiki/Entropy">entropy</a> is associated with the possibility of converting thermal energy into Mechanical Energy.....Statistical Mechanics interprets an increase of entropy as a decrease in order or, if we wish, as a decrease in our knowledge..... The <a href="https://en.wikipedia.org/wiki/Entropy_(information_theory)">entropy</a> of communication theory is a measure of this uncertainty and the uncertainty or entropy is taken as a measure of the amount of information conveyed by a message from a source."
-    </p>
-    <footer>-Pierce, John R.</footer>
-</blockquote>
-
-He, however, relents that they're analogous to each other. [Attempts to form a relationship](https://en.wikipedia.org/wiki/Entropy_in_thermodynamics_and_information_theory) between the two have occurred, but it's safer to think of these quantities as distinct; The quantities involved in solving each entropy differ in context.
+<h3 id="1st-order-approx">First Order Letter Approximation of English Text</h3>
 
 <h2 id="Morse">Morse Code and the Telegraph</h2>
 <a href="#TOC">Back to Table of Contents</a>
