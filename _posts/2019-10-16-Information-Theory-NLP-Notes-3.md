@@ -100,7 +100,9 @@ First Order Letter Approximation differs from zero order approximation via one f
     <footer>-Pierce, John R.</footer>
 </blockquote>
 
-First order approximations move us closer to English text but we're still not quite there yet. The main problem with first-order, as shown above, is that letters in English (and other languages for that matter) are not independent of each other. For example, in English text we almosy never encounter any pairing of letters beginning 'Q' except 'QU'. This extends to other pairings as well. These pairings are called ***digram probabilities*** (in English text) and are the center our discussion for second-order approximations, next.
+First order approximations move us closer to English text but we're still not quite there yet. The main problem with first-order, as shown above, is that letters in English (and other languages for that matter) are not independent of each other. For example, in English text we almosy never encounter any pairing of letters beginning 'Q' except 'QU'. This extends to other pairings as well. These pairings are called ***digram probabilities*** (or [bigram](https://en.wikipedia.org/wiki/Bigram)) and are the center our discussion for second-order approximations, next.
+
+
 
 <h2 id="Morse">Morse Code and the Telegraph</h2>
 <a href="#TOC">Back to Table of Contents</a>
