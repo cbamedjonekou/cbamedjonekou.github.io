@@ -15,7 +15,7 @@ In this post we look to provide a brief summary for Chapter 3 (<i>"The Origins o
 <ul>
     <li><a href="#tldr">TL;DR</a></li>
     <li><a href="#MM">What is a Mathematical Model?</a></li>
-    <li><a href="#Entropy-Confusion">Avoiding the Confusion w/ Entropy</a></li>
+    <li><a href="#ith-order-approx">$i$-th Order Approximation of English Text</a></li>
     <li><a href="#Morse">Morse Code and the Telegraph</a></li>
     <li><a href="#Fourier">Contributions of Joseph Fourier</a></li>
     <li><a href="#Nyquist">Contributions of Harry Nyquist</a></li>
@@ -26,12 +26,12 @@ In this post we look to provide a brief summary for Chapter 3 (<i>"The Origins o
 
 <h2 id="tldr">TL;DR</h2>
 
-Chapter 2 discusses the history of Information Theory. The intent of the chapter is to give the reader an insight into motivation behind the creation of said theory. It discusses electrical communication, specifically Morse Code, the problems associated with send signals (such as Morse Code) over electric circuits (specifically telegraphy circuits) as well as key contributions from mathematicians, engineers, and telegraphist such as [Samuel Morse](https://en.wikipedia.org/wiki/Samuel_Morse), [Joseph Fourier](https://en.wikipedia.org/wiki/Joseph_Fourier), [Harry Nyquist](https://en.wikipedia.org/wiki/Harry_Nyquist), [R.V.L. Hartley](https://en.wikipedia.org/wiki/Ralph_Hartley), and [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon). Morse gives us the telegraph, and introduces to us the problem of encoding the letters of the alphabet for electrical communication (Morse Code). Morse also identifies several problems faced in electrical communication: failure to transmit accurately rapid changes in current, and unwanted noise. We also a learn of the greater choice of signals besides on and off. Fourier gives us Fourier Analysis: a way to generalize any signal as the sum of sinusoïds of various frequencies. We also learn from Fourier that most communication circuits are linear. Nyquist gave us clear methods to tackle these aforementioned problems --- Nyquist's formula $W = K \log_n m$ which describes the relationship between the speed of telegraphy and the number of current values, and ultimately, calculates transmission speeds. Hartley provided us with a formula ($H = n \log s$) that showed us the rate at which letters can be transmitted. Finally, we briefly go over Shannon's contribution which the entirety of Pierce's book covers.
+To be written later.
 
 <h2 id="MM">What is a Mathematical Model?</h2>
 <a href="#TOC">Back to Table of Contents</a>
 
-We start Chapter 3 discussing what a mathematical model is. A mathematical Model is a simplification of our environment, the topic in mind; It is a simplified version of our world considering only what is relevant to the behavior that is under consideration.
+We start Chapter 3 discussing what a mathematical model is. A mathematical model is a simplification of our environment, or phenomena; It is a simplified version of our world focusing only on what is relevant to the behavior that is under consideration.
 
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
     <p>
@@ -40,7 +40,25 @@ We start Chapter 3 discussing what a mathematical model is. A mathematical Model
     <footer>-Pierce, John R.</footer>
 </blockquote>
 
-A benefit of creating mathematical models is that we can start simple and then iterate over them, adding (what we perceive to be) relevant features overtime. Additionally, mathematical models can have various degrees of application and accuracy. 
+A benefit of creating mathematical models is that we can start simple and then iterate over them, adding (what we perceive to be) relevant features over time. Additionally, mathematical models can have various degrees of application and accuracy. This means that our model does not have to be perfectly descriptive (exact in description) of the phenomenon in order to be effective (e.g.: accurately predicting orbits of planets by considering them rigid bodies, despite the fact that no truly rigid bodies exist). Mathematical Models are also good at modeling ***deterministic*** systems; Deterministic Systems are systems that are predictable as they follow the same sort of pattern every time.
+
+<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
+    <p>
+        "...idealize <i>deterministic</i> systems which have the sort of predictable behavior we ordinarily expect from machines."
+    </p>
+    <footer>-Pierce, John R.</footer>
+</blockquote>
+
+There are caveats to consider, however. Pierce infers that while certain phenomena may be predictable (or ***deterministic***), there is a degree of unpredictability still present with regard to said phenomena.
+
+<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
+    <p>
+        "Even the individual economic man is deterministic, for he will always act for his economic gin. But, if he at some time gambles on the honest throw of a die because the odds favor him, his economic fate becomes to a degree unpredictable, for he may lose even though the odds do favor him."
+    </p>
+    <footer>-Pierce, John R.</footer>
+</blockquote>
+
+This is especially true for humans. Phenomena regarding human behavior, particularly human communication for which we are interested in, tend to be more successfully modeled by statistical models as opposed to [deterministic](https://en.wikipedia.org/wiki/Deterministic_system) ones. [Statistical Models](https://en.wikipedia.org/wiki/Statistical_model) allows for randomness which is the reason why we use them to model human behavior. [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon), the man whose work is considered in this post (and in Pierce's book in general), formed a mathematical process (and model) demonstrating how English words and text can be approximated and carried out by machines. We examine this below.
 
 <h2 id="Entropy-Confusion">Avoiding the Confusion w/ Entropy</h2>
 <a href="#TOC">Back to Table of Contents</a>
