@@ -19,6 +19,8 @@ In this post we look to provide a brief summary for Chapter 3 (<i>"The Origins o
         <ul>
             <li><a href="#0th-order-approx">Zero Order Letter Approximation of English Text</a></li>
             <li><a href="#1st-order-approx">First Order Letter Approximation of English Text</a></li>
+            <li><a href="#2nd-order-approx">Second Order Letter Approximation of English Text</a></li>
+            <li><a href="#n-order-approx">Letter Approximations greater than 2</a></li>
         </ul>
     </li>
     <li><a href="#Morse">Morse Code and the Telegraph</a></li>
@@ -40,7 +42,7 @@ We start Chapter 3 discussing what a mathematical model is. A mathematical model
 
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
     <p>
-        "A Mathematical Theory which seeks to explain and to predict the events in the world about us always deals with a simplified model of the world, a mathematical model in which only things pertinent to the behavior under consideration enter...The great beauty and power of a mathematical theory or model lies in the seperation of the releveant from the irrelevant, so that certain observable behavior can be related and understood without the need of comprehending the whole nature and behavior of the universe."
+        "A Mathematical Theory which seeks to explain and to predict the events in the world about us always deals with a simplified model of the world, a mathematical model in which only things pertinent to the behavior under consideration enter...The great beauty and power of a mathematical theory or model lies in the separation of the relevant from the irrelevant, so that certain observable behavior can be related and understood without the need of comprehending the whole nature and behavior of the universe."
     </p>
     <footer>-Pierce, John R.</footer>
 </blockquote>
@@ -93,15 +95,44 @@ First Order Letter Approximation differs from zero order approximation via one f
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
     <p>
         "...We can approach more nearly to English text by choosing letters independently of one another, but choosing E more often than W or Z. We could do this by putting many E's and few W's and Z's into the hat, mixing, and drawing out the letters. As the <i>probability</i> that a given letter is an E should be .13, out of every hundred letters we put in the hat 13 should be E's. As the probability that a letter will be W should be .02, out of each hundred letters we put in the hat, 2 should be W's, and so on. Here is the result of an equivalent procedure, which gives what Shannon calls a first-order approximation of English text:
-        <p> 1. First-order approximation (symbols are independent but with frequencies of English text):</p>
+        <p> 2. First-order approximation (symbols are independent but with frequencies of English text):</p>
         <p>OCRO HLI RGWR NMIELWIS EULL NBNESEBYA TH EEI ALHENHTTPA OOBTTVA NAH BRL</p>
         "
     </p>
     <footer>-Pierce, John R.</footer>
 </blockquote>
 
-First order approximations move us closer to English text but we're still not quite there yet. The main problem with first-order, as shown above, is that letters in English (and other languages for that matter) are not independent of each other. For example, in English text we almosy never encounter any pairing of letters beginning 'Q' except 'QU'. This extends to other pairings as well. These pairings are called ***digram probabilities*** (or [bigram](https://en.wikipedia.org/wiki/Bigram)) and are the center our discussion for second-order approximations, next.
+First order approximations move us closer to English text but we're still not quite there yet. The main problem with first-order, as shown above, is that letters in English (and other languages for that matter) are not independent of each other. For example, in English text we almost never encounter any pairing of letters beginning 'Q' except 'QU'. This extends to other pairings as well. These pairings are called ***digram probabilities*** (or [bigram](https://en.wikipedia.org/wiki/Bigram)) and are the center our discussion for second-order approximations, next.
 
+<h3 id="2nd-order-approx">Second Order Letter Approximation of English Text</h3>
+
+For Second Order approximations we consider pairings of letters called ***digrams*** (or [bigrams](https://en.wikipedia.org/wiki/Bigram)) which have probabilities (relative frequencies) that are [conditional](https://en.wikipedia.org/wiki/Conditional_probability) as opposed to zero & first order approximations which are independent. They have frequencies of English text just like first order approximations. To calculate their relative frequencies you'll need [Bayes' Theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem).
+
+<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
+    <p>
+        "3. Second-order approximation (digram structure as in English):
+        <p>ON IE ANTSOUTINYS ARE T INCTORE ST BE S DEAMYACHIN D ILONASIVE TUCOOWE AT TEASONARE FUSO TIZIN ANDY TOBE SEACE CTISBE</p>
+        "
+    </p>
+    <footer>-Pierce, John R.</footer>
+</blockquote>
+
+Second order approximations move us even closer to English text that first and zero order approximations. From our example we can see that we got a couple of words using [bigram probabilities](https://en.wikipedia.org/wiki/Bigram)). To be specific we were able to obtain 5 English words: ON, ARE, BE, AT, ANDY. We can extend our our letter combinations to a length of $n$ where $n \geq 2$ thus increasing the order of the approximations. We cover this next.
+
+<h3 id="n-order-approx">Letter Approximations greater than 2</h3>
+
+We can have more letter combinations with sequences of 3 letters called [trigrams](https://en.wikipedia.org/wiki/Trigram) or of any length, generally called [n-grams](https://en.wikipedia.org/wiki/N-gram). Again, the probabilities of these n-grams are conditional and to calculate them you'll need Bayes' Theorem. The following is an example of a trigram (a special case of $n$-gram where $n = 3$).
+
+<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
+    <p>
+        "3. Second-order approximation (digram structure as in English):
+        <p>ON IE ANTSOUTINYS ARE T INCTORE ST BE S DEAMYACHIN D ILONASIVE TUCOOWE AT TEASONARE FUSO TIZIN ANDY TOBE SEACE CTISBE</p>
+        "
+    </p>
+    <footer>-Pierce, John R.</footer>
+</blockquote>
+
+Second order approximations move us even closer to English text that first and zero order approximations. From our example we can see that we got a couple of words using [bigram probabilities](https://en.wikipedia.org/wiki/Bigram)). To be specific we were able to obtain 5 English words: ON, ARE, BE, AT, ANDY. We can extend our our letter combinations to a length of $n$ where $n \geq 2$ thus increasing the order of the approximations. We cover this next.
 
 
 <h2 id="Morse">Morse Code and the Telegraph</h2>
