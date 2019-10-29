@@ -125,14 +125,14 @@ We can have more letter combinations with sequences of 3 letters called [trigram
 
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
     <p>
-        "3. Second-order approximation (digram structure as in English):
-        <p>ON IE ANTSOUTINYS ARE T INCTORE ST BE S DEAMYACHIN D ILONASIVE TUCOOWE AT TEASONARE FUSO TIZIN ANDY TOBE SEACE CTISBE</p>
+        "3. Third-order approximation (digram structure as in English):
+        <p>IN NO IST LAT WHEY CRATICT FROURE BIRS GROCID PONDENOME OF DEMONSTURES OF THE REPTAGIN IS REGOACTIONA OF CRE</p>
         "
     </p>
     <footer>-Pierce, John R.</footer>
 </blockquote>
 
-Second order approximations move us even closer to English text that first and zero order approximations. From our example we can see that we got a couple of words using [bigram probabilities](https://en.wikipedia.org/wiki/Bigram)). To be specific we were able to obtain 5 English words: ON, ARE, BE, AT, ANDY. We can extend our our letter combinations to a length of $n$ where $n \geq 2$ thus increasing the order of the approximations. We cover this next.
+As you can gather by now, increasing the order increases the chance of forming more English words/text. This time we have 8 English words formed: IN, NO, IST, LAT, WHEY, OF, THE, IS. This includes a bro-supplement, 'WHEY' (as in whey protein). We can extend these to other symbols, syllables, and words as well. We cover the use case for words in the next section.
 
 
 <h2 id="Morse">Morse Code and the Telegraph</h2>
