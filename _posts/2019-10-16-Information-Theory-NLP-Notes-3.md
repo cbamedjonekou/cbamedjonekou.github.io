@@ -25,7 +25,6 @@ In this post we look to provide a brief summary for Chapter 3 (<i>"The Origins o
     </li>
     <li><a href="#ith-order-word">$i$-th Order Word Approximation of English Text</a>
         <ul>
-            <li><a href="#0th-order-word">Zero Order Word Approximation of English Text</a></li>
             <li><a href="#1st-order-word">First Order Word Approximation of English Text</a></li>
             <li><a href="#2nd-order-word">Second Order Word Approximation of English Text</a></li>
             <li><a href="#n-order-word">Word Approximations greater than 2</a></li>
