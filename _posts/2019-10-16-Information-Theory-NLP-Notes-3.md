@@ -23,7 +23,14 @@ In this post we look to provide a brief summary for Chapter 3 (<i>"The Origins o
             <li><a href="#n-order-approx">Letter Approximations greater than 2</a></li>
         </ul>
     </li>
-    <li><a href="#Morse">Morse Code and the Telegraph</a></li>
+    <li><a href="#ith-order-word">$i$-th Order Word Approximation of English Text</a>
+        <ul>
+            <li><a href="#0th-order-word">Zero Order Word Approximation of English Text</a></li>
+            <li><a href="#1st-order-word">First Order Word Approximation of English Text</a></li>
+            <li><a href="#2nd-order-word">Second Order Word Approximation of English Text</a></li>
+            <li><a href="#n-order-word">Word Approximations greater than 2</a></li>
+        </ul>
+    </li>
     <li><a href="#Fourier">Contributions of Joseph Fourier</a></li>
     <li><a href="#Nyquist">Contributions of Harry Nyquist</a></li>
     <li><a href="#Hartley">Contributions of R.V.L. Hartley</a></li>
@@ -135,33 +142,66 @@ We can have more letter combinations with sequences of 3 letters called [trigram
 As you can gather by now, increasing the order increases the chance of forming more English words/text. This time we have 8 English words formed: IN, NO, IST, LAT, WHEY, OF, THE, IS. This includes a bro-supplement, 'WHEY' (as in whey protein). We can extend these to other symbols, syllables, and words as well. We cover the use case for words in the next section.
 
 
-<h2 id="Morse">Morse Code and the Telegraph</h2>
+<h2 id="ith-order-word">$n$-th Order Word Approximation of English Text</h2>
 <a href="#TOC">Back to Table of Contents</a>
 
-He also speaks in depth about the history of electrical communication for which information theory was derived. The reason, as emphasized in Chapter 1, is to give the reader an understanding of the problems and trials previous contributors faced when developing our theory for communication:
-
-* Pierce discusses Morse Code and the creation of the electrical telegraph. [Morse Code](https://en.wikipedia.org/wiki/Morse_code) encodes letters, and words, as a series of dots, dashes, and spaces. The most frequent letters retained short code symbols (such as the letter 'e' which happens to be the most frequent letter in English) while the least frequent letters used long combinations of code symbols (the letter 'z' for instance). The lesson provided by Morse's code, one Pierce would like the reader to retain, is that it matters profoundly how one translates a message into electrical signals.
-
-* He also brings up the construction of a Telegraph Circuit between Washington and Baltimore (circa. 1843). The construction of the telegraph circuit ran into some difficulties with underground cables, and later, submarine cables. If one where to send multiple messages over underground/undersea circuits the messages would merge at the receiving end. To combat this phenomenon, increasing the length of the symbols is an option. However, the result is a slow rate of transmission (a limit in transmission speed, in general).
-
-By this point a few of the problems Information Theory addresses makes themselves known to us: merging of signals at the receiving end of a transmission, and the limits in transmission speeds.
-
-Pierce also discusses another method used to increase the amount of symbols being transmitted over a given period of time; Increasing transmission speeds is one method (previously discussed). This method suggests an increase in the number of elements (current states) used in telegraphy. Single current, double current, and quadruplex telegraph systems are implementations of this method. They're discussed below:
-
-* The Single Current Telegraph has two elements or states which can be used to construct the morse code: current (on, '1'), and no current (off, '0').
-
-* The Double Current Telegraph has three elements or states which can be used to construct the morse code: forward current (current in wire, '+1'), no current (off, '0'), backward current (current out wire, '-1'). The result, however, is an equivalent response as the Single Current Telegraph.
-
-* The Quadruplex Telegraph has four elements or states which can be used to construct the morse code. Two of the current states indicate direction while the other two indicate intensity: forward current (current in wire, '+1' and '+3'), and backward current (current out wire, '-1' and '-3'). A magnitude of '3' indicates higher intensity. You can send twice as many letters per minute as the previous two, with the ablility to send two symbols at a time.
-
-By this point we are made aware of the two factors necessary to determine the amount of information being sent via telegraph: the speed of successive symbols (successive current values) over the circuit, or transmission speeds; and the amount of different symbols (different current values) available to choose from, or [multiplexing](https://en.wikipedia.org/wiki/Multiplexing#Telegraphy). But neither of these really solve our issues regarding the spread and overlap of the symbols (not yet, and not directly), and noise. Increasing power can help with noise but cables have limits. Ultimately, it was these problems that acted as a catalyst for the creation of Information Theory (in all its mathy goodness).
+We can extend order approximations to words as well. Doing so makes sense in comparison to increasing the order of letter approximations to generate sequences of text. It is just a lot simpler to provide a machine with actual English words and have it produce sequence of text based on that rather than increasing the order of letter approximations to match the [longest English word](https://en.wikipedia.org/wiki/Longest_word_in_English) available. 
 
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
     <p>
-        “Early telegraphists understood intuitively a good deal about the limitations associated with speed of signaling, interference (or noise), difficulty in distinguishing among many alternative values in current, and the limitation on the power that one could use. More than an intuitive understanding was required. An exact Mathematical Analysis of such problems was needed.” -Pierce, John R.
+        "But it would be much simpler merely to supply machine with words rather than letters and to let it produce these words according to certain probabilities"
     </p>
     <footer>-Pierce, John R.</footer>
 </blockquote>
+
+This is done by using a corpus (or sequence of text) and creating a "dictionary" to select words from. Just like with letters you can have $n$-order approximations. We'll cover $n = 1, 2$ approximations.
+
+<h3 id="1st-order-word">First Order Letter Approximation of English Text</h3>
+
+First Order Letter Approximation differs from zero order approximation via one feature: letters no longer have equal probability, and follow more closely the frequency of letters in English text. The means certain letters, such as the letter 'E', have higher relative frequency (probability) than others. However, the fact that the letters are independent from each other still remains.
+
+<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
+    <p>
+        "...We can approach more nearly to English text by choosing letters independently of one another, but choosing E more often than W or Z. We could do this by putting many E's and few W's and Z's into the hat, mixing, and drawing out the letters. As the <i>probability</i> that a given letter is an E should be .13, out of every hundred letters we put in the hat 13 should be E's. As the probability that a letter will be W should be .02, out of each hundred letters we put in the hat, 2 should be W's, and so on. Here is the result of an equivalent procedure, which gives what Shannon calls a first-order approximation of English text:
+        <p> 2. First-order approximation (symbols are independent but with frequencies of English text):</p>
+        <p>OCRO HLI RGWR NMIELWIS EULL NBNESEBYA TH EEI ALHENHTTPA OOBTTVA NAH BRL</p>
+        "
+    </p>
+    <footer>-Pierce, John R.</footer>
+</blockquote>
+
+First order approximations move us closer to English text but we're still not quite there yet. The main problem with first-order, as shown above, is that letters in English (and other languages for that matter) are not independent of each other. For example, in English text we almost never encounter any pairing of letters beginning 'Q' except 'QU'. This extends to other pairings as well. These pairings are called ***digram probabilities*** (or [bigram](https://en.wikipedia.org/wiki/Bigram)) and are the center our discussion for second-order approximations, next.
+
+<h3 id="2nd-order-word">Second Order Letter Approximation of English Text</h3>
+
+For Second Order approximations we consider pairings of letters called ***digrams*** (or [bigrams](https://en.wikipedia.org/wiki/Bigram)) which have probabilities (relative frequencies) that are [conditional](https://en.wikipedia.org/wiki/Conditional_probability) as opposed to zero & first order approximations which are independent. They have frequencies of English text just like first order approximations. To calculate their relative frequencies you'll need [Bayes' Theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem).
+
+<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
+    <p>
+        "3. Second-order approximation (digram structure as in English):
+        <p>ON IE ANTSOUTINYS ARE T INCTORE ST BE S DEAMYACHIN D ILONASIVE TUCOOWE AT TEASONARE FUSO TIZIN ANDY TOBE SEACE CTISBE</p>
+        "
+    </p>
+    <footer>-Pierce, John R.</footer>
+</blockquote>
+
+Second order approximations move us even closer to English text that first and zero order approximations. From our example we can see that we got a couple of words using [bigram probabilities](https://en.wikipedia.org/wiki/Bigram)). To be specific we were able to obtain 5 English words: ON, ARE, BE, AT, ANDY. We can extend our our letter combinations to a length of $n$ where $n \geq 2$ thus increasing the order of the approximations. We cover this next.
+
+<h3 id="n-order-word">Letter Approximations greater than 2</h3>
+
+We can have more letter combinations with sequences of 3 letters called [trigrams](https://en.wikipedia.org/wiki/Trigram) or of any length, generally called [n-grams](https://en.wikipedia.org/wiki/N-gram). Again, the probabilities of these n-grams are conditional and to calculate them you'll need Bayes' Theorem. The following is an example of a trigram (a special case of $n$-gram where $n = 3$).
+
+<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
+    <p>
+        "3. Third-order approximation (digram structure as in English):
+        <p>IN NO IST LAT WHEY CRATICT FROURE BIRS GROCID PONDENOME OF DEMONSTURES OF THE REPTAGIN IS REGOACTIONA OF CRE</p>
+        "
+    </p>
+    <footer>-Pierce, John R.</footer>
+</blockquote>
+
+As you can gather by now, increasing the order increases the chance of forming more English words/text. This time we have 8 English words formed: IN, NO, IST, LAT, WHEY, OF, THE, IS. This includes a bro-supplement, 'WHEY' (as in whey protein). We can extend these to other symbols, syllables, and words as well. We cover the use case for words in the next section.
+
 
 <h2 id="Fourier">Contributions of Joseph Fourier</h2>
 <a href="#TOC">Back to Table of Contents</a>
