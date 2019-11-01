@@ -96,7 +96,7 @@ The problem with zero-order, as shown above, is that our sequence does not mimic
 
 <h3 id="1st-order-approx">First Order Letter Approximation of English Text</h3>
 
-First Order Letter Approximation differs from zero order approximation via one feature: letters no longer have equal probability, and follow more closely the frequency of letters in English text. The means certain letters, such as the letter 'E', have higher relative frequency (probability) than others. However, the fact that the letters are independent from each other still remains.
+First Order Letter Approximation differs from zero order approximation via one feature: letters no longer have equal probability, and follow more closely the frequency of letters in English text. This means certain letters, such as the letter 'E', have higher relative frequency (probability) than others. However, the fact that the letters are independent from each other still remains.
 
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
     <p>
@@ -155,23 +155,26 @@ We can extend order approximations to words as well. Doing so makes sense in com
 
 This is done by using a corpus (or sequence of text) and creating a "dictionary" to select words from. Just like with letters you can have $n$-order approximations. We'll cover $n = 1, 2$ approximations.
 
-<h3 id="1st-order-word">First Order Letter Approximation of English Text</h3>
+<h3 id="1st-order-word">First Order Word Approximation of English Text</h3>
 
-First Order Letter Approximation differs from zero order approximation via one feature: letters no longer have equal probability, and follow more closely the frequency of letters in English text. The means certain letters, such as the letter 'E', have higher relative frequency (probability) than others. However, the fact that the letters are independent from each other still remains.
+First Order Word Approximations have the exact same qualities as the <a href="#1st-order-approx">First Order Letter Approximations</a> discussed earlier; They follow more closely the frequency of words in English text. This means certain words, such as the word 'the', have higher relative frequency (probability) than others. Just like the case with letters, the words in a sequence are independent from each other.
+
+To create a sequence of text, we would start by selecting words at random from an imaginary bucket (words w/ higher frequency would be selected more often) and appending them to our sequence.
 
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-    <p>
-        "...We can approach more nearly to English text by choosing letters independently of one another, but choosing E more often than W or Z. We could do this by putting many E's and few W's and Z's into the hat, mixing, and drawing out the letters. As the <i>probability</i> that a given letter is an E should be .13, out of every hundred letters we put in the hat 13 should be E's. As the probability that a letter will be W should be .02, out of each hundred letters we put in the hat, 2 should be W's, and so on. Here is the result of an equivalent procedure, which gives what Shannon calls a first-order approximation of English text:
-        <p> 2. First-order approximation (symbols are independent but with frequencies of English text):</p>
-        <p>OCRO HLI RGWR NMIELWIS EULL NBNESEBYA TH EEI ALHENHTTPA OOBTTVA NAH BRL</p>
+    <p>...This could be achieved by cutting text into words, scrambling the words in a hat, and then drawing out a succession of words. He (Shannon) calls this a first-order word approximation...
+        <p> "First-order word approximation. Here words are chosen independently but with appropriate frequencies:</p>
+        <p>REPRESENTING AND SPEEDILY IS AN GOOD APT OR COME CAN DIFFERENT NATURAL HERE HE THE A IN CAME THE TO OF TO EXPERT GRAY COME TO FURNISHES THE LINE MESSAGE HAD BE THESE</p>
         "
     </p>
     <footer>-Pierce, John R.</footer>
 </blockquote>
 
-First order approximations move us closer to English text but we're still not quite there yet. The main problem with first-order, as shown above, is that letters in English (and other languages for that matter) are not independent of each other. For example, in English text we almost never encounter any pairing of letters beginning 'Q' except 'QU'. This extends to other pairings as well. These pairings are called ***digram probabilities*** (or [bigram](https://en.wikipedia.org/wiki/Bigram)) and are the center our discussion for second-order approximations, next.
+The result is a string of text that makes no sense at all to any English speaker, however. The reason is simple: language is not some random assortment of words that are independent from each other. The choice of words that follow are dependent on the previous words used. We have a structure to our language. We could possibly handle this by using  ***digram probabilities*** (or [bigram](https://en.wikipedia.org/wiki/Bigram)) again, which is a second-order approximation. We discuss this next.
 
-<h3 id="2nd-order-word">Second Order Letter Approximation of English Text</h3>
+**Note: [Bigram](https://en.wikipedia.org/wiki/Bigram) can refer to pairings of words, syllables, or letters.**
+
+<h3 id="2nd-order-word">Second Order Word Approximation of English Text</h3>
 
 For Second Order approximations we consider pairings of letters called ***digrams*** (or [bigrams](https://en.wikipedia.org/wiki/Bigram)) which have probabilities (relative frequencies) that are [conditional](https://en.wikipedia.org/wiki/Conditional_probability) as opposed to zero & first order approximations which are independent. They have frequencies of English text just like first order approximations. To calculate their relative frequencies you'll need [Bayes' Theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem).
 
@@ -186,7 +189,7 @@ For Second Order approximations we consider pairings of letters called ***digram
 
 Second order approximations move us even closer to English text that first and zero order approximations. From our example we can see that we got a couple of words using [bigram probabilities](https://en.wikipedia.org/wiki/Bigram)). To be specific we were able to obtain 5 English words: ON, ARE, BE, AT, ANDY. We can extend our our letter combinations to a length of $n$ where $n \geq 2$ thus increasing the order of the approximations. We cover this next.
 
-<h3 id="n-order-word">Letter Approximations greater than 2</h3>
+<h3 id="n-order-word">Word Approximations greater than 2</h3>
 
 We can have more letter combinations with sequences of 3 letters called [trigrams](https://en.wikipedia.org/wiki/Trigram) or of any length, generally called [n-grams](https://en.wikipedia.org/wiki/N-gram). Again, the probabilities of these n-grams are conditional and to calculate them you'll need Bayes' Theorem. The following is an example of a trigram (a special case of $n$-gram where $n = 3$).
 
@@ -205,203 +208,26 @@ As you can gather by now, increasing the order increases the chance of forming m
 <h2 id="Fourier">Contributions of Joseph Fourier</h2>
 <a href="#TOC">Back to Table of Contents</a>
 
-Pierce continues by citing the contributions of many people (p.30), and specifically French Mathematician/Physicist Fourier as central to the development of information theory to solve aforementioned problems.
 
-* Fourier’s contribution to  electrical communication came in the form of [proofs and analysis](https://en.wikipedia.org/wiki/Fourier_analysis), specifically his proof concerning electric signals.
-
-* Electrical Signals can be viewed as a bunch of sine waves, typically. Fourier proved a theorem which showed that “any variation of a quantity with time can be accurately represented as the sum of a number of sinusoïdal variations of different amplitudes, phases, and frequencies”.
-
-* The caveat: the circuits cannot change with time (so only [passive components](https://en.wikipedia.org/wiki/Passivity_(engineering))) and that they behave in a linear manner,
-
-* Criterion/Identifiers for defining Linear Circuits: Signals have to act independently of each other.
-
-Pierce also speaks about the properties of electric signals (also attributed to [Fourier Analysis](https://en.wikipedia.org/wiki/Fourier_analysis)), specifically events that occur as signals enter and exit a circuit:
-
-* Input signals (especially ones with multiple sinusoidal components) produce output signals (also w/ multiple sinusoidal components) of the same frequency but with a different phase via a delay ([Phase Shift](https://en.wikipedia.org/wiki/Phase_(waves)#Phase_shift)), and a shrinkage in amplitude ([Attenuation](https://en.wikipedia.org/wiki/Attenuation)).
-
-* The amounts of attenuation and delay depend on the frequency of the sine wave.
-
-* Generally speaking, it is expected that the output sginal will have a different shape in comparison to the input signal (p. 34).
-
-* Caveat: "If the attenuation and delay of a circuit is the same for all frequencies, the shape of the output signal will be the same as that of the input signal; such a circuit is [distortionless](https://en.wikipedia.org/wiki/Heaviside_condition)." (p. 34)
 
 <h2 id="Nyquist">Contributions of Harry Nyquist</h2>
 <a href="#TOC">Back to Table of Contents</a>
 
-Pierce concludes the discussion concerning Fourier's Analysis with this statement: "Fourier Analysis is a powerful tool for the analysis of transmission problems" (p. 34). He also notes that many who studied electrical communication (mathematicians, telegraphists, and engineers) did not understand the variety of results provided by Fourier Analysis, and the appropriate context in which they should be used. Hence, a lot of the combinations of signals created (touted as being desirable) failed mostly due to bad mathematics and wrong arguments. Enter Harry Nyquist. To put it simply, Nyquist was a better mathematician than most men who tackled telegraphy problems. His research in the field, like Fourier, was instrumental for the development of Information Theory.
 
-<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-    <p>
-        “In 1917, Harry Nyquist came to the American Telephone and Telegraph Company immediately after receiving his Ph.D. at Yale  (Ph.D.'s were considerably rarer in those days). Nyquist was a much better mathematician than most men who tackled the problems of telegraphy, and he was a clear, original, and philosophical thinker concerning communication. He tackled problems of telegraphy with powerful methods and with clear insight...”
-    </p>
-    <footer>-Pierce, John R.</footer>
-</blockquote>
-
-The result of his research was a paper, "Certain Factors Affecting Telegraph Speed", authored in 1924. This contribution addressed one of the problems mentioned earlier: namely the limitations associated with transmission speed.
-
-<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-    <p>
-        "...It clarifies the relation between the speed of telegraphy and the number of current values such as $+1$, $-1$ (two current values) or $+3$, $+1$, $-1$, $-3$ (four current values)."
-    </p>
-    <footer>-Pierce, John R.</footer>
-</blockquote>
-
-Pierce introduces Nyquist's formula $W = K \log_n m$ which describes this relationship, and ultimately, calculates transmission speeds.
-
-<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-    <p>
-        "...Nyquist says that if we send symbols (successive current values) at a constant rate, the speed of transmission '$W$' is related to '$m$', the number of possible combinations of different/independent symbols (synonymous w/ current values, or messages), by $$W = K \log_n m$$ where '$K$' is a constant whose value depends on how many successive current values are sent each second."
-    </p>
-    <footer>-Pierce, John R.</footer>
-</blockquote>
-
-The base, '$n$', of the logarithm is dependent the amount of current values used. In the case of two current values ('$0$' and '$1$') the following is true.
-
-<table>
-    <thead>
-        <tr>
-            <th colspan= "2">2 Current Values (Base 2)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>$m$</td>
-            <td>$\log m$</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>1.6</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>2</td>
-        </tr>
-        <tr>
-            <td>8</td>
-            <td>3</td>
-        </tr>
-        <tr>
-            <td>16</td>
-            <td>4</td>
-        </tr>
-    </tbody>
-</table>
-
-<blockquote>
-    <p>
-        <b>Reminder: Computing the logarithm of a value for a given base is equivalent to finding the required exponent necessary to produce that value. $$\log_2(x) = 3 \space \rightarrow \space 2^3 = x$$ $x$ is the value and $x = 8$ in this case.</b>
-    </p>
-    <footer>-CBA, Leet Warrior</footer>
-</blockquote>
-
-
-
-For three current values, aka [Balanced Ternery Numeral System](https://en.wikipedia.org/wiki/Balanced_ternary), ('$-1$', '$0$', and '$+1$') the following is true :
-
-<table>
-    <thead>
-        <tr>
-            <th colspan= "2">3 Current Values (Base 3)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>$m$</td>
-            <td>$\log m$</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>.63</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>1.26</td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td>2</td>
-        </tr>
-        <tr>
-            <td>27</td>
-            <td>3</td>
-        </tr>
-    </tbody>
-</table>
-
-The idea extends to $n \geq 4$ where $n$ is the base of the logarithm, and more specifically, the number of current values we choose to use. This relation proves mathematically what was intuitively understood. The more current values we use, the more combinations (possible combinations of different/independent symbols) we have available to choose from, and more messages we can send at once. As such '$W$', the transmission speeds, increase.
-
-<a href= "/assets/Certain Factors Affecting Telegraph Speed Nyquist.pdf">OG Nyquist Paper found here</a>
-
-Nyquist, however, confirmed what those before him figured out: the use of more current values is difficult due to noise, attenuation, etc. Nyquist later published another, more quantitive, paper
-([found here](http://physics.oregonstate.edu/~hetheriw/whiki/ph415_s15/tasks/dsp/files/nyquist/Nyquist.pdf)) which showed that
-
-<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-    <p>
-        "...if one sends some number $2N$ of different current values per second, all the sinusoidal components of the signal with frequencies greater that $N$ are redundant, in the sense that they are not needed in deducing from the received signal the succession of current values which were sent."
-    </p>
-    <footer>-Pierce, John R.</footer>
-</blockquote>
-
-Basically in removing all higher frequencies above the threshold, one could still figure out which current values were sent.
 
 <h2 id= "Hartley">Contributions of R.V.L. Hartley</h2>
 <a href="#TOC">Back to Table of Contents</a>
 
-Hartley, another contributer who Pierce speaks about, wrote a paper called [Transmission of Information](http://keszei.chem.elte.hu/entropia/Hartley1928text.pdf) (1928). In this paper, he regarded a sender of a message as:
 
-<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-    <p>
-        "...equipped with a set of symbols (the letters of the alphabet for instance) from which he mentally selects symbol after symbol, thus generating a sequence of symbols. He observed that a chance event, such as rolling balls into pockets, might equally well generate such a sequence."
-    </p>
-    <footer>-Pierce, John R.</footer>
-</blockquote>
-
-The result of this premise was the following equation:
-
-<p>$$H = n \log s$$</p>
-
-where $H$ is defined as the information of the message, $n$ is the number of symbols selected, and $s$ is the number of unique symbols in the set (from which symbols are selected). There are caveats, criteria that needs to be considered:
-
-<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-    <p>
-        "This is acceptable...only if successive symbols are chosen independently and if any of the $s$ symbols is equally likely to be to be selected."
-    </p>
-    <footer>-Pierce, John R.</footer>
-</blockquote>
-
-Hartley's premise is analogous to what Nyquist proposed. [Read More.](http://keszei.chem.elte.hu/entropia/Hartley1928text.pdf)
 
 <h2 id="Shannon">Contributions of Claude Shannon</h2>
 <a href="#TOC">Back to Table of Contents</a>
 
-Shannon, whose work is the basis of Pierce's Book, primarily considered the problem of dealing with any signal selected from a group of signals. Specifically, his research focused on encoding messages chosen from known groups (of signals) so they can be transmitted accurately and swiftly in the presence of noise. For example, given a source text (an English text ***not of our choosing***, for example) as well an electric circuit of some kind (such as a noisy telegraph cable ***also not of our choosing***), Shannon showed that we can transmit the messages accurately and swiftly since we are allowed to choose the way we represent the message as a signal (amount of current values we allow) as well as the transmission rate. Making these assumptions change the dynamic of the problem: we go from "how do we treat a signal with noise in order to get the best estimate" to "what sort of signal can we send to best convey our messages given a particular noisy circuit".
 
-<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-    <p>
-        "Thus efficient coding and it's consequences form the chief substance of information theory."
-    </p>
-    <footer>-Pierce, John R.</footer>
-</blockquote>
 
 <h2 id="Conclusion">Conclusion</h2>
 
-Pierce does not go to much into depth about Shannon's contributions in Chapter 2, because he claims to have the whole book for that (which is fact). Therefore, our summary of Chapter 2 ends on that note. Again, refer to <a href="#tldr">TL;DR</a> for an even more brief summary of what was covered in Chapter 2.
+
 
 <img src="https://media.giphy.com/media/Y0btn5YtZRGNkTnvNx/giphy.gif">
 
