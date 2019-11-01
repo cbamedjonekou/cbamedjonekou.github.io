@@ -131,7 +131,7 @@ We can have more letter combinations with sequences of 3 letters called [trigram
 
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
     <p>
-        "3. Third-order approximation (digram structure as in English):
+        "4. Third-order approximation (digram structure as in English):
         <p>IN NO IST LAT WHEY CRATICT FROURE BIRS GROCID PONDENOME OF DEMONSTURES OF THE REPTAGIN IS REGOACTIONA OF CRE</p>
         "
     </p>
@@ -163,7 +163,7 @@ To create a sequence of text, we would start by selecting words at random from a
 
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
     <p>...This could be achieved by cutting text into words, scrambling the words in a hat, and then drawing out a succession of words. He (Shannon) calls this a first-order word approximation...
-        <p> "First-order word approximation. Here words are chosen independently but with appropriate frequencies:</p>
+        <p> "5. First-order word approximation. Here words are chosen independently but with appropriate frequencies:</p>
         <p>REPRESENTING AND SPEEDILY IS AN GOOD APT OR COME CAN DIFFERENT NATURAL HERE HE THE A IN CAME THE TO OF TO EXPERT GRAY COME TO FURNISHES THE LINE MESSAGE HAD BE THESE</p>
         "
     </p>
@@ -176,12 +176,12 @@ The result is a string of text that makes no sense at all to any English speaker
 
 <h3 id="2nd-order-word">Second Order Word Approximation of English Text</h3>
 
-For Second Order approximations we consider pairings of letters called ***digrams*** (or [bigrams](https://en.wikipedia.org/wiki/Bigram)) which have probabilities (relative frequencies) that are [conditional](https://en.wikipedia.org/wiki/Conditional_probability) as opposed to zero & first order approximations which are independent. They have frequencies of English text just like first order approximations. To calculate their relative frequencies you'll need [Bayes' Theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem).
+Second order word approximations are similar to <a href="#2nd-order-approx">second order letter approximations</a> in that we consider pairings of words instead of letters. They're still called ***digrams*** (or [bigrams](https://en.wikipedia.org/wiki/Bigram)) and the probabilities (relative frequencies) are [conditional](https://en.wikipedia.org/wiki/Conditional_probability) as opposed to first order word approximations which are independent. They have frequencies of English text just like first order approximations. [Bayes' Theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem) is still very much relevant in calculating their relative frequencies.
 
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-    <p>
-        "3. Second-order approximation (digram structure as in English):
-        <p>ON IE ANTSOUTINYS ARE T INCTORE ST BE S DEAMYACHIN D ILONASIVE TUCOOWE AT TEASONARE FUSO TIZIN ANDY TOBE SEACE CTISBE</p>
+    <p>...Shannon constructed a random passage in which the probabilities a of pairs of words were the same as in English text by the following expedient. He chose a first pair of words at random in a novel. He then looked through the novel for the next occurrence of the second word of the first pair and added the word which followed it in this new occurrence, and so on. This process gave him the following second-order word approximation to English.
+        <p>"6. Second-order word approximation. The word transition probabilities are correct, but no further structure is included:</p>
+        <p> THE HEAD AND IN FRONTAL ATTACK ON AN ENGLISH WRITER THAT THE CHARACTER OF THIS POINT IS THEREFORE ANOTHER METHOD FOR THE LETTERS THAT THE TIME OF WHO EVER TOLD THE PROBLEM FOR AN UNEXPECTED.</p>
         "
     </p>
     <footer>-Pierce, John R.</footer>
