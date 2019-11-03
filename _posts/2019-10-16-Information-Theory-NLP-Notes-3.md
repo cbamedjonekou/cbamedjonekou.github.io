@@ -187,23 +187,25 @@ Second order word approximations are similar to <a href="#2nd-order-approx">seco
     <footer>-Pierce, John R.</footer>
 </blockquote>
 
-Second order approximations move us even closer to English text that first and zero order approximations. From our example we can see that we got a couple of words using [bigram probabilities](https://en.wikipedia.org/wiki/Bigram)). To be specific we were able to obtain 5 English words: ON, ARE, BE, AT, ANDY. We can extend our our letter combinations to a length of $n$ where $n \geq 2$ thus increasing the order of the approximations. We cover this next.
+With second order word approximations we get more familiar chunks of English text compared to first order word approximations. We can continue this process with any value of $n > 2$ as well. We discuss Word Approximations greater than 2 ([n-grams](https://en.wikipedia.org/wiki/N-gram)) next.
 
 <h3 id="n-order-word">Word Approximations greater than 2</h3>
 
-We can have more letter combinations with sequences of 3 letters called [trigrams](https://en.wikipedia.org/wiki/Trigram) or of any length, generally called [n-grams](https://en.wikipedia.org/wiki/N-gram). Again, the probabilities of these n-grams are conditional and to calculate them you'll need Bayes' Theorem. The following is an example of a trigram (a special case of $n$-gram where $n = 3$).
+We can have more word combinations with sequences of 3 words called [trigrams](https://en.wikipedia.org/wiki/Trigram) or of any length, generally called [n-grams](https://en.wikipedia.org/wiki/N-gram). Again, the probabilities of these n-grams are conditional and to calculate them you'll need Bayes' Theorem.
+
+As aforementioned, increasing the order of approximations increases the chance of forming more English words/text. The discussions so far yields progress in our goal in getting machines to replicate english text as a native speaker would but there are still issues. For one, this method of production is heavily dependent on historical English text. To be more specific, the method is reliant on works that have been previously produced but does not produce any sentence that can/might be spoken by an English speaker (in the future).
 
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-    <p>
-        "3. Third-order approximation (digram structure as in English):
-        <p>IN NO IST LAT WHEY CRATICT FROURE BIRS GROCID PONDENOME OF DEMONSTURES OF THE REPTAGIN IS REGOACTIONA OF CRE</p>
-        "
-    </p>
+    <p></p>
     <footer>-Pierce, John R.</footer>
 </blockquote>
 
-As you can gather by now, increasing the order increases the chance of forming more English words/text. This time we have 8 English words formed: IN, NO, IST, LAT, WHEY, OF, THE, IS. This includes a bro-supplement, 'WHEY' (as in whey protein). We can extend these to other symbols, syllables, and words as well. We cover the use case for words in the next section.
+Also, as we learned in grade school (or other levels of education), English (and language in general), deals not only in letters/words but also in [grammar](https://en.wikipedia.org/wiki/Grammar).
 
+<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
+    <p></p>
+    <footer>-Pierce, John R.</footer>
+</blockquote>
 
 <h2 id="Fourier">Contributions of Joseph Fourier</h2>
 <a href="#TOC">Back to Table of Contents</a>
