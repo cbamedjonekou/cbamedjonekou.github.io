@@ -30,7 +30,7 @@ In this post we look to provide a brief summary for Chapter 3 (<i>"The Origins o
             <li><a href="#n-order-word">Word Approximations greater than 2</a></li>
         </ul>
     </li>
-    <li><a href="#Fourier">Contributions of Joseph Fourier</a></li>
+    <li><a href="#FS-Markov-Automaton">Incorporating Grammar Rules (Shannon's Mathematical Model of Communication) via Markov Chains/Finite State Automaton</a></li>
     <li><a href="#Nyquist">Contributions of Harry Nyquist</a></li>
     <li><a href="#Hartley">Contributions of R.V.L. Hartley</a></li>
     <li><a href="#Shannon">Contributions of Claude Shannon,</a></li>
@@ -193,21 +193,23 @@ With second order word approximations we get more familiar chunks of English tex
 
 We can have more word combinations with sequences of 3 words called [trigrams](https://en.wikipedia.org/wiki/Trigram) or of any length, generally called [n-grams](https://en.wikipedia.org/wiki/N-gram). Again, the probabilities of these n-grams are conditional and to calculate them you'll need Bayes' Theorem.
 
-As aforementioned, increasing the order of approximations increases the chance of forming more English words/text. The discussions so far yields progress in our goal in getting machines to replicate english text as a native speaker would but there are still issues. For one, this method of production is heavily dependent on historical English text. To be more specific, the method is reliant on works that have been previously produced but does not produce any sentence that can/might be spoken by an English speaker (in the future).
+As aforementioned, increasing the order of approximations increases the chance of forming more English sequences of words/text. The discussion so far yields progress in our goal in getting machines to replicate english text as a native speaker would but there are still issues. For one, this method of production is heavily dependent on historical English text. To be more specific, the method is reliant on works that have been previously produced but does not produce any sentence that can/might be spoken by an English speaker (in the future).
 
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-    <p></p>
+    <p>"...Such a scheme, even if refined greatly, would not, however, produce all sequences the words that a person might utter. Carried to an extreme, it would be confined to combinations of words which had occurred; otherwise, there would be no statistical data available on them. Yet I may say, "The magenta typhoon whirled the <a href="https://www.dictionary.com/browse/farded">farded</a> bishop away," and this may well never have been said before."</p>
     <footer>-Pierce, John R.</footer>
 </blockquote>
 
 Also, as we learned in grade school (or other levels of education), English (and language in general), deals not only in letters/words but also in [grammar](https://en.wikipedia.org/wiki/Grammar).
 
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-    <p></p>
+    <p>"...The real rules of English text deal not with the letters or words alone but with classes of words and their rules of association, that is, with grammar. Linguist and engineers who try to make machines for translating one language into another must find these rules, so that Their machines can combine words to form grammatical utterances even when these exact combinations have not occurred before (And also so that the meaning of words in the text to be translated can be deduced from the context)..."</p>
     <footer>-Pierce, John R.</footer>
 </blockquote>
 
-<h2 id="Fourier">Contributions of Joseph Fourier</h2>
+We explore how Shannon incorporates grammar in the development of machines that can "speak English" in the next section.
+
+<h2 id="FS-Markov-Automaton">Incorporating Grammar Rules (Shannon's Mathematical Model of Communication) via Markov Chains/Finite State Automaton</h2>
 <a href="#TOC">Back to Table of Contents</a>
 
 
