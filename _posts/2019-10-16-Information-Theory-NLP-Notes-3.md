@@ -85,8 +85,9 @@ When we talk about Zero Order Letter Approximation of English Text, we consider 
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
     <p>
         "Suppose, for instance that we merely produce a sequence of letters and spaces with equal probabilities. We might do this by putting equal numbers of cards marked with each letter and with the space into a hat, mixing them up, drawing a card, recording its symbol, returning it, remixing, drawing a card, and so on. This gives what Shannon calls the zero-order approximation to English text. His example, obtained by an equivalent process goes:
-        <p> 1. Zero-order approximation (symbols independent and equi-probable):</p>
-        <p>XFOML RXKHRJFFJUJ ZLPWCFWKCYJ FFJEYVKCQSGHYD QPAAMKBZAACIBZLHJQD</p>
+        <blockquote> 1. Zero-order approximation (symbols independent and equi-probable):
+            <blockquote>XFOML RXKHRJFFJUJ ZLPWCFWKCYJ FFJEYVKCQSGHYD QPAAMKBZAACIBZLHJQD</blockquote>
+        </blockquote>
         "
     </p>
     <footer>-Pierce, John R.</footer>
@@ -101,8 +102,9 @@ First Order Letter Approximation differs from zero order approximation via one f
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
     <p>
         "...We can approach more nearly to English text by choosing letters independently of one another, but choosing E more often than W or Z. We could do this by putting many E's and few W's and Z's into the hat, mixing, and drawing out the letters. As the <i>probability</i> that a given letter is an E should be .13, out of every hundred letters we put in the hat 13 should be E's. As the probability that a letter will be W should be .02, out of each hundred letters we put in the hat, 2 should be W's, and so on. Here is the result of an equivalent procedure, which gives what Shannon calls a first-order approximation of English text:
-        <p> 2. First-order approximation (symbols are independent but with frequencies of English text):</p>
-        <p>OCRO HLI RGWR NMIELWIS EULL NBNESEBYA TH EEI ALHENHTTPA OOBTTVA NAH BRL</p>
+            <blockquote> 2. First-order approximation (symbols are independent but with frequencies of English text):
+                <blockquote>OCRO HLI RGWR NMIELWIS EULL NBNESEBYA TH EEI ALHENHTTPA OOBTTVA NAH BRL</blockquote>
+            </blockquote>
         "
     </p>
     <footer>-Pierce, John R.</footer>
@@ -117,7 +119,7 @@ For Second Order approximations we consider pairings of letters called ***digram
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
     <p>
         "3. Second-order approximation (digram structure as in English):
-        <p>ON IE ANTSOUTINYS ARE T INCTORE ST BE S DEAMYACHIN D ILONASIVE TUCOOWE AT TEASONARE FUSO TIZIN ANDY TOBE SEACE CTISBE</p>
+        <blockquote>ON IE ANTSOUTINYS ARE T INCTORE ST BE S DEAMYACHIN D ILONASIVE TUCOOWE AT TEASONARE FUSO TIZIN ANDY TOBE SEACE CTISBE</blockquote>
         "
     </p>
     <footer>-Pierce, John R.</footer>
@@ -132,7 +134,7 @@ We can have more letter combinations with sequences of 3 letters called [trigram
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
     <p>
         "4. Third-order approximation (digram structure as in English):
-        <p>IN NO IST LAT WHEY CRATICT FROURE BIRS GROCID PONDENOME OF DEMONSTURES OF THE REPTAGIN IS REGOACTIONA OF CRE</p>
+        <blockquote>IN NO IST LAT WHEY CRATICT FROURE BIRS GROCID PONDENOME OF DEMONSTURES OF THE REPTAGIN IS REGOACTIONA OF CRE</blockquote>
         "
     </p>
     <footer>-Pierce, John R.</footer>
@@ -162,9 +164,10 @@ First Order Word Approximations have the exact same qualities as the <a href="#1
 To create a sequence of text, we would start by selecting words at random from an imaginary bucket (words w/ higher frequency would be selected more often) and appending them to our sequence.
 
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-    <p>...This could be achieved by cutting text into words, scrambling the words in a hat, and then drawing out a succession of words. He (Shannon) calls this a first-order word approximation...
-        <p> "5. First-order word approximation. Here words are chosen independently but with appropriate frequencies:</p>
-        <p>REPRESENTING AND SPEEDILY IS AN GOOD APT OR COME CAN DIFFERENT NATURAL HERE HE THE A IN CAME THE TO OF TO EXPERT GRAY COME TO FURNISHES THE LINE MESSAGE HAD BE THESE</p>
+    <p>"...This could be achieved by cutting text into words, scrambling the words in a hat, and then drawing out a succession of words. He (Shannon) calls this a first-order word approximation...
+        <blockquote>5. First-order word approximation. Here words are chosen independently but with appropriate frequencies:
+            <blockquote>REPRESENTING AND SPEEDILY IS AN GOOD APT OR COME CAN DIFFERENT NATURAL HERE HE THE A IN CAME THE TO OF TO EXPERT GRAY COME TO FURNISHES THE LINE MESSAGE HAD BE THESE</blockquote>
+        </blockquote>
         "
     </p>
     <footer>-Pierce, John R.</footer>
@@ -179,9 +182,10 @@ The result is a string of text that makes no sense at all to any English speaker
 Second order word approximations are similar to <a href="#2nd-order-approx">second order letter approximations</a> in that we consider pairings of words instead of letters. They're still called ***digrams*** (or [bigrams](https://en.wikipedia.org/wiki/Bigram)) and the probabilities (relative frequencies) are [conditional](https://en.wikipedia.org/wiki/Conditional_probability) as opposed to first order word approximations which are independent. They have frequencies of English text just like first order approximations. [Bayes' Theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem) is still very much relevant in calculating their relative frequencies.
 
 <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-    <p>...Shannon constructed a random passage in which the probabilities a of pairs of words were the same as in English text by the following expedient. He chose a first pair of words at random in a novel. He then looked through the novel for the next occurrence of the second word of the first pair and added the word which followed it in this new occurrence, and so on. This process gave him the following second-order word approximation to English.
-        <p>"6. Second-order word approximation. The word transition probabilities are correct, but no further structure is included:</p>
-        <p> THE HEAD AND IN FRONTAL ATTACK ON AN ENGLISH WRITER THAT THE CHARACTER OF THIS POINT IS THEREFORE ANOTHER METHOD FOR THE LETTERS THAT THE TIME OF WHO EVER TOLD THE PROBLEM FOR AN UNEXPECTED.</p>
+    <p>"...Shannon constructed a random passage in which the probabilities a of pairs of words were the same as in English text by the following expedient. He chose a first pair of words at random in a novel. He then looked through the novel for the next occurrence of the second word of the first pair and added the word which followed it in this new occurrence, and so on. This process gave him the following second-order word approximation to English.
+        <blockquote>6. Second-order word approximation. The word transition probabilities are correct, but no further structure is included:
+            <blockquote> THE HEAD AND IN FRONTAL ATTACK ON AN ENGLISH WRITER THAT THE CHARACTER OF THIS POINT IS THEREFORE ANOTHER METHOD FOR THE LETTERS THAT THE TIME OF WHO EVER TOLD THE PROBLEM FOR AN UNEXPECTED.</blockquote>
+        </blockquote>
         "
     </p>
     <footer>-Pierce, John R.</footer>
@@ -212,7 +216,26 @@ We explore how Shannon incorporates grammar in the development of machines that 
 <h2 id="FS-Markov-Automaton">Incorporating Grammar Rules (Shannon's Mathematical Model of Communication) via Markov Chains/Finite State Automaton</h2>
 <a href="#TOC">Back to Table of Contents</a>
 
+Normally, the problem of incorporating grammar use in a machines is extremely difficult. Reason being (and this is a conjecture) is because grammar is very fluid. As native English speakers, we don't use grammar rules perfectly either. We just can't seem to agree 100% of the time on proper use cases specifically since there are an infinite amount.([check out this quora answer](https://www.quora.com/Why-cant-we-teach-language-grammar-rules-which-we-teach-to-kids-to-computers-and-machine-learning-algorithms)). However, what we can do is create a "machine" (that is, a [finite state automaton](https://en.wikipedia.org/wiki/Finite-state_machine) implementing a [markovian process](https://en.wikipedia.org/wiki/Markov_chain). [more here](https://stackoverflow.com/questions/4880286/is-a-markov-chain-the-same-as-a-finite-state-machine) and [here](https://en.wikipedia.org/wiki/Finite-state_machine#Finite_Markov_chain_processes)) that randomly produces endless, grammatical utterances of a ***limited*** sort. An example of such a machine is shown below:
 
+<div class="rotated">
+    <img src="https://ia902705.us.archive.org/BookReader/BookReaderImages.php?zip=/34/items/symbolssignalsan002575mbp/symbolssignalsan002575mbp_tif.zip&file=symbolssignalsan002575mbp_tif/symbolssignalsan002575mbp_0071.tif&scale=8&rotate=0" width="600" height="600"/>
+</div>
+
+Each box represents a state (the state contains a word). Notice we have a ***finite*** amount of states, hence the term *"Finite State Machine"*. Two arrows leave each box, connecting to two other boxes. Each arrow have a probability assigned to it (i.e. $P(x) = \frac{1}{2}$).
+
+To run our state machine and generate an endless amount of grammatical utterances, we need to initiate the process using a sequence of random choices. These choices represent the path (arrow) we choose to follow. For example, we could flip a coin (fair coin has an equal probability of $\frac{1}{2}$) with a choice of heads indicating that we'll take the top path (or arrow). Flipping the coin and landing on tails indicates taking the bottom path (or arrow). Each time we flip the coin, we switch states and print the word, words, or symbols associated with that state. We have the following example below:
+
+<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
+    <p>"As an example, if we started in state 7 and flipped the following sequence of heads and tails: T H H H T T H T T T H H H H, the machine would print out 
+        <blockquote>
+            THE COMMUNIST PARTY INVESTIGATED THE CONGRESS. THE COMMUNIST PARTY PURGED THE CONGRESS AND DESTROYED THE COMMUNIST PARTY AND FOUND EVIDENCE OF THE CONGRESS.
+        </blockquote>
+    This can go on and on, never retracing its whole course and producing sentences of unlimited length."</p>
+    <footer>-Pierce, John R.</footer>
+</blockquote>
+
+Again, via this [stochastic process](https://en.wikipedia.org/wiki/Stochastic_process), we are about to generate text that somewhat resembles English text (including grammar rules).
 
 <h2 id="Nyquist">Contributions of Harry Nyquist</h2>
 <a href="#TOC">Back to Table of Contents</a>
