@@ -31,15 +31,13 @@ In this post we look to provide a brief summary for Chapter 3 (<i>"The Origins o
         </ul>
     </li>
     <li><a href="#FS-Markov-Automaton">Incorporating Grammar Rules (Shannon's Mathematical Model of Communication) via Markov Chains/Finite State Automaton</a></li>
-    <li><a href="#Nyquist">Contributions of Harry Nyquist</a></li>
-    <li><a href="#Hartley">Contributions of R.V.L. Hartley</a></li>
-    <li><a href="#Shannon">Contributions of Claude Shannon,</a></li>
+    <li><a href="#ergodic">Ergodic Processes</a></li>
     <li><a href="#Conclusion">Conclusion</a></li>
 </ul>
 
 <h2 id="tldr">TL;DR</h2>
 
-To be written later.
+The objective of chapter 3 is to provide a model representing the role of humans as a message source and aspects of the messages they produce. We start by giving a broad definition of what a mathematical model is. Then we describe a few properties of English text, specifically relative frequencies of single letter, bigram, and trigram sequences. We also give a definition and explanations pertaining to ergodic sources as they are an important concept to the mathematical model produced in this chapter as well as the overall conversation of Information Theory.
 
 <h2 id="MM">What is a Mathematical Model?</h2>
 <a href="#TOC">Back to Table of Contents</a>
@@ -76,7 +74,7 @@ This is especially true for humans. Phenomena regarding human behavior, particul
 <h2 id="ith-order-approx">$i$-th Order Letter Approximation of English Text</h2>
 <a href="#TOC">Back to Table of Contents</a>
 
-We begin to examine how Claude Shannon formed a mathematical process (and model) demonstrating how English words and text can be approximated and carried out by machines. We only consider letter approximations up to third order to demonstrate a point: with each increase in order, we start to form letter combinations that start to resemble words in English (or any other language). Finding probabilities of letters are important to this discussion.
+We begin to examine how Claude Shannon formed a mathematical process demonstrating how English words and text can be approximated and carried out by machines. We only consider letter approximations up to third order to demonstrate a point: with each increase in order, we start to form letter combinations that start to resemble words in English (or any other language). Finding probabilities of letters are important to this discussion.
 
 <h3 id="0th-order-approx">Zero Order Letter Approximation of English Text</h3>
 
@@ -235,26 +233,71 @@ To run our state machine and generate an endless amount of grammatical utterance
     <footer>-Pierce, John R.</footer>
 </blockquote>
 
-Again, via this [stochastic process](https://en.wikipedia.org/wiki/Stochastic_process), we are about to generate text that somewhat resembles English text (including grammar rules).
+Again, via this [stochastic process](https://en.wikipedia.org/wiki/Stochastic_process), we are able to generate text that somewhat resembles English text (including grammar rules). In the next section, we'll get to the meat of the matter, discussing Shannon's adopted mathematical model for English text (the [ergodic process](https://en.wikipedia.org/wiki/Ergodic_process)).
 
-<h2 id="Nyquist">Contributions of Harry Nyquist</h2>
+<h2 id="ergodic">Ergodic Processes</h2>
 <a href="#TOC">Back to Table of Contents</a>
 
+Initially, this chapter set out to describe a mathematical model for generating text that approximates actual English text.
+
+<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
+    <p>"...We have been seeking a mathematical model of a source of English text. Such a model should be capable of producing text which corresponds closely to actual English text, closely enough so that the problem of encoding and transmitting such text is essentially equivalent to the problem of encoding and transmitting actual English text...."</p>
+    <footer>-Pierce, John R.</footer>
+</blockquote>
+
+The conversation began with describing the structure of English text (and the English language, in general). This was in the form of $i$-order letter/word approximations (i.e.: <a href="https://en.wikipedia.org/wiki/N-gram">$n$-grams</a>) and stochastic processes such as Finite-State Automatons (or Markov Chains; <a href="https://stackoverflow.com/questions/4880286/is-a-markov-chain-the-same-as-a-finite-state-machine">read this for caveats...</a>).
+
+<blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
+    <p>"...We have examined a number of properties of English text. We have seen that the average frequency of E’s is commonly constant for both the English text produced by one writer and, also, for the text produced by all writers. Other more complicated statistics, such as the frequency of digrams (TH, WE, and other letter pairs), are also essentially constant. Further, we have shown that English-like text can be produced by a sequence of random choices, such as drawings of slips of paper from hats, or flips of a coin, if the proper probabilities are in some way built into the process. One way of producing such text is through the use of a finite-state machine..."</p>
+    <footer>-Pierce, John R.</footer>
+</blockquote>
+
+In this section, we actually begin describing the mathematical model Shannon developed. We do this by introducing several new terms: [stationary](https://en.wikipedia.org/wiki/Stationary_process), [ergodic processes](https://en.wikipedia.org/wiki/Ergodic_process), [ensemble](https://en.wikipedia.org/wiki/Statistical_ensemble_(mathematical_physics)), [ensemble average](https://en.wikipedia.org/wiki/Ensemble_average_(statistical_mechanics)), and time average.
+
+**Terms & Definitions:**
+
+<ol>
+    <li><b><i>Stationary source</i></b> describes a source where there is no change w/ time. This is true regardless of whether we are talking about single letter, bigram, or trigram sequences. In the case of bigram and trigram sequences, this is particularly true for an ensemble of sequences (an infinite number of sequences produced by our FSM). The frequencies of letters, bigrams, or trigrams remain consistent (the same as) with their frequency in English text.</li>
+    <li>An <b><i>ensemble</i></b> of sequences in this case is an infinite number of sequences produced by our FSM (Finite State Machine).</li>
+    <li>The <b><i>ensemble average</i></b> considers the average of a particular symbol across the ensemble (therefore, across all sequences) whether it's a single symbol, bigram, or trigram (more generally, $n$-gram).</li>
+    <li>The <b><i>time average</i></b> considers the average of a particular symbol across just one sequence.</li>
+</ol>
 
 
-<h2 id= "Hartley">Contributions of R.V.L. Hartley</h2>
-<a href="#TOC">Back to Table of Contents</a>
+***Note:*** Time Averages and Ensemble Averages can be different. An example is shown below. **Click the images**.
 
+<div class="side-by-side">
+    <a href="https://ia802705.us.archive.org/BookReader/BookReaderImages.php?zip=/34/items/symbolssignalsan002575mbp/symbolssignalsan002575mbp_tif.zip&file=symbolssignalsan002575mbp_tif/symbolssignalsan002575mbp_0074.tif&scale=8&rotate=0" target="_blank">
+    <img width="220" height="250" src="https://ia802705.us.archive.org/BookReader/BookReaderImages.php?zip=/34/items/symbolssignalsan002575mbp/symbolssignalsan002575mbp_tif.zip&file=symbolssignalsan002575mbp_tif/symbolssignalsan002575mbp_0074.tif&scale=8&rotate=0"/>
+    </a>
+    <a href="https://ia802705.us.archive.org/BookReader/BookReaderImages.php?zip=/34/items/symbolssignalsan002575mbp/symbolssignalsan002575mbp_tif.zip&file=symbolssignalsan002575mbp_tif/symbolssignalsan002575mbp_0075.tif&scale=8&rotate=0" target="_blank">
+    <img width="220" height="250" src="https://ia802705.us.archive.org/BookReader/BookReaderImages.php?zip=/34/items/symbolssignalsan002575mbp/symbolssignalsan002575mbp_tif.zip&file=symbolssignalsan002575mbp_tif/symbolssignalsan002575mbp_0075.tif&scale=8&rotate=0"/>
+    </a>
+</div>
 
+<ol start="5">
+    <li><b><i> Ergodic source </i></b> describes a source which is stationary and where the time and ensemble averages are equivalent.</li>
+</ol>
 
-<h2 id="Shannon">Contributions of Claude Shannon</h2>
-<a href="#TOC">Back to Table of Contents</a>
+It’s more apt that we treat the above terms as criteria for our model versus simply as just definitions. The reason for this is because the theorems for our model depend on the fact that source of information is ergodic. The reason is that in ergodic sources the frequency of symbols in question don’t change regardless of the length of said source. Based on [law of large numbers](https://en.wikipedia.org/wiki/Law_of_large_numbers), the analysis of larger and larger text gets us closer to the true probabilities of the occurrences of the symbols in question. This could also be phrased as the following:
 
+* ***The longer the text we analyze the more accurate the Mathematical description (the probabilities of the symbols) of the source is.***
 
+This leads us to the next implication (also a result of the law of large numbers):
+
+* ***The relative frequencies of the symbols across all messages generated by the source are equal to the relative frequencies of one message generated by the source; Can otherwise be simplified as having the ensemble and time [expected values](https://en.wikipedia.org/wiki/Expected_value) be the same.***
+
+Because of these qualities, we can use them to derive certain statistical data which can help narrow the probability as to what the next symbol (word, or letter) of the message will be.
+
+After all, the "fundamental problem of communication" is for the receiver to be able to identify what data was generated by the source, based on the signal it receives through the channel.
+
+***Things to keep in mind:***
+
+<ol><li>While our model works well w/ ergodic sources, message sources from humans may not be strictly ergodic. It's not to say that the model is useless in real world applications; For the most part, the model applies. It's more of a warning, "to use caution" in the application of the model's theorems (be nuanced essentially).</li></ol>
 
 <h2 id="Conclusion">Conclusion</h2>
 
-
+The key takeaway for this chapter is the mathematical model representing ergodic sources. Ergodic sources don't change w/ time(stationary) and the statistics collected across one message from the source apply/extend well to all messages the source generates (equivalent time and ensemble averages). This allows some predicting power for determining what the source will produce next. A caveat to keep in mind is that theorems apply ***exactly*** to true ergodic sources for which human produced text is not. However, the theorems can be applied to human produced text as it is approximately ergodic (the theorems are still useful); This is just as long as caution/discretion is used. We get into theorems in later parts.
 
 <img src="https://media.giphy.com/media/Y0btn5YtZRGNkTnvNx/giphy.gif">
 
