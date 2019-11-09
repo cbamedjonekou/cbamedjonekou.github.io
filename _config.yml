@@ -1,4 +1,13 @@
-name: CB.Amedjonekou, l33t Warrior.
+# Dependencies
 markdown: kramdown
 theme: minima
 permalink: /blog/:year/:month/:day/:title
+
+# Setup
+title: CB.Amedjonekou
+name: CB.Amedjonekou, L33T God.
+tagline: 'CB Amedjonekou'
+description: 'Some cool shit detailing why I'm the shit. Birth of a Legend - @Densetsu'
+url: https://cbamedjonekou.github.io/
+baseurl: /
+
