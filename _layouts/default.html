@@ -1,51 +1,22 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>{{ page.title }}</title>
+	<!-- HTML Header: Used Liquid Templating-->
+	{% include default_head.html %}
 
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-
-		<!-- link to MathJax New Delimiters, Inline Mode -->
-		<script>
-			MathJax = {
-			  tex: {
-				inlineMath: [['$', '$'], ['\\(', '\\)'], ['\\{', '\\}']]
-			  },
-			  svg: {
-				fontCache: 'global'
-			  }
-			};
-		</script>
-		<script type="text/javascript" id="MathJax-script" async
-			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-		</script>
-
-
-		<!-- link to MathJax LaTex CDN -->
-		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-	</head>
+	<!-- HTML Body: -->
 	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About Me</a></li>
-			<li><a href="/projects">Projects</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/rss">RSS Feed</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		
-		{{ content }}
+		<!-- Body Part 1: Header of the page -->
+		{% include default_header.html %}
 
+		<!-- Body Part 2: Sidebar -->
+		{% include default_sidebar.html %}
+
+		<!-- Body Part 3: All Content -->
+		<div class="container">
+			{{ content }}
 		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:cbadataservices@gmail.com">email</a></li>
-        		<li><a href="https://github.com/cbamedjonekou">github.com/cbamedjonekou</a></li>
-			</ul>
-		</footer>
+
+		<!-- Body Part 4: The Footer of the page -->
+		{% include default_footer.html %}
 	</body>
 </html>

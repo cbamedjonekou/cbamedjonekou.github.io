@@ -1,0 +1,26 @@
+<!-- Content of the Sidebar -->
+<div class="sidebar">
+    <div class="sidebar-container">
+        <!-- Title and About for my site -->
+        <div class="sidebar-about">
+            <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+            <p class="lead"> {{ site.description }}</p>
+        </div>
+
+        <!-- Navigation for my site -->
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Me</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/cv">CV</a></li>
+                <li><a href="/rss">RSS Feed</a></li>
+            </ul>
+        </nav>
+
+        <!-- Copy write for the site -->
+        <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+        
+    </div>
+</div>
+
