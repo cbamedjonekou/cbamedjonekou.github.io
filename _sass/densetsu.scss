@@ -1,0 +1,94 @@
+/* Reset some basic elements */
+
+ body, h1, h2, h3, h4, h5, h6,
+ p, blockquote, pre, hr,
+ dl, dd, ol, ul, figure {
+   margin: 0;
+   padding: 0;
+ }
+
+/* Variables */
+
+$color-body: #141414;
+$color-text: #FEF9E7;
+$color-header-rgba: rgba(#141414, 0.1);
+$font-base: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+$line-height: 1.15;
+$font-size-general: 20px;
+$link-color-hover: rgba(#EC4949, 0.6);
+
+ /* Base Styling */
+
+ *{
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+ body{
+     background-color: $color-body;
+     transition: all .3s ease;
+ }
+
+ p, span, li{
+     font-family: $font-base;
+     font-size: $font-size-general;
+     color: $color-text;
+     text-align: justify;
+ }
+
+ h1{
+     font-family: $font-base;
+     color: $color-text;
+ }
+
+/* Sidebar Navigation Styling */
+
+//  .header-container{
+//      overflow: hidden;
+//      background-color: $color-header-rgba;
+//      width: 200px;
+//      height: 100%;
+//      position: fixed;
+//      top: 0;
+//      left: 0;
+//      padding-top: 20px;
+//      overflow-x: hidden;
+//  }
+
+ .sidebar{
+    overflow: hidden;
+    background-image: url(https://i.pinimg.com/originals/0c/9b/3f/0c9b3fa0cb0b74b810a9309f6b442e84.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    text-align: center;
+    padding: 2rem 1rem;
+ }
+
+.sidebar-about h1{
+    padding-bottom: 1rem;
+}
+
+/* Content */
+.container{
+    margin-left: 350px;
+    font-size: $font-size-general;
+    padding-top:    4rem;
+    padding-bottom: 4rem;
+}
+
+a{
+    color: rgba($color-text, 0.9);
+}
+
+a:hover{
+    color: $link-color-hover;
+    text-decoration: underline;
+}
