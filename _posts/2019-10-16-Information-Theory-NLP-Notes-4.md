@@ -1,7 +1,7 @@
 ---
 layout: post
 mathjax: true
-title: "A Brief Summary to Pierce's Introduction to Information Theory (Part 3)"
+title: "A Brief Summary to Pierce's Introduction to Information Theory (Part 4)"
 date: 2019-10-16
 description: The second of a series of blog posts that attempts to give a concise introduction to Information Theory. This series of posts can act as a summary of events of Pierce's "An Introduction to Information Theory-Symbols, Signals and Noise".
 tags: natural-language-processing artificial-intelligence information-theory introduction shannon concise wheel-of-fortune
@@ -9,7 +9,7 @@ tags: natural-language-processing artificial-intelligence information-theory int
 
 <h2 id="Top">Introduction</h2>
 
-In this post we look to provide a brief summary for Chapter 3 (<i>"The Origins of Information Theory"</i>) of [Pierce's](https://archive.org/details/symbolssignalsan002575mbp/page/n27) <i>"An Introduction to Information Theory: Symbols, Signals, and Noise</i>. Skip to <a href="#tldr">TL;DR</a> for a summary of the summary (that's so [meta](https://www.grammarly.com/blog/meta-meaning/)).
+In this post we look to provide a brief summary for Chapter 4 (<i>"The Origins of Information Theory"</i>) of [Pierce's](https://archive.org/details/symbolssignalsan002575mbp/page/n27) <i>"An Introduction to Information Theory: Symbols, Signals, and Noise</i>. Skip to <a href="#tldr">TL;DR</a> for a summary of the summary (that's so [meta](https://www.grammarly.com/blog/meta-meaning/)).
 
 <h2 id="TOC">Table of Contents</h2>
 <ul>
@@ -296,8 +296,8 @@ In this section, we actually begin describing the mathematical model Shannon dev
 ***Note:*** Time Averages and Ensemble Averages can be different. An example is shown below. **Click the images**
 
 <div class="side-by-side">
-    <a href="https://ia802705.us.archive.org/BookReader/BookReaderImages.php?zip=/34/items/symbolssignalsan002575mbp/symbolssignalsan002575mbp_tif.zip&file=symbolssignalsan002575mbp_tif/symbolssignalsan002575mbp_0074.tif&scale=8&rotate=0" target="_blank">
-    <img width="220" height="250" src="https://ia802705.us.archive.org/BookReader/BookReaderImages.php?zip=/34/items/symbolssignalsan002575mbp/symbolssignalsan002575mbp_tif.zip&file=symbolssignalsan002575mbp_tif/symbolssignalsan002575mbp_0074.tif&scale=8&rotate=0"/>
+    <a href="https://www.google.com/" target="_blank">
+    <img width="220" height="250" src="https://media.giphy.com/media/Y0btn5YtZRGNkTnvNx/giphy.gif"/>
     </a>
     <a href="https://ia802705.us.archive.org/BookReader/BookReaderImages.php?zip=/34/items/symbolssignalsan002575mbp/symbolssignalsan002575mbp_tif.zip&file=symbolssignalsan002575mbp_tif/symbolssignalsan002575mbp_0075.tif&scale=8&rotate=0" target="_blank">
     <img width="220" height="250" src="https://ia802705.us.archive.org/BookReader/BookReaderImages.php?zip=/34/items/symbolssignalsan002575mbp/symbolssignalsan002575mbp_tif.zip&file=symbolssignalsan002575mbp_tif/symbolssignalsan002575mbp_0075.tif&scale=8&rotate=0"/>
