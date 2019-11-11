@@ -12,32 +12,34 @@
 $color-body: #141414;
 $color-text: #FEF9E7;
 $color-header-rgba: rgba(#141414, 0.1);
-$font-base: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
-$line-height: 1.15;
-$font-size-general: 20px;
+$font-base: 'Helvetica', 'Arial', 'Sans-Serif';
+$line-height: 1.4em;
+$font-size-general: 0.9em;
 $link-color-hover: rgba(#EC4949, 0.6);
+$element-padding: 1rem 1rem 1rem 0rem;
 
  /* Base Styling */
 
- *{
+ * {
      -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
      box-sizing: border-box;
 }
 
- body{
+ body {
      background-color: $color-body;
      transition: all .3s ease;
  }
 
- p, span, li{
+ p, span, li {
      font-family: $font-base;
      font-size: $font-size-general;
      color: $color-text;
      text-align: justify;
+     line-height: $line-height;
  }
 
- h1{
+ h1 {
      font-family: $font-base;
      color: $color-text;
  }
@@ -56,7 +58,7 @@ $link-color-hover: rgba(#EC4949, 0.6);
 //      overflow-x: hidden;
 //  }
 
- .sidebar{
+ .sidebar {
     overflow: hidden;
     background-image: url(https://i.pinimg.com/originals/0c/9b/3f/0c9b3fa0cb0b74b810a9309f6b442e84.jpg);
     background-size: cover;
@@ -69,26 +71,71 @@ $link-color-hover: rgba(#EC4949, 0.6);
     left: 0;
     overflow-x: hidden;
     text-align: center;
-    padding: 2rem 1rem;
- }
+    padding: 2rem 1rem ;
+    image-rendering: pixelated;
 
-.sidebar-about h1{
+    nav ul, footer ul {
+        font-family:'Helvetica', 'Arial', 'Sans-Serif';
+        padding: 1rem 1rem 2rem 0rem;
+        list-style: none;
+        font-weight: bold;
+    }
+ }
+ 
+// .hero .pixels{
+    
+//     filter: alpha(opacity=80);
+//     opacity: .8;
+//     background-image: url("../../assets/img/pixels.png")
+// }
+
+.sidebar-about h1 {
     padding-bottom: 1rem;
 }
 
 /* Content */
-.container{
+.container {
     margin-left: 350px;
     font-size: $font-size-general;
-    padding-top:    4rem;
-    padding-bottom: 4rem;
+    padding: 4rem 2rem 4rem 0rem;
+    color: $color-text;
+    
+    h1 {
+        font-size: 3em;
+        padding: $element-padding;
+        font-family: $font-base;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        padding: $element-padding;
+        font-family: $font-base;
+    }
+
+    p {
+        font-size: 1.09em;
+        line-height: 1.4em;
+        color: $color-text;
+        padding: $element-padding;
+    }
+
+    ul.posts { 
+        margin: 20px auto 40px; 
+        font-size: $font-size-general;
+    }
 }
 
-a{
+.terms-def{
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 1rem 1rem 2rem 0rem;
+    flex-wrap: wrap;
+}
+
+a {
     color: rgba($color-text, 0.9);
 }
 
-a:hover{
+a:hover {
     color: $link-color-hover;
     text-decoration: underline;
 }
