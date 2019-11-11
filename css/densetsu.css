@@ -17,13 +17,14 @@ body {
   transition: all .3s ease; }
 
 p, span, li {
-  font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 20px;
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  font-size: 0.9em;
   color: #FEF9E7;
-  text-align: justify; }
+  text-align: justify;
+  line-height: 1.4em; }
 
 h1 {
-  font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", "Sans-Serif";
   color: #FEF9E7; }
 
 /* Sidebar Navigation Styling */
@@ -40,7 +41,13 @@ h1 {
   left: 0;
   overflow-x: hidden;
   text-align: center;
-  padding: 2rem 1rem; }
+  padding: 2rem 1rem;
+  image-rendering: pixelated; }
+  .sidebar nav ul, .sidebar footer ul {
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 1rem 1rem 2rem 0rem;
+    list-style: none;
+    font-weight: bold; }
 
 .sidebar-about h1 {
   padding-bottom: 1rem; }
@@ -48,9 +55,30 @@ h1 {
 /* Content */
 .container {
   margin-left: 350px;
-  font-size: 20px;
-  padding-top: 4rem;
-  padding-bottom: 4rem; }
+  font-size: 0.9em;
+  padding: 4rem 2rem 4rem 0rem;
+  color: #FEF9E7; }
+  .container h1 {
+    font-size: 3em;
+    padding: 1rem 1rem 1rem 0rem;
+    font-family: "Helvetica", "Arial", "Sans-Serif"; }
+  .container h2 {
+    font-size: 1.5em;
+    padding: 1rem 1rem 1rem 0rem;
+    font-family: "Helvetica", "Arial", "Sans-Serif"; }
+  .container p {
+    font-size: 1.09em;
+    line-height: 1.4em;
+    color: #FEF9E7;
+    padding: 1rem 1rem 1rem 0rem; }
+  .container ul.posts {
+    margin: 20px auto 40px;
+    font-size: 0.9em; }
+
+.terms-def {
+  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+  padding: 1rem 1rem 2rem 0rem;
+  flex-wrap: wrap; }
 
 a {
   color: rgba(254, 249, 231, 0.9); }
