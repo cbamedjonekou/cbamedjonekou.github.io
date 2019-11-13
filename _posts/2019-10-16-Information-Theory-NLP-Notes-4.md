@@ -3,37 +3,39 @@ layout: post
 mathjax: true
 title: "A Brief Summary to Pierce's Introduction to Information Theory (Part 4)"
 date: 2019-10-16
-description: The second of a series of blog posts that attempts to give a concise introduction to Information Theory. This series of posts can act as a summary of events of Pierce's "An Introduction to Information Theory-Symbols, Signals and Noise".
+description: The fourth of a series of blog posts that attempts to give a concise introduction to Information Theory. This series of posts can act as a summary of events of Pierce's "An Introduction to Information Theory-Symbols, Signals and Noise".
 tags: natural-language-processing artificial-intelligence information-theory introduction shannon concise wheel-of-fortune
 ---
 
 <h2 id="Top">Introduction</h2>
 
-In this post we look to provide a brief summary for Chapter 4 (<i>"The Origins of Information Theory"</i>) of [Pierce's](https://archive.org/details/symbolssignalsan002575mbp/page/n27) <i>"An Introduction to Information Theory: Symbols, Signals, and Noise</i>. Skip to <a href="#tldr">TL;DR</a> for a summary of the summary (that's so [meta](https://www.grammarly.com/blog/meta-meaning/)).
+In this post we look to provide a brief summary for Chapter 4 (<i>"A Mathematical Model of Information Theory"</i>) of [Pierce's](https://archive.org/details/symbolssignalsan002575mbp/page/n27) <i>"An Introduction to Information Theory: Symbols, Signals, and Noise</i>. Skip to <a href="#tldr">TL;DR</a> for a summary of the summary (that's so [meta](https://www.grammarly.com/blog/meta-meaning/)).
 
-<h2 id="TOC">Table of Contents</h2>
-<ul>
-    <li><a href="#tldr">TL;DR</a></li>
-    <li><a href="#MM">What is a Mathematical Model?</a></li>
-    <li><a href="#ith-order-approx">$i$-th Order Letter Approximation of English Text</a>
-        <ul>
-            <li><a href="#0th-order-approx">Zero Order Letter Approximation of English Text</a></li>
-            <li><a href="#1st-order-approx">First Order Letter Approximation of English Text</a></li>
-            <li><a href="#2nd-order-approx">Second Order Letter Approximation of English Text</a></li>
-            <li><a href="#n-order-approx">Letter Approximations greater than 2</a></li>
-        </ul>
-    </li>
-    <li><a href="#ith-order-word">$i$-th Order Word Approximation of English Text</a>
-        <ul>
-            <li><a href="#1st-order-word">First Order Word Approximation of English Text</a></li>
-            <li><a href="#2nd-order-word">Second Order Word Approximation of English Text</a></li>
-            <li><a href="#n-order-word">Word Approximations greater than 2</a></li>
-        </ul>
-    </li>
-    <li><a href="#FS-Markov-Automaton">Incorporating Grammar Rules (Shannon's Mathematical Model of Communication) via Markov Chains/Finite State Automaton</a></li>
-    <li><a href="#ergodic">Ergodic Processes</a></li>
-    <li><a href="#Conclusion">Conclusion</a></li>
-</ul>
+<div id="Table-of-Contents">
+    <h2 id="TOC">Table of Contents</h2>
+    <ul>
+        <li><a href="#tldr">TL;DR</a></li>
+        <li><a href="#MM">What is a Mathematical Model?</a></li>
+        <li><a href="#ith-order-approx">$i$-th Order Letter Approximation of English Text</a>
+            <ul>
+                <li><a href="#0th-order-approx">Zero Order Letter Approximation of English Text</a></li>
+                <li><a href="#1st-order-approx">First Order Letter Approximation of English Text</a></li>
+                <li><a href="#2nd-order-approx">Second Order Letter Approximation of English Text</a></li>
+                <li><a href="#n-order-approx">Letter Approximations greater than 2</a></li>
+            </ul>
+        </li>
+        <li><a href="#ith-order-word">$i$-th Order Word Approximation of English Text</a>
+            <ul>
+                <li><a href="#1st-order-word">First Order Word Approximation of English Text</a></li>
+                <li><a href="#2nd-order-word">Second Order Word Approximation of English Text</a></li>
+                <li><a href="#n-order-word">Word Approximations greater than 2</a></li>
+            </ul>
+        </li>
+        <li><a href="#FS-Markov-Automaton">Incorporating Grammar Rules (Shannon's Mathematical Model of Communication) via Markov Chains/Finite State Automaton</a></li>
+        <li><a href="#ergodic">Ergodic Processes</a></li>
+        <li><a href="#Conclusion">Conclusion</a></li>
+    </ul>
+</div>
 
 <h2 id="tldr">TL;DR</h2>
 
@@ -46,9 +48,9 @@ We start Chapter 3 discussing what a mathematical model is. A mathematical model
 <div class="quote-bubble">
     <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
         <p>
-            "A Mathematical Theory which seeks to explain and to predict the events in the world about us always deals with a simplified model of the world, a mathematical model in which only things pertinent to the behavior under consideration enter...The great beauty and power of a mathematical theory or model lies in the separation of the relevant from the irrelevant, so that certain observable behavior can be related and understood without the need of comprehending the whole nature and behavior of the universe."
+            A Mathematical Theory which seeks to explain and to predict the events in the world about us always deals with a simplified model of the world, a mathematical model in which only things pertinent to the behavior under consideration enter...The great beauty and power of a mathematical theory or model lies in the separation of the relevant from the irrelevant, so that certain observable behavior can be related and understood without the need of comprehending the whole nature and behavior of the universe.
         </p>
-        <footer>-Pierce, John R.</footer>
+        <footer>&mdash;<a href="https://archive.org/details/symbolssignalsan002575mbp/page/n27">Pierce, John R</a>.</footer>
     </blockquote>
 </div>
 
@@ -57,9 +59,9 @@ A benefit of creating mathematical models is that we can start simple and then i
 <div class="quote-bubble">
     <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
         <p>
-            "...idealize <i>deterministic</i> systems which have the sort of predictable behavior we ordinarily expect from machines."
+            ...idealize <i>deterministic</i> systems which have the sort of predictable behavior we ordinarily expect from machines.
         </p>
-        <footer>-Pierce, John R.</footer>
+        <footer>&mdash;<a href="https://archive.org/details/symbolssignalsan002575mbp/page/n27">Pierce, John R</a>.</footer>
     </blockquote>
 </div>
 
@@ -68,9 +70,9 @@ There are caveats to consider, however. Pierce infers that while certain phenome
 <div class="quote-bubble">
     <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
         <p>
-            "Even the individual economic man is deterministic, for he will always act for his economic gin. But, if he at some time gambles on the honest throw of a die because the odds favor him, his economic fate becomes to a degree unpredictable, for he may lose even though the odds do favor him."
+            Even the individual economic man is deterministic, for he will always act for his economic gin. But, if he at some time gambles on the honest throw of a die because the odds favor him, his economic fate becomes to a degree unpredictable, for he may lose even though the odds do favor him.
         </p>
-        <footer>-Pierce, John R.</footer>
+        <footer>&mdash;<a href="https://archive.org/details/symbolssignalsan002575mbp/page/n27">Pierce, John R</a>.</footer>
     </blockquote>
 </div>
 
@@ -89,13 +91,16 @@ When we talk about Zero Order Letter Approximation of English Text, we consider 
 <div class="quote-bubble">
     <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
         <p>
-            "Suppose, for instance that we merely produce a sequence of letters and spaces with equal probabilities. We might do this by putting equal numbers of cards marked with each letter and with the space into a hat, mixing them up, drawing a card, recording its symbol, returning it, remixing, drawing a card, and so on. This gives what Shannon calls the zero-order approximation to English text. His example, obtained by an equivalent process goes:
-            <blockquote> 1. Zero-order approximation (symbols independent and equi-probable):
-                <blockquote>XFOML RXKHRJFFJUJ ZLPWCFWKCYJ FFJEYVKCQSGHYD QPAAMKBZAACIBZLHJQD</blockquote>
-            </blockquote>
-            "
+            Suppose, for instance that we merely produce a sequence of letters and spaces with equal probabilities. We might do this by putting equal numbers of cards marked with each letter and with the space into a hat, mixing them up, drawing a card, recording its symbol, returning it, remixing, drawing a card, and so on. This gives what Shannon calls the zero-order approximation to English text. His example, obtained by an equivalent process goes:
+            <br>
+            <br>
+            <span class="inner-quote"> 1. Zero-order approximation (symbols independent and equi-probable):
+                <br>
+                <br>
+                <span class="inner-inner-quote">XFOML RXKHRJFFJUJ ZLPWCFWKCYJ FFJEYVKCQSGHYD QPAAMKBZAACIBZLHJQD</span>
+            </span>
         </p>
-        <footer>-Pierce, John R.</footer>
+        <footer>&mdash;<a href="https://archive.org/details/symbolssignalsan002575mbp/page/n27">Pierce, John R</a>.</footer>
     </blockquote>
 </div>
 
@@ -108,13 +113,16 @@ First Order Letter Approximation differs from zero order approximation via one f
 <div class="quote-bubble">
     <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
         <p>
-            "...We can approach more nearly to English text by choosing letters independently of one another, but choosing E more often than W or Z. We could do this by putting many E's and few W's and Z's into the hat, mixing, and drawing out the letters. As the <i>probability</i> that a given letter is an E should be .13, out of every hundred letters we put in the hat 13 should be E's. As the probability that a letter will be W should be .02, out of each hundred letters we put in the hat, 2 should be W's, and so on. Here is the result of an equivalent procedure, which gives what Shannon calls a first-order approximation of English text:
-                <blockquote> 2. First-order approximation (symbols are independent but with frequencies of English text):
-                    <blockquote>OCRO HLI RGWR NMIELWIS EULL NBNESEBYA TH EEI ALHENHTTPA OOBTTVA NAH BRL</blockquote>
-                </blockquote>
-            "
+            ...We can approach more nearly to English text by choosing letters independently of one another, but choosing E more often than W or Z. We could do this by putting many E's and few W's and Z's into the hat, mixing, and drawing out the letters. As the <i>probability</i> that a given letter is an E should be .13, out of every hundred letters we put in the hat 13 should be E's. As the probability that a letter will be W should be .02, out of each hundred letters we put in the hat, 2 should be W's, and so on. Here is the result of an equivalent procedure, which gives what Shannon calls a first-order approximation of English text:
+            <br>
+            <br>
+            <span class="inner-quote"> 2. First-order approximation (symbols are independent but with frequencies of English text):
+                <br>
+                <br>
+                <span class="inner-inner-quote">OCRO HLI RGWR NMIELWIS EULL NBNESEBYA TH EEI ALHENHTTPA OOBTTVA NAH BRL</span>
+            </span>
         </p>
-        <footer>-Pierce, John R.</footer>
+        <footer>&mdash;<a href="https://archive.org/details/symbolssignalsan002575mbp/page/n27">Pierce, John R</a>.</footer>
     </blockquote>
 </div>
 
@@ -126,12 +134,12 @@ For Second Order approximations we consider pairings of letters called ***digram
 
 <div class="quote-bubble">
     <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-        <p>
-            "3. Second-order approximation (digram structure as in English):
-            <blockquote>ON IE ANTSOUTINYS ARE T INCTORE ST BE S DEAMYACHIN D ILONASIVE TUCOOWE AT TEASONARE FUSO TIZIN ANDY TOBE SEACE CTISBE</blockquote>
-            "
+        <p> 3. Second-order approximation (digram structure as in English):
+            <br>
+            <br>
+            <span class="inner-quote"> ON IE ANTSOUTINYS ARE T INCTORE ST BE S DEAMYACHIN D ILONASIVE TUCOOWE AT TEASONARE FUSO TIZIN ANDY TOBE SEACE CTISBE</span>
         </p>
-        <footer>-Pierce, John R.</footer>
+        <footer>&mdash;<a href="https://archive.org/details/symbolssignalsan002575mbp/page/n27">Pierce, John R</a>.</footer>
     </blockquote>
 </div>
 
@@ -143,12 +151,12 @@ We can have more letter combinations with sequences of 3 letters called [trigram
 
 <div class="quote-bubble">
     <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-        <p>
-            "4. Third-order approximation (digram structure as in English):
-            <blockquote>IN NO IST LAT WHEY CRATICT FROURE BIRS GROCID PONDENOME OF DEMONSTURES OF THE REPTAGIN IS REGOACTIONA OF CRE</blockquote>
-            "
+        <p> 4. Third-order approximation (digram structure as in English):
+            <br>
+            <br>
+            <span class="inner-quote">IN NO IST LAT WHEY CRATICT FROURE BIRS GROCID PONDENOME OF DEMONSTURES OF THE REPTAGIN IS REGOACTIONA OF CRE</span>
         </p>
-        <footer>-Pierce, John R.</footer>
+        <footer>&mdash;<a href="https://archive.org/details/symbolssignalsan002575mbp/page/n27">Pierce, John R</a>.</footer>
     </blockquote>
 </div>
 
@@ -163,9 +171,9 @@ We can extend order approximations to words as well. Doing so makes sense in com
 <div class="quote-bubble">
     <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
         <p>
-            "But it would be much simpler merely to supply machine with words rather than letters and to let it produce these words according to certain probabilities"
+            But it would be much simpler merely to supply machine with words rather than letters and to let it produce these words according to certain probabilities
         </p>
-        <footer>-Pierce, John R.</footer>
+        <footer>&mdash;<a href="https://archive.org/details/symbolssignalsan002575mbp/page/n27">Pierce, John R</a>.</footer>
     </blockquote>
 </div>
 
@@ -179,13 +187,16 @@ To create a sequence of text, we would start by selecting words at random from a
 
 <div class="quote-bubble">
     <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-        <p>"...This could be achieved by cutting text into words, scrambling the words in a hat, and then drawing out a succession of words. He (Shannon) calls this a first-order word approximation...
-            <blockquote>5. First-order word approximation. Here words are chosen independently but with appropriate frequencies:
-                <blockquote>REPRESENTING AND SPEEDILY IS AN GOOD APT OR COME CAN DIFFERENT NATURAL HERE HE THE A IN CAME THE TO OF TO EXPERT GRAY COME TO FURNISHES THE LINE MESSAGE HAD BE THESE</blockquote>
-            </blockquote>
-            "
+        <p>...This could be achieved by cutting text into words, scrambling the words in a hat, and then drawing out a succession of words. He (Shannon) calls this a first-order word approximation...
+            <br>
+            <br>
+            <span class="inner-quote">5. First-order word approximation. Here words are chosen independently but with appropriate frequencies:
+                <br>
+                <br>
+                <span class="inner-inner-quote">REPRESENTING AND SPEEDILY IS AN GOOD APT OR COME CAN DIFFERENT NATURAL HERE HE THE A IN CAME THE TO OF TO EXPERT GRAY COME TO FURNISHES THE LINE MESSAGE HAD BE THESE</span>
+            </span>
         </p>
-        <footer>-Pierce, John R.</footer>
+        <footer>&mdash;<a href="https://archive.org/details/symbolssignalsan002575mbp/page/n27">Pierce, John R</a>.</footer>
     </blockquote>
 </div>
 
@@ -199,13 +210,16 @@ Second order word approximations are similar to <a href="#2nd-order-approx">seco
 
 <div class="quote-bubble">
     <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-        <p>"...Shannon constructed a random passage in which the probabilities a of pairs of words were the same as in English text by the following expedient. He chose a first pair of words at random in a novel. He then looked through the novel for the next occurrence of the second word of the first pair and added the word which followed it in this new occurrence, and so on. This process gave him the following second-order word approximation to English.
-            <blockquote>6. Second-order word approximation. The word transition probabilities are correct, but no further structure is included:
-                <blockquote> THE HEAD AND IN FRONTAL ATTACK ON AN ENGLISH WRITER THAT THE CHARACTER OF THIS POINT IS THEREFORE ANOTHER METHOD FOR THE LETTERS THAT THE TIME OF WHO EVER TOLD THE PROBLEM FOR AN UNEXPECTED.</blockquote>
-            </blockquote>
-            "
+        <p>...Shannon constructed a random passage in which the probabilities a of pairs of words were the same as in English text by the following expedient. He chose a first pair of words at random in a novel. He then looked through the novel for the next occurrence of the second word of the first pair and added the word which followed it in this new occurrence, and so on. This process gave him the following second-order word approximation to English.
+            <br>
+            <br>
+            <span class="inner-quote">6. Second-order word approximation. The word transition probabilities are correct, but no further structure is included:
+                <br>
+                <br>
+                <span class="inner-inner-quote">THE HEAD AND IN FRONTAL ATTACK ON AN ENGLISH WRITER THAT THE CHARACTER OF THIS POINT IS THEREFORE ANOTHER METHOD FOR THE LETTERS THAT THE TIME OF WHO EVER TOLD THE PROBLEM FOR AN UNEXPECTED.</span>
+            </span>
         </p>
-        <footer>-Pierce, John R.</footer>
+        <footer>&mdash;<a href="https://archive.org/details/symbolssignalsan002575mbp/page/n27">Pierce, John R</a>.</footer>
     </blockquote>
 </div>
 
@@ -219,8 +233,8 @@ As aforementioned, increasing the order of approximations increases the chance o
 
 <div class="quote-bubble">
     <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-        <p>"...Such a scheme, even if refined greatly, would not, however, produce all sequences the words that a person might utter. Carried to an extreme, it would be confined to combinations of words which had occurred; otherwise, there would be no statistical data available on them. Yet I may say, "The magenta typhoon whirled the <a href="https://www.dictionary.com/browse/farded">farded</a> bishop away," and this may well never have been said before."</p>
-        <footer>-Pierce, John R.</footer>
+        <p>...Such a scheme, even if refined greatly, would not, however, produce all sequences the words that a person might utter. Carried to an extreme, it would be confined to combinations of words which had occurred; otherwise, there would be no statistical data available on them. Yet I may say, "The magenta typhoon whirled the <a href="https://www.dictionary.com/browse/farded">farded</a> bishop away," and this may well never have been said before.</p>
+        <footer>&mdash;<a href="https://archive.org/details/symbolssignalsan002575mbp/page/n27">Pierce, John R</a>.</footer>
     </blockquote>
 </div>
 
@@ -228,8 +242,8 @@ Also, as we learned in grade school (or other levels of education), English (and
 
 <div class="quote-bubble">
     <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-        <p>"...The real rules of English text deal not with the letters or words alone but with classes of words and their rules of association, that is, with grammar. Linguist and engineers who try to make machines for translating one language into another must find these rules, so that Their machines can combine words to form grammatical utterances even when these exact combinations have not occurred before (And also so that the meaning of words in the text to be translated can be deduced from the context)..."</p>
-        <footer>-Pierce, John R.</footer>
+        <p>...The real rules of English text deal not with the letters or words alone but with classes of words and their rules of association, that is, with grammar. Linguist and engineers who try to make machines for translating one language into another must find these rules, so that Their machines can combine words to form grammatical utterances even when these exact combinations have not occurred before (And also so that the meaning of words in the text to be translated can be deduced from the context)...</p>
+        <footer>&mdash;<a href="https://archive.org/details/symbolssignalsan002575mbp/page/n27">Pierce, John R</a>.</footer>
     </blockquote>
 </div>
 
@@ -250,12 +264,14 @@ To run our state machine and generate an endless amount of grammatical utterance
 
 <div class="quote-bubble">
     <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
-        <p>"As an example, if we started in state 7 and flipped the following sequence of heads and tails: T H H H T T H T T T H H H H, the machine would print out 
-            <blockquote>
-                THE COMMUNIST PARTY INVESTIGATED THE CONGRESS. THE COMMUNIST PARTY PURGED THE CONGRESS AND DESTROYED THE COMMUNIST PARTY AND FOUND EVIDENCE OF THE CONGRESS.
-            </blockquote>
-        This can go on and on, never retracing its whole course and producing sentences of unlimited length."</p>
-        <footer>-Pierce, John R.</footer>
+        <p>As an example, if we started in state 7 and flipped the following sequence of heads and tails: <span class= "highlight">T H H H T T H T T T H H H H</span>, the machine would print out
+            <br>
+            <br>
+            <span class="inner-quote">THE COMMUNIST PARTY INVESTIGATED THE CONGRESS. THE COMMUNIST PARTY PURGED THE CONGRESS AND DESTROYED THE COMMUNIST PARTY AND FOUND EVIDENCE OF THE CONGRESS.</span>
+        <br>
+        <br>This can go on and on, never retracing its whole course and producing sentences of unlimited length.
+        </p>
+        <footer>&mdash;<a href="https://archive.org/details/symbolssignalsan002575mbp/page/n27">Pierce, John R</a>.</footer>
     </blockquote>
 </div>
 
@@ -269,7 +285,7 @@ Initially, this chapter set out to describe a mathematical model for generating 
 <div class="quote-bubble">
     <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
         <p>"...We have been seeking a mathematical model of a source of English text. Such a model should be capable of producing text which corresponds closely to actual English text, closely enough so that the problem of encoding and transmitting such text is essentially equivalent to the problem of encoding and transmitting actual English text...."</p>
-        <footer>-Pierce, John R.</footer>
+        <footer>&mdash;<a href="https://archive.org/details/symbolssignalsan002575mbp/page/n27">Pierce, John R</a>.</footer>
     </blockquote>
 </div>
 
@@ -278,7 +294,7 @@ The conversation began with describing the structure of English text (and the En
 <div class="quote-bubble">
     <blockquote cite="https://archive.org/details/symbolssignalsan002575mbp/page/n27">
         <p>"...We have examined a number of properties of English text. We have seen that the average frequency of E’s is commonly constant for both the English text produced by one writer and, also, for the text produced by all writers. Other more complicated statistics, such as the frequency of digrams (TH, WE, and other letter pairs), are also essentially constant. Further, we have shown that English-like text can be produced by a sequence of random choices, such as drawings of slips of paper from hats, or flips of a coin, if the proper probabilities are in some way built into the process. One way of producing such text is through the use of a finite-state machine..."</p>
-        <footer>-Pierce, John R.</footer>
+        <footer>&mdash;<a href="https://archive.org/details/symbolssignalsan002575mbp/page/n27">Pierce, John R</a>.</footer>
     </blockquote>
 </div>
 
@@ -330,4 +346,4 @@ The key takeaway for this chapter is the mathematical model representing ergodic
 
 <img src="https://media.giphy.com/media/Y0btn5YtZRGNkTnvNx/giphy.gif">
 
-<a href="#Top">Back to the Top</a>
+<a href="#jump">Back to the Top</a>
