@@ -12,11 +12,14 @@
 		{% include default_sidebar.html %}
 
 		<!-- Body Part 3: All Content -->
-		<div class="container">
+		<div id="main-content" class="container">
 			{{ content }}
 		</div><!-- /.container -->
 
 		<!-- Body Part 4: The Footer of the page -->
 		{% include default_footer.html %}
+
+		<!-- Javascript to make things look dope -->
+		<script src="/js/sidebar_nav.js"></script>
 	</body>
 </html>
