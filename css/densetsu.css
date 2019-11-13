@@ -6,7 +6,9 @@ dl, dd, ol, ul, figure {
   padding: 0; }
 
 /* Variables */
-/* Base Styling */
+/****************************
+***     Base Styling      ***
+*****************************/
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -14,7 +16,7 @@ dl, dd, ol, ul, figure {
 
 body {
   background-color: #141414;
-  transition: all .3s ease; }
+  transition: background-color 0.5s; }
 
 p, span, li {
   font-family: "Helvetica", "Arial", "Sans-Serif";
@@ -27,64 +29,180 @@ h1 {
   font-family: "Helvetica", "Arial", "Sans-Serif";
   color: #FEF9E7; }
 
-/* Sidebar Navigation Styling */
-.sidebar {
-  overflow: hidden;
-  background-image: url(https://i.pinimg.com/originals/0c/9b/3f/0c9b3fa0cb0b74b810a9309f6b442e84.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 300px;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  text-align: center;
-  padding: 2rem 1rem;
-  image-rendering: pixelated; }
-  .sidebar nav ul, .sidebar footer ul {
-    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 1rem 1rem 2rem 0rem;
-    list-style: none;
-    font-weight: bold; }
-
-.sidebar-about h1 {
-  padding-bottom: 1rem; }
-
-/* Content */
-.container {
-  margin-left: 350px;
-  font-size: 0.9em;
-  padding: 4rem 2rem 4rem 0rem;
-  color: #FEF9E7; }
-  .container h1 {
-    font-size: 3em;
-    padding: 1rem 1rem 1rem 0rem;
-    font-family: "Helvetica", "Arial", "Sans-Serif"; }
-  .container h2 {
-    font-size: 1.5em;
-    padding: 1rem 1rem 1rem 0rem;
-    font-family: "Helvetica", "Arial", "Sans-Serif"; }
-  .container p {
-    font-size: 1.09em;
-    line-height: 1.4em;
-    color: #FEF9E7;
-    padding: 1rem 1rem 1rem 0rem; }
-  .container ul.posts {
-    margin: 20px auto 40px;
-    font-size: 0.9em; }
-
-.terms-def {
-  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-  padding: 1rem 1rem 2rem 0rem;
-  flex-wrap: wrap; }
-
 a {
-  color: rgba(254, 249, 231, 0.9); }
+  color: rgba(254, 249, 231, 0.9);
+  text-decoration: none; }
 
 a:hover {
   color: rgba(236, 73, 73, 0.6);
   text-decoration: underline; }
+
+/******************************************
+ ***     Sidebar Navigation Styling     ***
+ ******************************************/
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s; }
+  .sidebar #whole-sidebar-nav {
+    overflow: hidden;
+    background: rgba(236, 73, 73, 0.6);
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    image-rendering: pixelated;
+    font-family: "Helvetica", "Arial", "Sans-Serif"; }
+  .sidebar .sidebar-nav a {
+    display: block;
+    transition: 0.3s; }
+  .sidebar #close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2em;
+    margin-left: 4em; }
+  .sidebar nav ul, .sidebar footer ul {
+    font-family: "Helvetica", "Arial", "Sans-Serif";
+    padding: 1rem 1rem 2rem 0rem;
+    list-style: none;
+    font-weight: bold; }
+
+.site-header {
+  width: 100%;
+  height: 10%;
+  padding: 1rem;
+  color: #FEF9E7;
+  font-family: "Helvetica", "Arial", "Sans-Serif"; }
+  .site-header #header-logo {
+    font-size: 2rem;
+    font-weight: bolder; }
+
+.sidebar-about {
+  padding-top: 5rem; }
+  .sidebar-about h1 {
+    padding: 0rem 1rem 1rem 1rem;
+    font-family: "Helvetica", "Arial", "Sans-Serif"; }
+  .sidebar-about p {
+    padding: 0rem 1rem 1rem 1rem; }
+
+.sidebar-nav {
+  padding: 0rem 1rem 1rem 1rem; }
+
+#copyright-statement {
+  padding: 1rem; }
+
+#footer-content, #main-content {
+  transition: margin-left .5s; }
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px; }
+
+  .sidenav a {
+    font-size: 18px; } }
+/******************************************
+ ***              Content               ***
+ ******************************************/
+.container {
+  font-size: 0.9em;
+  color: #FEF9E7; }
+  .container h1, .container h2, .container h3, .container p, .container span.tag-list {
+    padding: 1rem 3rem 1rem 3rem;
+    font-family: "Helvetica", "Arial", "Sans-Serif"; }
+  .container ol, .container ul {
+    padding: 1rem 5rem 1rem 5rem;
+    font-family: "Helvetica", "Arial", "Sans-Serif"; }
+  .container h1 {
+    font-size: 3em; }
+  .container h2 {
+    font-size: 1.5em; }
+  .container h3 {
+    font-size: 1.2em; }
+  .container p {
+    font-size: 1.09em;
+    line-height: 1.4em;
+    color: #FEF9E7; }
+  .container ul.posts {
+    margin: 20px auto 40px;
+    font-size: 0.9em; }
+
+.site-footer ul {
+  margin-left: 50px;
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  padding: 1rem 2rem 1rem 0rem;
+  list-style: none;
+  font-weight: bold; }
+
+.terms-def {
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  padding: 1rem 1rem 2rem 0rem;
+  flex-wrap: wrap; }
+
+.quote-bubble blockquote {
+  margin: auto;
+  width: 83%; }
+  .quote-bubble blockquote p {
+    padding: 1em;
+    background: #3AAFFB;
+    border-radius: .33em;
+    text-align: justify;
+    text-align-last: center;
+    box-shadow: 0.3em 0.3em; }
+  .quote-bubble blockquote footer {
+    font-size: 1em;
+    color: #FFC300;
+    padding-top: 0.5em;
+    font-weight: bold; }
+    .quote-bubble blockquote footer a {
+      padding: 0.5rem; }
+  .quote-bubble blockquote p::before {
+    content: '\201C'; }
+  .quote-bubble blockquote p::after {
+    content: '\201D'; }
+  .quote-bubble blockquote span.inner-quote {
+    font-family: "Helvetica", "Arial", "Sans-Serif"; }
+  .quote-bubble blockquote span.highlight {
+    color: #FFC300; }
+
+/* Markdown styling for Jupyter notebooks */
+table {
+  margin: auto;
+  width: 50%; }
+
+table tr {
+  border-top: 1px solid #08D6F0;
+  background-color: #3AAFFB;
+  margin: 0;
+  padding: 0; }
+
+table tr:nth-child(2n) {
+  background-color: #3AAFFB; }
+
+table tr th {
+  font-weight: bold;
+  border: 1px solid #08D6F0;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px; }
+
+table tr td {
+  border: 1px solid #08D6F0;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px; }
+
+table tr th :first-child, table tr td :first-child {
+  margin-top: 0; }
+
+table tr th :last-child, table tr td :last-child {
+  margin-bottom: 0; }
 
 /*# sourceMappingURL=densetsu.css.map */

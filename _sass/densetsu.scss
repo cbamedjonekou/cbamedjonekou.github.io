@@ -16,22 +16,24 @@ $font-base: 'Helvetica', 'Arial', 'Sans-Serif';
 $line-height: 1.4em;
 $font-size-general: 0.9em;
 $link-color-hover: rgba(#EC4949, 0.6);
-$element-padding: 1rem 1rem 1rem 0rem;
+$element-padding: 1rem 3rem 1rem 3rem;
 
- /* Base Styling */
+ /****************************
+ ***     Base Styling      ***
+ *****************************/
 
- * {
+* {
      -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
      box-sizing: border-box;
 }
 
- body {
+body {
      background-color: $color-body;
-     transition: all .3s ease;
+     transition: background-color .5s
  }
 
- p, span, li {
+p, span, li {
      font-family: $font-base;
      font-size: $font-size-general;
      color: $color-text;
@@ -39,49 +41,88 @@ $element-padding: 1rem 1rem 1rem 0rem;
      line-height: $line-height;
  }
 
- h1 {
+h1 {
      font-family: $font-base;
      color: $color-text;
  }
 
-/* Sidebar Navigation Styling */
+a {
+    color: rgba($color-text, 0.9);
+    text-decoration: none;
+}
 
-//  .header-container{
-//      overflow: hidden;
-//      background-color: $color-header-rgba;
-//      width: 200px;
-//      height: 100%;
-//      position: fixed;
-//      top: 0;
-//      left: 0;
-//      padding-top: 20px;
-//      overflow-x: hidden;
-//  }
+a:hover {
+    color: $link-color-hover;
+    text-decoration: underline;
+}
 
- .sidebar {
-    overflow: hidden;
-    background-image: url(https://i.pinimg.com/originals/0c/9b/3f/0c9b3fa0cb0b74b810a9309f6b442e84.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 300px;
+/******************************************
+ ***     Sidebar Navigation Styling     ***
+ ******************************************/
+
+.sidebar {
     height: 100%;
+    width: 0;
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
+    // background-color: #111;
     overflow-x: hidden;
-    text-align: center;
-    padding: 2rem 1rem ;
-    image-rendering: pixelated;
+    transition: 0.5s;
+    // padding-top: 60px;
+
+    #whole-sidebar-nav {
+        overflow: hidden;
+        background: $link-color-hover;
+        // background-image: url(https://i.pinimg.com/originals/0c/9b/3f/0c9b3fa0cb0b74b810a9309f6b442e84.jpg);
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        // background-position: center center;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        text-align: center;
+        image-rendering: pixelated;
+        font-family: $font-base;
+    }
+
+    .sidebar-nav a {
+        display: block;
+        transition: 0.3s;
+    }
+
+    #close-button {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 2em;
+        margin-left: 4em;
+    }
 
     nav ul, footer ul {
-        font-family:'Helvetica', 'Arial', 'Sans-Serif';
+        font-family: $font-base;
         padding: 1rem 1rem 2rem 0rem;
         list-style: none;
         font-weight: bold;
     }
  }
- 
+
+ .site-header {
+     width: 100%;
+     height: 10%;
+     padding: 1rem;
+     color: $color-text;
+     font-family: $font-base;
+
+     #header-logo {
+         font-size: 2rem;
+         font-weight: bolder;
+     }
+ }
+
 // .hero .pixels{
     
 //     filter: alpha(opacity=80);
@@ -89,34 +130,72 @@ $element-padding: 1rem 1rem 1rem 0rem;
 //     background-image: url("../../assets/img/pixels.png")
 // }
 
-.sidebar-about h1 {
-    padding-bottom: 1rem;
+.sidebar-about {
+    padding-top: 5rem;
+    h1 {
+        padding: 0rem 1rem 1rem 1rem;
+        font-family: $font-base;
+    } 
+    
+    p{
+        padding: 0rem 1rem 1rem 1rem;
+    }
 }
 
-/* Content */
+.sidebar-nav {
+    padding: 0rem 1rem 1rem 1rem;
+}
+
+#copyright-statement {
+    padding: 1rem;
+}
+
+#footer-content, #main-content {
+    transition: margin-left .5s;
+    // padding: 16px;
+  }
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+/******************************************
+ ***              Content               ***
+ ******************************************/
+
 .container {
-    margin-left: 350px;
     font-size: $font-size-general;
-    padding: 4rem 2rem 4rem 0rem;
+    // padding: 4rem 2rem 4rem 3rem;
     color: $color-text;
-    
-    h1 {
-        font-size: 3em;
+
+    h1, h2, h3, p, span.tag-list {
         padding: $element-padding;
         font-family: $font-base;
     }
 
+    ol, ul {
+        padding: 1rem 5rem 1rem 5rem;
+        font-family: $font-base;
+    }
+    
+    h1 {
+        font-size: 3em;
+    }
+
     h2 {
         font-size: 1.5em;
-        padding: $element-padding;
-        font-family: $font-base;
+    }
+
+    h3 {
+        font-size: 1.2em;
     }
 
     p {
         font-size: 1.09em;
         line-height: 1.4em;
         color: $color-text;
-        padding: $element-padding;
     }
 
     ul.posts { 
@@ -125,17 +204,68 @@ $element-padding: 1rem 1rem 1rem 0rem;
     }
 }
 
-.terms-def{
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+// #main-content h1, .meta, .post, .tag-list {
+//     padding-left: 3rem;
+// }
+
+// .tag-list {
+//     margin-left: 50px;
+//     padding: 0rem 1rem 1rem 0rem;
+// }
+
+.site-footer ul {
+    margin-left: 50px;
+    font-family: $font-base;
+    padding: 1rem 2rem 1rem 0rem;
+    list-style: none;
+    font-weight: bold;
+}
+
+.terms-def {
+    font-family: $font-base;
     padding: 1rem 1rem 2rem 0rem;
     flex-wrap: wrap;
 }
 
-a {
-    color: rgba($color-text, 0.9);
+.quote-bubble blockquote {
+    margin: auto;
+    width: 83%;
+
+    p {
+        padding: 1em;
+        background: #3AAFFB;
+        border-radius: .33em;
+        text-align: justify;
+        text-align-last: center;
+        box-shadow: 0.3em 0.3em;
+    }
+    
+    footer {
+        font-size: 1em;
+        color: #FFC300;
+        padding-top: 0.5em;
+        font-weight: bold;
+
+        a {
+            padding: 0.5rem;
+        }
+    }
+
+    p::before {
+        content: '\201C';
+    }
+
+    p::after {
+        content: '\201D';
+    }
+
+    span.inner-quote {
+        font-family: $font-base;
+    }
+    
+    span.highlight {
+        color: #FFC300;
+    }
 }
 
-a:hover {
-    color: $link-color-hover;
-    text-decoration: underline;
-}
+@import "densetsu/jupyter.scss";

@@ -1,25 +1,24 @@
-/*Markdown styling for Jupyter notebooks*/
-
-p, blockquote, ul, ol, dl, li, table, pre {
-margin: 15px 0; }
+/* Markdown styling for Jupyter notebooks */
 
 table {
-  padding: 0; }
+  margin: auto;
+  width: 50%;
+}
   table tr {
-    border-top: 1px solid #cccccc;
-    background-color: white;
+    border-top: 1px solid #08D6F0;
+    background-color: #3AAFFB;
     margin: 0;
     padding: 0; }
     table tr:nth-child(2n) {
-      background-color: #f8f8f8; }
+      background-color: #3AAFFB; }
       table tr th {
       font-weight: bold;
-      border: 1px solid #cccccc;
+      border: 1px solid #08D6F0;
       text-align: left;
       margin: 0;
       padding: 6px 13px; }
     table tr td {
-      border: 1px solid #cccccc;
+      border: 1px solid #08D6F0;
       text-align: left;
       margin: 0;
       padding: 6px 13px; }
