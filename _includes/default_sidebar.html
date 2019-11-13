@@ -1,8 +1,9 @@
 <!-- Content of the Sidebar -->
 <div class="sidebar">
-    <div class="sidebar-container">
+    <div id="whole-sidebar-nav" class="sidebar-container">
         <!-- Title and About for my site -->
         <div class="sidebar-about">
+            <a id="close-button" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
             <p class="lead"> {{ site.description }}</p>
         </div>
@@ -19,7 +20,7 @@
         </nav>
 
         <!-- Copy write for the site -->
-        <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+        <p id="copyright-statement">&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
         
     </div>
 </div>
