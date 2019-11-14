@@ -1,24 +1,30 @@
-/* Markdown styling for Jupyter notebooks */
+/********************************************
+ ** Markdown styling for Jupyter notebooks **
+ ********************************************/
+
+// Table styling
 
 table {
   margin: auto;
-  width: 50%;
+  width: 83%;
+  border-radius: 0.4rem;
+  
 }
   table tr {
-    border-top: 1px solid #08D6F0;
-    background-color: #3AAFFB;
+    border-top: 1px solid rgba(#2695D2, 0.8);
+    background-color: rgba(#2695D2, 0.1);
     margin: 0;
     padding: 0; }
     table tr:nth-child(2n) {
-      background-color: #3AAFFB; }
+      background-color: rgba(#2695D2, 0.1); }
       table tr th {
       font-weight: bold;
-      border: 1px solid #08D6F0;
+      border: 1px solid rgba(#2695D2, 0.8);
       text-align: left;
       margin: 0;
       padding: 6px 13px; }
     table tr td {
-      border: 1px solid #08D6F0;
+      border: 1px solid rgba(#2695D2, 0.8);
       text-align: left;
       margin: 0;
       padding: 6px 13px; }
@@ -26,3 +32,56 @@ table {
       margin-top: 0; }
     table tr th :last-child, table tr td :last-child {
 margin-bottom: 0; }
+
+// Code Block Styling
+p, li {
+  padding: 0.2rem;
+  code {
+    background: rgba(#2695D2, 0.2);
+    padding: 0.1rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #FFC300;
+  }
+}
+.language-python {
+  padding: 1rem;
+}
+
+.highlighter-rouge .highlight {
+  // padding: 1rem;
+  pre code {
+    width: 83%;
+    margin: auto;
+    background: rgba(#2695D2, 0.1);
+    border: 1px solid rgba(#2695D2, 0.8);
+    padding: 1rem;
+    display: block;
+    border-radius: 0.7rem;
+    overflow: auto;
+    span{
+      font-family: 'Courier New', Courier, monospace;
+    }
+  }
+}
+// TOC Styling
+
+#Table-of-Contents {
+  margin: auto;
+  width: 60%;
+  background: rgba(#2695D2, 0.1);
+  border: 1px solid rgba(#2695D2, 0.8);
+  padding: 1rem;
+  display: block;
+  border-radius: 0.7rem;
+  overflow: auto;
+  #TOC {
+    padding: 1rem 3rem 0rem 3rem;
+  }
+  ul {
+    padding: 1rem 5rem 1rem 2rem;
+    ul {
+      padding: 0rem 1rem 0rem 2rem;
+    }
+  }
+}
+

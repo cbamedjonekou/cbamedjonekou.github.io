@@ -1,4 +1,6 @@
-/* Reset some basic elements */
+/****************************
+* Reset some basic elements *
+*****************************/
 
  body, h1, h2, h3, h4, h5, h6,
  p, blockquote, pre, hr,
@@ -7,7 +9,9 @@
    padding: 0;
  }
 
-/* Variables */
+ /****************************
+ ***       Variables       ***
+ *****************************/
 
 $color-body: #141414;
 $color-text: #FEF9E7;
@@ -67,10 +71,8 @@ a:hover {
     z-index: 1;
     top: 0;
     left: 0;
-    // background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    // padding-top: 60px;
 
     #whole-sidebar-nav {
         overflow: hidden;
@@ -122,13 +124,6 @@ a:hover {
          font-weight: bolder;
      }
  }
-
-// .hero .pixels{
-    
-//     filter: alpha(opacity=80);
-//     opacity: .8;
-//     background-image: url("../../assets/img/pixels.png")
-// }
 
 .sidebar-about {
     padding-top: 5rem;
@@ -202,6 +197,12 @@ a:hover {
         margin: 20px auto 40px; 
         font-size: $font-size-general;
     }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 // #main-content h1, .meta, .post, .tag-list {
@@ -233,11 +234,11 @@ a:hover {
 
     p {
         padding: 1em;
-        background: #3AAFFB;
+        background-color: rgba(#2695D2, 0.1);
+        border: 1px solid rgba(#2695D2, 0.8);
         border-radius: .33em;
         text-align: justify;
         text-align-last: center;
-        box-shadow: 0.3em 0.3em;
     }
     
     footer {
@@ -267,5 +268,9 @@ a:hover {
         color: #FFC300;
     }
 }
+
+/******************************************
+ ***          Jupyter Notebooks         ***
+ ******************************************/
 
 @import "densetsu/jupyter.scss";
