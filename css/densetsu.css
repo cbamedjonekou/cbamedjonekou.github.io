@@ -1,11 +1,15 @@
-/* Reset some basic elements */
+/****************************
+* Reset some basic elements *
+*****************************/
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0; }
 
-/* Variables */
+/****************************
+***       Variables       ***
+*****************************/
 /****************************
 ***     Base Styling      ***
 *****************************/
@@ -133,6 +137,10 @@ a:hover {
   .container ul.posts {
     margin: 20px auto 40px;
     font-size: 0.9em; }
+  .container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
 
 .site-footer ul {
   margin-left: 50px;
@@ -151,11 +159,11 @@ a:hover {
   width: 83%; }
   .quote-bubble blockquote p {
     padding: 1em;
-    background: #3AAFFB;
+    background-color: rgba(38, 149, 210, 0.1);
+    border: 1px solid rgba(38, 149, 210, 0.8);
     border-radius: .33em;
     text-align: justify;
-    text-align-last: center;
-    box-shadow: 0.3em 0.3em; }
+    text-align-last: center; }
   .quote-bubble blockquote footer {
     font-size: 1em;
     color: #FFC300;
@@ -172,29 +180,35 @@ a:hover {
   .quote-bubble blockquote span.highlight {
     color: #FFC300; }
 
-/* Markdown styling for Jupyter notebooks */
+/******************************************
+ ***          Jupyter Notebooks         ***
+ ******************************************/
+/********************************************
+ ** Markdown styling for Jupyter notebooks **
+ ********************************************/
 table {
   margin: auto;
-  width: 50%; }
+  width: 83%;
+  border-radius: 0.4rem; }
 
 table tr {
-  border-top: 1px solid #08D6F0;
-  background-color: #3AAFFB;
+  border-top: 1px solid rgba(38, 149, 210, 0.8);
+  background-color: rgba(38, 149, 210, 0.1);
   margin: 0;
   padding: 0; }
 
 table tr:nth-child(2n) {
-  background-color: #3AAFFB; }
+  background-color: rgba(38, 149, 210, 0.1); }
 
 table tr th {
   font-weight: bold;
-  border: 1px solid #08D6F0;
+  border: 1px solid rgba(38, 149, 210, 0.8);
   text-align: left;
   margin: 0;
   padding: 6px 13px; }
 
 table tr td {
-  border: 1px solid #08D6F0;
+  border: 1px solid rgba(38, 149, 210, 0.8);
   text-align: left;
   margin: 0;
   padding: 6px 13px; }
@@ -204,5 +218,44 @@ table tr th :first-child, table tr td :first-child {
 
 table tr th :last-child, table tr td :last-child {
   margin-bottom: 0; }
+
+p, li {
+  padding: 0.2rem; }
+  p code, li code {
+    background: rgba(38, 149, 210, 0.2);
+    padding: 0.1rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #FFC300; }
+
+.language-python {
+  padding: 1rem; }
+
+.highlighter-rouge .highlight pre code {
+  width: 83%;
+  margin: auto;
+  background: rgba(38, 149, 210, 0.1);
+  border: 1px solid rgba(38, 149, 210, 0.8);
+  padding: 1rem;
+  display: block;
+  border-radius: 0.7rem;
+  overflow: auto; }
+  .highlighter-rouge .highlight pre code span {
+    font-family: 'Courier New', Courier, monospace; }
+
+#Table-of-Contents {
+  margin: auto;
+  width: 60%;
+  background: rgba(38, 149, 210, 0.1);
+  border: 1px solid rgba(38, 149, 210, 0.8);
+  padding: 1rem;
+  display: block;
+  border-radius: 0.7rem;
+  overflow: auto; }
+  #Table-of-Contents #TOC {
+    padding: 1rem 3rem 0rem 3rem; }
+  #Table-of-Contents ul {
+    padding: 1rem 5rem 1rem 2rem; }
+    #Table-of-Contents ul ul {
+      padding: 0rem 1rem 0rem 2rem; }
 
 /*# sourceMappingURL=densetsu.css.map */
