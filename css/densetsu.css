@@ -253,9 +253,9 @@ p, li {
   overflow: auto; }
   #Table-of-Contents #TOC {
     padding: 1rem 3rem 0rem 3rem; }
-  #Table-of-Contents ul {
+  #Table-of-Contents ul, #Table-of-Contents ol {
     padding: 1rem 5rem 1rem 2rem; }
-    #Table-of-Contents ul ul {
+    #Table-of-Contents ul ul, #Table-of-Contents ol ul {
       padding: 0rem 1rem 0rem 2rem; }
 
 /*# sourceMappingURL=densetsu.css.map */
