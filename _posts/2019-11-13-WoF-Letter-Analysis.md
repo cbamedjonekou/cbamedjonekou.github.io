@@ -10,20 +10,21 @@ tags: machine-learning artificial-intelligence natural-language-processing tenso
 
 For this post, we'll do some Exploratory Data Analysis on the Wheel of Fortune Bonus Round Puzzle data we scraped <a href="https://cbamedjonekou.github.io/blog/2019/09/25/Web-Scraping-Series-Web-Scraping-with-BeautifulSoup">here</a>. We'd like to analyze the frequencies of letters as the appear within our data. This includes but is not limited to frequency independent of phrase length, or category.  
 
-<h3 id="Contents">Contents</h3>
-
-<ol>
-    <li><a href="#Prerequisites">Prerequisites</a></li>
-    <li><a href="#Packages">Packages</a></li>
-    <li><a href="#DWC">Data Wrangling/Cleaning</a></li>
-    <li><a href="#EDA">Exploratory Data Analysis</a>
-        <ul>
-            <li><a href="#2nd-order-approx">$2$-$nd$ Order Approximations</a></li>
-            <li><a href="#3rd-order-approx">$3$-$rd$ Order Approximations</a></li>
-            <li><a href="#1st-order-word">$1$-$st$ Order Word Approximations</a></li>
-        </ul>
-    </li>
-</ol>
+<div id="Table-of-Contents">
+  <h3 id="Contents">Contents</h3>
+  <ol>
+      <li><a href="#Prerequisites">Prerequisites</a></li>
+      <li><a href="#Packages">Packages</a></li>
+      <li><a href="#DWC">Data Wrangling/Cleaning</a></li>
+      <li><a href="#EDA">Exploratory Data Analysis</a>
+          <ul>
+              <li><a href="#2nd-order-approx">$2$-$nd$ Order Approximations</a></li>
+              <li><a href="#3rd-order-approx">$3$-$rd$ Order Approximations</a></li>
+              <li><a href="#1st-order-word">$1$-$st$ Order Word Approximations</a></li>
+          </ul>
+      </li>
+  </ol>
+</div>
 
 <h2 id="Prerequisites">Prerequisites</h2>
 
