@@ -2,7 +2,9 @@
  ** Markdown styling for Jupyter notebooks **
  ********************************************/
 
-// Table styling
+ /*----------------------------------*
+  |         Table styling            |
+  *----------------------------------*/
 
 table {
   margin: auto;
@@ -33,7 +35,10 @@ table {
     table tr th :last-child, table tr td :last-child {
 margin-bottom: 0; }
 
-// Code Block Styling
+/*-----------------------------------*
+ |        Code Block styling         |
+ *-----------------------------------*/
+
 p, li {
   padding: 0.2rem;
   code {
@@ -48,7 +53,6 @@ p, li {
 }
 
 .highlighter-rouge .highlight {
-  // padding: 1rem;
   pre code {
     width: 83%;
     margin: auto;
@@ -63,7 +67,10 @@ p, li {
     }
   }
 }
-// TOC Styling
+
+/*-----------------------------------*
+ |      Table Of Contents styling    |
+ *-----------------------------------*/
 
 #Table-of-Contents {
   margin: auto;
