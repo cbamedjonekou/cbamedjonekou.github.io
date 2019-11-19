@@ -193,13 +193,12 @@ a:hover {
  |       Cards / Tiles styling      |
  *----------------------------------*/
 .mosaic-tiles {
-  padding: 1rem 3rem 1rem 3rem;
+  padding: 2rem 6rem 2rem 6rem;
   display: grid;
   height: 100%;
-  grid-template-rows: repeat(6, 1fr);
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: minmax();
-  gap: 20px; }
+  grid-template-rows: repeat(auto, minmax(50px, 1fr));
+  grid-template-columns: repeat(5, minmax(50px, 1fr));
+  gap: 5px; }
 
 .mosaic-tiles-items {
   border: 1px solid rgba(38, 149, 210, 0.8);
@@ -208,11 +207,9 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center; }
+  .mosaic-tiles-items p {
+    padding: 6rem .5rem 6rem .5rem; }
   .mosaic-tiles-items.small {
-    background-image: url(https://i.pinimg.com/originals/0c/9b/3f/0c9b3fa0cb0b74b810a9309f6b442e84.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
     grid-row: span 1;
     grid-column: span 1; }
   .mosaic-tiles-items.medium {
