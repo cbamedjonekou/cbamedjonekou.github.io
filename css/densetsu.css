@@ -34,11 +34,11 @@ h1 {
   color: #FEF9E7; }
 
 a {
-  color: rgba(254, 249, 231, 0.9);
+  color: rgba(255, 212, 48, 0.9);
   text-decoration: none; }
 
 a:hover {
-  color: rgba(236, 73, 73, 0.6);
+  color: #ffd430;
   text-decoration: underline; }
 
 /******************************************
@@ -55,7 +55,7 @@ a:hover {
   transition: 0.5s; }
   .sidebar #whole-sidebar-nav {
     overflow: hidden;
-    background: rgba(236, 73, 73, 0.6);
+    background: rgba(38, 149, 210, 0.1);
     height: 100%;
     width: 0;
     position: fixed;
@@ -115,6 +115,9 @@ a:hover {
 /******************************************
  ***              Content               ***
  ******************************************/
+/*-----------------------------------------------------------------*
+ |         Base Content Texts, Lists, Links, Images styling        |
+ *-----------------------------------------------------------------*/
 .container {
   font-size: 0.9em;
   color: #FEF9E7; }
@@ -134,7 +137,7 @@ a:hover {
     font-size: 1.09em;
     line-height: 1.4em;
     color: #FEF9E7; }
-  .container ul.posts {
+  .container ul.post, .container ul.mosaic-posts {
     margin: 20px auto 40px;
     font-size: 0.9em; }
   .container img {
@@ -142,6 +145,14 @@ a:hover {
     margin-left: auto;
     margin-right: auto; }
 
+.terms-def {
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  padding: 1rem 1rem 2rem 0rem;
+  flex-wrap: wrap; }
+
+/*------------------------------------*
+ |         Site Footer styling        |
+ *------------------------------------*/
 .site-footer ul {
   margin-left: 50px;
   font-family: "Helvetica", "Arial", "Sans-Serif";
@@ -149,11 +160,9 @@ a:hover {
   list-style: none;
   font-weight: bold; }
 
-.terms-def {
-  font-family: "Helvetica", "Arial", "Sans-Serif";
-  padding: 1rem 1rem 2rem 0rem;
-  flex-wrap: wrap; }
-
+/*----------------------------------*
+ |        Block Quote styling       |
+ *----------------------------------*/
 .quote-bubble blockquote {
   margin: auto;
   width: 83%; }
@@ -180,12 +189,54 @@ a:hover {
   .quote-bubble blockquote span.highlight {
     color: #FFC300; }
 
+/*----------------------------------*
+ |       Cards / Tiles styling      |
+ *----------------------------------*/
+.mosaic-tiles {
+  padding: 1rem 3rem 1rem 3rem;
+  display: grid;
+  height: 100%;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax();
+  gap: 20px; }
+
+.mosaic-tiles-items {
+  border: 1px solid rgba(38, 149, 210, 0.8);
+  border-radius: .33em;
+  color: #FEF9E7;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .mosaic-tiles-items.small {
+    background-image: url(https://i.pinimg.com/originals/0c/9b/3f/0c9b3fa0cb0b74b810a9309f6b442e84.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    grid-row: span 1;
+    grid-column: span 1; }
+  .mosaic-tiles-items.medium {
+    grid-row: span 2;
+    grid-column: span 2; }
+  .mosaic-tiles-items.large {
+    grid-row: span 3;
+    grid-column: span 3; }
+  .mosaic-tiles-items.tall {
+    grid-row: span 3;
+    grid-column: span 2; }
+  .mosaic-tiles-items.wide {
+    grid-row: span 2;
+    grid-column: span 3; }
+
 /******************************************
  ***          Jupyter Notebooks         ***
  ******************************************/
 /********************************************
  ** Markdown styling for Jupyter notebooks **
  ********************************************/
+/*----------------------------------*
+ |         Table styling            |
+ *----------------------------------*/
 table {
   margin: auto;
   width: 83%;
@@ -219,6 +270,9 @@ table tr th :first-child, table tr td :first-child {
 table tr th :last-child, table tr td :last-child {
   margin-bottom: 0; }
 
+/*-----------------------------------*
+ |        Code Block styling         |
+ *-----------------------------------*/
 p, li {
   padding: 0.2rem; }
   p code, li code {
@@ -242,6 +296,9 @@ p, li {
   .highlighter-rouge .highlight pre code span {
     font-family: 'Courier New', Courier, monospace; }
 
+/*-----------------------------------*
+ |      Table Of Contents styling    |
+ *-----------------------------------*/
 #Table-of-Contents {
   margin: auto;
   width: 60%;
