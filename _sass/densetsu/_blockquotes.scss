@@ -1,0 +1,44 @@
+/*----------------------------------*
+ |        Block Quote styling       |
+ *----------------------------------*/
+
+ .quote-bubble blockquote {
+    margin: auto;
+    width: 83%;
+
+    p {
+        padding: 1em;
+        background-color: rgba(#2695D2, 0.1);
+        border: 1px solid rgba(#2695D2, 0.8);
+        border-radius: .33em;
+        text-align: justify;
+        text-align-last: center;
+    }
+    
+    footer {
+        font-size: 1em;
+        color: #FFC300;
+        padding-top: 0.5em;
+        font-weight: bold;
+
+        a {
+            padding: 0.5rem;
+        }
+    }
+
+    p::before {
+        content: '\201C';
+    }
+
+    p::after {
+        content: '\201D';
+    }
+
+    span.inner-quote {
+        font-family: $font-base;
+    }
+    
+    span.highlight {
+        color: #FFC300;
+    }
+}

@@ -1,0 +1,56 @@
+/*-----------------------------------------------------------------*
+ |         Base Content Texts, Lists, Links, Images styling        |
+ *-----------------------------------------------------------------*/
+
+ .container {
+    font-size: $font-size-general;
+    // padding: 4rem 2rem 4rem 3rem;
+    color: $color-text;
+
+    h1, h2, h3, p, span.tag-list {
+        padding: $element-padding;
+        font-family: $font-base;
+    }
+
+    ol, ul {
+        padding: 1rem 5rem 1rem 5rem;
+        font-family: $font-base;
+    }
+    
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 1.09em;
+        line-height: 1.4em;
+        color: $color-text;
+    }
+
+    ul.post, ul.mosaic-posts { 
+        margin: 20px auto 40px; 
+        font-size: $font-size-general;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+// Also ordered-list
+
+.terms-def {
+    font-family: $font-base;
+    padding: 1rem 1rem 2rem 0rem;
+    flex-wrap: wrap;
+}

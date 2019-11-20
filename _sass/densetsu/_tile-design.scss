@@ -36,11 +36,11 @@
 
     .mosaic-tiles-back { transform: rotateY(180deg); }
 
-    .mosaic-tiles-front { 
-        background-image: url(https://i.pinimg.com/originals/0c/9b/3f/0c9b3fa0cb0b74b810a9309f6b442e84.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
+    .mosaic-tiles-front {
+        &.one { background: #2695D2; }
+        &.two { background: rgba(#2695D2, 0.5); }
+        &.three { background: rgba(#2695D2, 0.8); }
+        &.four { background: rgba(#2695D2, 0.2); }
     }
 
     // &.medium == .mosaic-tiles-items.medium 

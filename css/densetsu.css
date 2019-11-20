@@ -1,3 +1,4 @@
+/* Reset some basic elements */
 /****************************
 * Reset some basic elements *
 *****************************/
@@ -7,12 +8,14 @@ dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0; }
 
+/* Variables */
 /****************************
 ***       Variables       ***
 *****************************/
+/* Base Styling */
 /****************************
-***     Base Styling      ***
-*****************************/
+ ***     Base Styling      ***
+ *****************************/
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -41,6 +44,7 @@ a:hover {
   color: #ffd430;
   text-decoration: underline; }
 
+/* Sidebar Navigation Styling */
 /******************************************
  ***     Sidebar Navigation Styling     ***
  ******************************************/
@@ -106,15 +110,13 @@ a:hover {
 #footer-content, #main-content {
   transition: margin-left .5s; }
 
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px; }
-
-  .sidenav a {
-    font-size: 18px; } }
+/* Content */
 /******************************************
  ***              Content               ***
  ******************************************/
+/*-----------------------------------------------------------------*
+ |         Base Content Texts, Lists, Links, Images styling        |
+ *-----------------------------------------------------------------*/
 /*-----------------------------------------------------------------*
  |         Base Content Texts, Lists, Links, Images styling        |
  *-----------------------------------------------------------------*/
@@ -153,6 +155,9 @@ a:hover {
 /*------------------------------------*
  |         Site Footer styling        |
  *------------------------------------*/
+/*------------------------------------*
+ |         Site Footer styling        |
+ *------------------------------------*/
 .site-footer ul {
   margin-left: 50px;
   font-family: "Helvetica", "Arial", "Sans-Serif";
@@ -160,6 +165,9 @@ a:hover {
   list-style: none;
   font-weight: bold; }
 
+/*----------------------------------*
+ |        Block Quote styling       |
+ *----------------------------------*/
 /*----------------------------------*
  |        Block Quote styling       |
  *----------------------------------*/
@@ -221,11 +229,14 @@ a:hover {
     text-overflow: ellipsis; }
   .mosaic-tiles-items .mosaic-tiles-back {
     transform: rotateY(180deg); }
-  .mosaic-tiles-items .mosaic-tiles-front {
-    background-image: url(https://i.pinimg.com/originals/0c/9b/3f/0c9b3fa0cb0b74b810a9309f6b442e84.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center; }
+  .mosaic-tiles-items .mosaic-tiles-front.one {
+    background: #2695D2; }
+  .mosaic-tiles-items .mosaic-tiles-front.two {
+    background: rgba(38, 149, 210, 0.5); }
+  .mosaic-tiles-items .mosaic-tiles-front.three {
+    background: rgba(38, 149, 210, 0.8); }
+  .mosaic-tiles-items .mosaic-tiles-front.four {
+    background: rgba(38, 149, 210, 0.2); }
   .mosaic-tiles-items.medium {
     grid-row: span 3;
     grid-column: span 1; }
@@ -236,9 +247,7 @@ a:hover {
 .mosaic-tiles-items:hover {
   transform: rotateY(180deg); }
 
-/******************************************
- ***          Jupyter Notebooks         ***
- ******************************************/
+/* Jupyter Notebooks */
 /********************************************
  ** Markdown styling for Jupyter notebooks **
  ********************************************/

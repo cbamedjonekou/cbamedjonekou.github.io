@@ -1,0 +1,37 @@
+/****************************
+ ***     Base Styling      ***
+ *****************************/
+
+ * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $color-body;
+    transition: background-color .5s
+}
+
+p, span, li {
+    font-family: $font-base;
+    font-size: $font-size-general;
+    color: $color-text;
+    text-align: justify;
+    line-height: $line-height;
+}
+
+h1 {
+    font-family: $font-base;
+    color: $color-text;
+}
+
+a {
+   color: rgba($link-color-hover, 0.9);
+   text-decoration: none;
+}
+
+a:hover {
+   color: $link-color-hover;
+   text-decoration: underline;
+}
