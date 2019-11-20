@@ -13,9 +13,9 @@
  ***       Variables       ***
  *****************************/
 
-$color-body: #141414;
+$color-body: #000;
 $color-text: #FEF9E7;
-$color-header-rgba: rgba(#141414, 0.1);
+$color-header-rgba: rgba(#141414, 0.7);
 $font-base: 'Helvetica', 'Arial', 'Sans-Serif';
 $line-height: 1.4em;
 $font-size-general: 0.9em;
@@ -278,56 +278,7 @@ a:hover {
  |       Cards / Tiles styling      |
  *----------------------------------*/
 
- .mosaic-tiles {
-    padding: 2rem 6rem 2rem 6rem;
-    display: grid;
-    height: 100%;
-    grid-template-rows: repeat(auto, minmax(50px, 1fr)); // <-- Change this for when posts overflow
-    grid-template-columns: repeat(5, minmax(50px, 1fr));
-    gap: 5px;
- }
-
- .mosaic-tiles-items {
-    // background: rgba(#2695D2, 0.1);
-    border: 1px solid rgba(#2695D2, 0.8);
-    border-radius: .33em;
-    color: $color-text;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    p {padding: 6rem .5rem 6rem .5rem;}
-
-    // &.small == .mosaic-tiles-items.small 
-    &.small {
-        grid-row: span 1;
-        grid-column: span 1;
-    }
-
-    // &.medium == .mosaic-tiles-items.medium 
-    &.medium {
-        grid-row: span 2;
-        grid-column: span 2;
-    }
-
-    // &.large == .mosaic-tiles-items.large 
-    &.large {
-        grid-row: span 3;
-        grid-column: span 3;
-    }
-
-    // &.tall == .mosaic-tiles-items.tall 
-    &.tall {
-        grid-row: span 3;
-        grid-column: span 2;
-    }
-
-    // &.wide == .mosaic-tiles-items.wide 
-    &.wide {
-        grid-row: span 2;
-        grid-column: span 3;
-    }
- }
+ @import "densetsu/tile-design.scss";
 
 /******************************************
  ***          Jupyter Notebooks         ***
