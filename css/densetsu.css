@@ -19,7 +19,7 @@ dl, dd, ol, ul, figure {
   box-sizing: border-box; }
 
 body {
-  background-color: #141414;
+  background-color: #000;
   transition: background-color 0.5s; }
 
 p, span, li {
@@ -192,38 +192,49 @@ a:hover {
 /*----------------------------------*
  |       Cards / Tiles styling      |
  *----------------------------------*/
+/*----------------------------------*
+ |       Cards / Tiles styling      |
+ *----------------------------------*/
 .mosaic-tiles {
   padding: 2rem 6rem 2rem 6rem;
   display: grid;
   height: 100%;
-  grid-template-rows: repeat(auto, minmax(50px, 1fr));
-  grid-template-columns: repeat(5, minmax(50px, 1fr));
+  grid-template-rows: repeat(18, minmax(50px, 1fr));
+  grid-template-columns: repeat(3, minmax(50px, 1fr));
   gap: 5px; }
 
 .mosaic-tiles-items {
   border: 1px solid rgba(38, 149, 210, 0.8);
   border-radius: .33em;
   color: #FEF9E7;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .mosaic-tiles-items p {
-    padding: 6rem .5rem 6rem .5rem; }
-  .mosaic-tiles-items.small {
-    grid-row: span 1;
-    grid-column: span 1; }
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d; }
+  .mosaic-tiles-items .mosaic-tiles-front, .mosaic-tiles-items .mosaic-tiles-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .mosaic-tiles-items .mosaic-tiles-back {
+    transform: rotateY(180deg); }
+  .mosaic-tiles-items .mosaic-tiles-front {
+    background-image: url(https://i.pinimg.com/originals/0c/9b/3f/0c9b3fa0cb0b74b810a9309f6b442e84.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; }
   .mosaic-tiles-items.medium {
-    grid-row: span 2;
-    grid-column: span 2; }
+    grid-row: span 3;
+    grid-column: span 1; }
   .mosaic-tiles-items.large {
-    grid-row: span 3;
-    grid-column: span 3; }
-  .mosaic-tiles-items.tall {
-    grid-row: span 3;
+    grid-row: span 6;
     grid-column: span 2; }
-  .mosaic-tiles-items.wide {
-    grid-row: span 2;
-    grid-column: span 3; }
+
+.mosaic-tiles-items:hover {
+  transform: rotateY(180deg); }
 
 /******************************************
  ***          Jupyter Notebooks         ***
