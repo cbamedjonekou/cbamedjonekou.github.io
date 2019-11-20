@@ -5,16 +5,18 @@ layout: default
 <div class="mosaic-tiles">
   {% for post in site.tags[page.tag] %}
   <div class="mosaic-tiles-items {% cycle "medium", "large", "medium", "large", "medium", "medium" %}">
-    <div class="mosaic-tiles-front"></div>
+    <div class="mosaic-tiles-front {% cycle "one", "two", "three", "four" %}">
+      <img src="{{ image.path }}" alt="">
+    </div>	
     <div class="mosaic-tiles-back">
       {% if post.lang %}
       <p lang="{{post.lang}}">
       {% else %}
       <p>
       {% endif %}
-        <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})<br>
-        {{ post.description }}
-        <!-- Tags: {{ post.tags | join: ", " }} -->
+      <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})<br>
+      {{ post.description }}
+      <!-- Tags: {{ post.tags | join: ", " }} -->
       </p>
     </div>
   </div>

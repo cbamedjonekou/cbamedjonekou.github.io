@@ -5,13 +5,14 @@ title: CB.Amedjonekou's Blog
 <h1>{{ page.title }}</h1>
 
 <div class="mosaic-tiles">
-	{% for post in site.posts %}
+	{% for post in site.posts%}
 	<div class="mosaic-tiles-items {% cycle "medium", "large", "medium", "large", "medium", "medium" %}">
-		<div class="mosaic-tiles-front"></div>
+		<div class="mosaic-tiles-front {% cycle "one", "two", "three", "four" %}">
+			<img src="{{ image.path }}" alt="">
+		</div>
 		<div class="mosaic-tiles-back">
-			<p><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></p>
+			<p><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <span>{{ post.description}}</span></p>
 		</div>
 	</div> 
 	{% endfor %}
 </div>
-	
