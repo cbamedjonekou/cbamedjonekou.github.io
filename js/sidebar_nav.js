@@ -3,7 +3,7 @@ function closeNav() {
   document.getElementById("main-content").style.marginLeft= "0";
   document.getElementById("footer-content").style.marginLeft= "0";
   document.getElementById("header-dnstsu").style.marginLeft= "0";
-  document.body.style.backgroundColor = "black";
+  document.body.style.backgroundColor = "rgba(0,0,0, 1)";
 }
 
 function openNav() {
@@ -11,5 +11,5 @@ function openNav() {
   document.getElementById("main-content").style.marginLeft = "300px";
   document.getElementById("footer-content").style.marginLeft = "300px";
   document.getElementById("header-dnstsu").style.marginLeft = "300px";
-  document.body.style.backgroundColor = "rgba(0,0,0,0.9)";
+  document.body.style.backgroundColor = "rgba(0,0,0, 0.9)";
 }
