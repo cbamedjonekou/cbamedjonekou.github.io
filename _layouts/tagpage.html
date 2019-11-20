@@ -4,16 +4,19 @@ layout: default
 <h1 class="tag-title">Tag: {{ page.tag }}</h1>
 <div class="mosaic-tiles">
   {% for post in site.tags[page.tag] %}
-  <div class="mosaic-tiles-items {% cycle "medium", "large", "medium", "small", "tall", "wide" %}">
-    {% if post.lang %}
-    <p lang="{{post.lang}}">
-    {% else %}
-    <p>
-    {% endif %}
-      <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})<br>
-      {{ post.description }}
-      <!-- Tags: {{ post.tags | join: ", " }} -->
-    </p>
+  <div class="mosaic-tiles-items {% cycle "medium", "large", "medium", "large", "medium", "medium" %}">
+    <div class="mosaic-tiles-front"></div>
+    <div class="mosaic-tiles-back">
+      {% if post.lang %}
+      <p lang="{{post.lang}}">
+      {% else %}
+      <p>
+      {% endif %}
+        <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})<br>
+        {{ post.description }}
+        <!-- Tags: {{ post.tags | join: ", " }} -->
+      </p>
+    </div>
   </div>
   {% endfor %}    
 </div>

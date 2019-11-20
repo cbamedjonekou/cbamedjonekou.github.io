@@ -6,8 +6,11 @@ title: CB.Amedjonekou's Blog
 
 <div class="mosaic-tiles">
 	{% for post in site.posts %}
-	<div class="mosaic-tiles-items {% cycle "medium", "large", "medium", "small", "tall", "wide" %}">
-		<p><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></p>
+	<div class="mosaic-tiles-items {% cycle "medium", "large", "medium", "large", "medium", "medium" %}">
+		<div class="mosaic-tiles-front"></div>
+		<div class="mosaic-tiles-back">
+			<p><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></p>
+		</div>
 	</div> 
 	{% endfor %}
 </div>
