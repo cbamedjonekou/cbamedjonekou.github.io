@@ -21,3 +21,10 @@
 /* Jupyter Notebooks */
 
  @import "densetsu/jupyter.scss";
+
+/* Media Queries */
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
