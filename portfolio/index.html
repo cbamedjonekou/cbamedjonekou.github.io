@@ -4,7 +4,39 @@ title: CB.Amedjonekou, L33T Warrior
 ---
 
 <div class="projects">
-	<h1>Current:</h1>
-	<p></p>
+	<h1>Projects:</h1>
+
+	<p id="project-page-summary">
+		This page features projects that I've completed or am currently working on.
+		Each project tackles a specific Artificial Intelligence subject, concept, or
+		application. Run wild and explore ✌🏾✌🏾. 
+	</p>
+
 	<h1>Completed:</h1>
+	<div class="completed-proj-tiles">
+		{% for post in site.completed-projects%}
+		<div class="completed-tiles-items {% cycle "complete": "medium", "large", "medium", "large", "medium", "medium" %}">
+			<div class="completed-tiles-front {% cycle "complete-inner": "one", "two", "three", "four" %}">
+				<img src="{{ image.path }}" alt="">
+			</div>
+			<div class="completed-tiles-back">
+				<p><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <span>{{ post.description}}</span></p>
+			</div>
+		</div> 
+		{% endfor %}
+	</div>
+	<p></p>
+	<h1>Current:</h1>
+	<div class="current-proj-tiles">
+		{% for post in site.current-projects%}
+		<div class="current-tiles-items {% cycle "current": "medium", "large", "medium", "large", "medium", "medium" %}">
+			<div class="current-tiles-front {% cycle "current-inner": "one", "two", "three", "four" %}">
+				<img src="{{ image.path }}" alt="">
+			</div>
+			<div class="current-tiles-back">
+				<p><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <span>{{ post.description}}</span></p>
+			</div>
+		</div> 
+		{% endfor %}
+	</div>
 </div><!-- /.projects -->
